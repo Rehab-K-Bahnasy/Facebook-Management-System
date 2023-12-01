@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/inputBox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/welcomeLoginBG150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/welcomeLoginBG300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/welcomeSceneStlying.css" afterDir="false" />
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Welcome and Login screen added.&#10;Bugs: scene not resizable with window">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/WelcomeScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/welcomeLogin/WelcomeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/WelcomeScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/welcomeLogin/welcomeSceneStlying.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/welcomeSceneStlying.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +62,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -103,8 +98,17 @@
       <option name="presentableId" value="Default" />
       <updated>1701195701166</updated>
       <workItem from="1701195702237" duration="3000" />
-      <workItem from="1701430377634" duration="7426000" />
+      <workItem from="1701430377634" duration="9300000" />
     </task>
+    <task id="LOCAL-00001" summary="Welcome and Login screen added.&#10;Bugs: scene not resizable with window">
+      <option name="closed" value="true" />
+      <created>1701439080593</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701439080593</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,5 +124,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Welcome and Login screen added.&#10;Bugs: scene not resizable with window" />
+    <option name="LAST_COMMIT_MESSAGE" value="Welcome and Login screen added.&#10;Bugs: scene not resizable with window" />
   </component>
 </project>
