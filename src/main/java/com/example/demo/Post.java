@@ -1,11 +1,20 @@
 package com.example.demo;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
 import java.time.LocalDate;
 public class Post {
 
+    @FXML
+    Label created;
+    @FXML
+    Label priv;
+    @FXML
+    Label caption;
     private long post_ID;
     private LocalDate post_created_on;
-    private String [] post_caption = new String[10000];
+    private String  post_caption;
     private int post_reacts;
     //private User [] users_tagged_in_post = new User[10000];
     private Comment[] comments_on_post = new Comment[10000];
@@ -19,7 +28,7 @@ public class Post {
         this.comments_on_post = comments_on_post;
     }
 
-    public void setPost_caption(String[] post_caption) {
+    public void setPost_caption(String post_caption) {
         this.post_caption = post_caption;
     }
 
@@ -43,7 +52,7 @@ public class Post {
         return comments_on_post;
     }
 
-    public String[] getPost_caption() {
+    public String getPost_caption() {
         return post_caption;
     }
 
@@ -57,6 +66,16 @@ public class Post {
 
     public LocalDate getPost_created_on() {
         return post_created_on;
+    }
+
+
+    public void displayprivacy(Post post)
+    {
+        priv.setText(post.post_privacy);
+    }
+    public void displaycaption(Post post)
+    {
+        caption.setText(post.post_caption);
     }
 
 
