@@ -1,69 +1,82 @@
+package com.example.demo;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
 import java.time.LocalDate;
-import java.util.ArrayList;
 public class Post {
-    private int post_Id;
 
-    private LocalDate for_post=LocalDate.now();
-    private char [] caption = new char[4000];
+    @FXML
+    Label created;
+    @FXML
+    Label priv;
+    @FXML
+    Label caption;
+    private long post_ID;
+    private LocalDate post_created_on;
+    private String  post_caption;
+    private int post_reacts;
+    //private User [] users_tagged_in_post = new User[10000];
+    private Comment[] comments_on_post = new Comment[10000];
+    private String post_privacy;
 
-    private int reacts;
-
-    private ArrayList<Comment> comments = new ArrayList<Comment>();
-
-    private char[] privacy;
-
-    private User [] users_tagged = new User[4000];
-
-
-    public void setPost_Id(int post_Id) {
-        this.post_Id = post_Id;
+    public void setPost_reacts(int post_reacts) {
+        this.post_reacts = post_reacts;
     }
 
-    public void setCaption(char[] caption) {
-        this.caption = caption;
+    public void setComments_on_post(Comment[] comments_on_post) {
+        this.comments_on_post = comments_on_post;
     }
 
-    public void setReacts(int reacts) {
-        this.reacts = reacts;
+    public void setPost_caption(String post_caption) {
+        this.post_caption = post_caption;
     }
 
-    public void setComments(ArrayList<Comment> comments) {
-        this.comments = comments;
+    public void setPost_ID(long post_ID) {
+        this.post_ID = post_ID;
     }
 
-    public void setPrivacy(char[] privacy) {
-        this.privacy = privacy;
+    public void setPost_privacy(String post_privacy) {
+        this.post_privacy = post_privacy;
     }
 
-    public void setUsers_tagged(User[] users_tagged) {
-        this.users_tagged = users_tagged;
+    public void setPost_created_on(LocalDate post_created_on) {
+        this.post_created_on = post_created_on;
     }
 
-    public int getPost_Id() {
-        return post_Id;
+    public int getPost_reacts() {
+        return post_reacts;
     }
 
-    public char[] getCaption() {
-        return caption;
+    public Comment[] getComments_on_post() {
+        return comments_on_post;
     }
 
-    public int getReacts() {
-        return reacts;
+    public String getPost_caption() {
+        return post_caption;
     }
 
-    public ArrayList<Comment> getComments() {
-        return comments;
+    public long getPost_ID() {
+        return post_ID;
     }
 
-    public User[] getUsers_tagged() {
-        return users_tagged;
+    public String getPost_privacy() {
+        return post_privacy;
     }
 
-    public char[] getPrivacy() {
-        return privacy;
+    public LocalDate getPost_created_on() {
+        return post_created_on;
     }
 
-    public LocalDate getFor_post() {
-        return for_post;
+
+    public void displayprivacy(Post post)
+    {
+        priv.setText(post.post_privacy);
     }
+    public void displaycaption(Post post)
+    {
+        caption.setText(post.post_caption);
+    }
+
+
 }
