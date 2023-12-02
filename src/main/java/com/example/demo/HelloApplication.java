@@ -16,7 +16,7 @@ public class HelloApplication extends Application {
     private Parent root;
     private Scene scene;
     public void start(Stage stage) throws IOException {
-        FXMLLoader loader =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
+        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
         root=loader.load();
         Post post=loader.getController();
         post.setPost_caption("EZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
