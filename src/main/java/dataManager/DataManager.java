@@ -41,7 +41,6 @@ public class DataManager {
     }
     public static void main(String[] args) throws FileNotFoundException {
         read();
-
     }
     public static void isValidUserCredentials(String email,String Password)
     {
