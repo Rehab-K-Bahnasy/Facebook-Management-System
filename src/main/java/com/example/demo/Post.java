@@ -1,9 +1,19 @@
 package com.example.demo;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
-
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.Node;
+import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Objects;
+
+import javafx.scene.control.Button;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 public class Post {
 
     @FXML
@@ -12,6 +22,10 @@ public class Post {
     Label priv;
     @FXML
     Label caption;
+    Stage stage;
+    Parent root;
+    Scene feed_scene;
+    Scene comment_scene;
     private long post_ID;
     private LocalDate post_created_on;
     private String  post_caption;
@@ -75,8 +89,21 @@ public class Post {
     }
     public void displaycaption(Post post)
     {
+
         caption.setText(post.post_caption);
     }
-
-
+    /*public void switchtofeedscene(ActionEvent event) throws IOException {
+       Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("feed")));
+       stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+       feed_scene=new Scene(root);
+       stage.setScene(feed_scene);
+       stage.show();
+    }*/
+    public void switchtocommentscene(ActionEvent event) throws IOException {
+       Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("feed")));
+       stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+       comment_scene=new Scene(root);
+       stage.setScene(feed_scene);
+       stage.show();
+    }
 }
