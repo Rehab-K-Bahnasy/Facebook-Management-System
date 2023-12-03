@@ -3,6 +3,6 @@ module com.example.demo {
     requires javafx.fxml;
 
 
-    opens welcomeLogin to javafx.fxml;
-    exports welcomeLogin;
+    opens dataManager to javafx.fxml;
+    exports dataManager;
 }
