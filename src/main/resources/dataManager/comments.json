@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "content": ["Content 1"],
+    "comments": [
+      {
+        "id": 2,
+        "content": ["Content 2"],
+        "comments": [],
+        "reacts": []
+      }
+    ],
+    "reacts": [
+      {
+        "id": 101,
+        "name": "User 1"
+      },
+      {
+        "id": 102,
+        "name": "User 2"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "content": ["Content 3"],
+    "comments": [],
+    "reacts": []
+  }
+]
