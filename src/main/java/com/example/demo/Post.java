@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import javafx.scene.Node;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Objects;
 
 import javafx.scene.control.Button;
@@ -26,19 +27,19 @@ public class Post {
     Parent root;
     Scene feed_scene;
     Scene comment_scene;
-    private long post_ID;
-    private LocalDate post_created_on;
+    private int post_ID;
+    private LocalDate post_created_on = LocalDate.now();
     private String  post_caption;
     private int post_reacts;
     //private User [] users_tagged_in_post = new User[10000];
-    private Comment[] comments_on_post = new Comment[10000];
+    private ArrayList<Comment> comments_on_post = new ArrayList<Comment>();
     private String post_privacy;
 
     public void setPost_reacts(int post_reacts) {
         this.post_reacts = post_reacts;
     }
 
-    public void setComments_on_post(Comment[] comments_on_post) {
+    public void setComments_on_post(ArrayList<Comment> comments_on_post) {
         this.comments_on_post = comments_on_post;
     }
 
@@ -46,7 +47,7 @@ public class Post {
         this.post_caption = post_caption;
     }
 
-    public void setPost_ID(long post_ID) {
+    public void setPost_ID(int post_ID) {
         this.post_ID = post_ID;
     }
 
@@ -54,15 +55,12 @@ public class Post {
         this.post_privacy = post_privacy;
     }
 
-    public void setPost_created_on(LocalDate post_created_on) {
-        this.post_created_on = post_created_on;
-    }
 
     public int getPost_reacts() {
         return post_reacts;
     }
 
-    public Comment[] getComments_on_post() {
+    public ArrayList<Comment> getComments_on_post() {
         return comments_on_post;
     }
 
