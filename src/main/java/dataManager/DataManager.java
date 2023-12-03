@@ -19,6 +19,7 @@ public class DataManager {
             while (in.hasNextLine())
             {
                 String line = in.nextLine();
+                System.out.println(line);
                 String[] userData = line.split(" ");
             }
             in.close();
