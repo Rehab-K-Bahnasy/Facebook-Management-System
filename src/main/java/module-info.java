@@ -1,4 +1,4 @@
-module com.example.demo {
+module dataManager {
     requires javafx.controls;
     requires javafx.fxml;
 
