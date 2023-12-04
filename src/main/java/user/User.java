@@ -2,6 +2,7 @@ package user;
 
 public class User extends Person{
     private String email;
+    private String username;
     private String password;
     public User(String[] userData) {
         setEmail(userData[0]);
