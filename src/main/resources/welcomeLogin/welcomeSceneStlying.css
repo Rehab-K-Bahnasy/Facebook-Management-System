@@ -6,4 +6,25 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+/* Apply styles to the ImageView */
+.background-image-view {
+    -fx-fit-width: 100%;
+    -fx-fit-height: 100%;
+    -fx-preserve-ratio: true; /* Keeps the image's aspect ratio */
+    -fx-smooth: true; /* Smoothes the image */
+}
+
+/* Apply styles to the TextField */
+.text-field {
+    /* Add your preferred styles */
+}
+
+/* Apply styles to the PasswordField */
+.password-field {
+    /* Add your preferred styles */
+}
+
+/* Apply styles to the Buttons */
+.custom-button {
+    /* Add your preferred styles */
 }
