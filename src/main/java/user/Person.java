@@ -1,6 +1,7 @@
 package user;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public abstract class Person {
     protected String firstName;
@@ -45,7 +46,8 @@ public abstract class Person {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthDate(String birthDate) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        this.birthDate = LocalDate.parse(birthDate,formatter);
     }
 }
