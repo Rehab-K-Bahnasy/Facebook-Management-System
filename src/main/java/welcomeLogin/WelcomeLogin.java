@@ -13,9 +13,9 @@ public class WelcomeLogin extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(WelcomeLogin.class.getResource("WelcomeScene.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1500, 770);
+        Scene scene = new Scene(fxmlLoader.load(), 1024, 720);
 
-        stage.setTitle("theSocialNetwork");
+        stage.setTitle("SOCIO");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
