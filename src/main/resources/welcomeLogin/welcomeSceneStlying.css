@@ -1,9 +1,89 @@
-.loginButton{
-    background-color: #4b4443;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+.field {
+    -fx-background-color: rgba(255, 255, 255, 0.66);
+    -fx-border-color: rgba(73, 133, 52, 0.48);
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+    -fx-font-family: "Arial";
+    -fx-font-size: 13px;
+    -fx-padding: 8px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-prompt-text-fill: #999;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.03), 1, 1, -1, -1);
 }
+
+.field:focused {
+    -fx-border-color: #35502c;
+}
+
+
+.loginButton {
+    -fx-background-color: #709354;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 30px;
+    -fx-cursor: hand;
+    -fx-background-radius: 15px 5px 15px 15px;
+    -fx-border-color: transparent;
+}
+
+.loginButton:hover {
+    -fx-background-color: #597a38;
+}
+
+.loginButton:pressed {
+    -fx-background-color: #35502c;
+}
+
+
+.creatAccountButton {
+    -fx-background-color: transparent;
+    -fx-font-family: Tajawal;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+    -fx-text-fill: #615a59;
+    -fx-cursor: hand;
+}
+.creatAccountButton:hover {
+    -fx-text-fill: #709354;
+}
+.creatAccountButton:pressed {
+    -fx-text-fill: #35502c;
+}
+
+
+.showPasswordBox {
+    -fx-font-family: Tajawal;
+}
+.showPasswordBox .box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #999999;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-padding: 4px;
+    -fx-cursor: hand;
+    -fx-background-insets: 0;
+}
+
+.showPasswordBox .box:hover {
+    -fx-border-color: #666666;
+}
+
+.showPasswordBox:selected .box {
+    -fx-background-color: #709354;
+    -fx-border-color: #666666;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-padding: 4px;
+}
+
+.showPasswordBox:selected .box > .mark {
+    -fx-shape: "M5 27 L12 34 L30 16";
+    -fx-stroke: green;
+    -fx-stroke-width: 2px;
+}
+

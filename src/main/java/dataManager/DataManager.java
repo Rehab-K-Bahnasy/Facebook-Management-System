@@ -1,58 +1,66 @@
 package dataManager;
 
-import javafx.scene.Scene;
+import user.User;
 
-import java.io.*;
-import java.util.Arrays;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.concurrent.TransferQueue;
 
-public class DataManager {
-    private static Map<String,String> users = new HashMap<>();
-    public static void read() throws FileNotFoundException {
-        try {
+public class DataManager
+{
+    private static Map<String,User> users = new HashMap<>();
+    public static void readUsers() {
+        try
+        {
             File file = new File("src\\main\\resources\\dataManager\\usersData.txt");
             Scanner in = new Scanner(file);
 
+            //userData structure: email password firstName lastName phoneNumber gender
             while (in.hasNextLine())
             {
                 String line = in.nextLine();
                 System.out.println(line);
                 String[] userData = line.split(" ");
+                users.put(userData[0],new User(userData));
             }
             in.close();
-
-        } catch (Exception exp) {
+        }
+        catch (Exception exp)
+        {
             System.out.println(exp.getMessage());
         }
-
     }
-    public static void write()
-    {
+    public static void writeUsers() {
         //first open the file and write nothing to empty it
         //then write the whole new data
-        try {
+        try
+        {
             File file = new File("src\\main\\resources\\dataManager\\usersData.txt");
             FileWriter out = new FileWriter(file);
-        } catch (Exception exp) {
+
+            out.close();
+        }
+        catch (Exception exp)
+        {
             System.out.println(exp.getMessage());
         }
     }
-    public static void main(String[] args) throws FileNotFoundException {
-        read();
-    }
-    public static void isValidUserCredentials(String email,String Password)
-    {
-        //check if email
-//        if(!users.containsKey(email))
-//        {
-//            return false;
-//        }
-//
-//        return true;
-    }
-    //method returns user with specific email
 
+    //this should be the validator, and should extend the data manger
+    public static boolean isValidUserCredentials(String inputEmail,String inputPassword)
+    {
+        if(!users.containsKey(inputEmail))
+        {
+            return false;
+        }
+        var retrievedUser = users.get(inputEmail);
+        boolean res = retrievedUser.checkPasswordMatch(inputPassword);
+        return res;
+    }
+    public static User retrieveUser(String email)
+    {
+        return users.get(email);
+    }
 }
