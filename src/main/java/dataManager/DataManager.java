@@ -11,7 +11,8 @@ import java.util.Scanner;
 public class DataManager
 {
     private static Map<String,User> users = new HashMap<>();
-    public static void readUsers() {
+    public static void readUsers()
+    {
         try
         {
             File file = new File("src\\main\\resources\\dataManager\\usersData.txt");
@@ -32,7 +33,8 @@ public class DataManager
             System.out.println(exp.getMessage());
         }
     }
-    public static void writeUsers() {
+    public static void writeUsers()
+    {
         //first open the file and write nothing to empty it
         //then write the whole new data
         try
@@ -56,8 +58,7 @@ public class DataManager
             return false;
         }
         var retrievedUser = users.get(inputEmail);
-        boolean res = retrievedUser.checkPasswordMatch(inputPassword);
-        return res;
+        return retrievedUser.checkPasswordMatch(inputPassword);
     }
     public static User retrieveUser(String email)
     {

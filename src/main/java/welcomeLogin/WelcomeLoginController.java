@@ -2,18 +2,10 @@ package welcomeLogin;
 
 import dataManager.DataManager;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import user.User;
-
-import java.net.URL;
-import java.nio.channels.AlreadyBoundException;
-import java.util.ResourceBundle;
 
 public class WelcomeLoginController {
 
@@ -61,6 +53,6 @@ public class WelcomeLoginController {
     }
 
     public void createNewAccount() {
-
+        //change to create account scene
     }
 }
