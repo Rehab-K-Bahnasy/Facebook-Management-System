@@ -10,6 +10,7 @@ import java.util.Objects;
 public class User extends Person {
     private String username;
     private String email;
+    private String username;
     private String password;
 
     public User(Map userData) {
