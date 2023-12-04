@@ -8,7 +8,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class WelcomeLoginController {
-
     @FXML
     private TextField emailField;
     @FXML
@@ -53,6 +52,6 @@ public class WelcomeLoginController {
     }
 
     public void createNewAccount() {
-        //change to create account scene
+
     }
 }
