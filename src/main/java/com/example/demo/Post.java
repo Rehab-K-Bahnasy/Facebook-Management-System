@@ -25,7 +25,6 @@ public class Post {
     Label caption;
     Stage stage;
     Parent root;
-    Scene feed_scene;
     Scene comment_scene;
     private int post_ID;
     private LocalDate post_created_on = LocalDate.now();
@@ -97,11 +96,13 @@ public class Post {
        stage.setScene(feed_scene);
        stage.show();
     }*/
+    @FXML
     public void switchtocommentscene(ActionEvent event) throws IOException {
-       Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("feed")));
+        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("comment.fxml")));
+        root=loader.load();
        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
        comment_scene=new Scene(root);
-       stage.setScene(feed_scene);
+       stage.setScene(comment_scene);
        stage.show();
     }
 }

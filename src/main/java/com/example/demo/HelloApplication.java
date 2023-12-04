@@ -12,7 +12,6 @@ import java.util.Objects;
 
 public class HelloApplication extends Application {
 
-    private Stage stage;
     private Parent root;
     private Scene scene;
     public void start(Stage stage) throws IOException {
