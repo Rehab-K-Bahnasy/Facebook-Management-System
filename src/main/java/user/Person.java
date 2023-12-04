@@ -6,18 +6,21 @@ import java.time.format.DateTimeFormatter;
 public abstract class Person {
     protected String firstName;
     protected String lastName;
-    protected String gender;
+    protected String phoneNumber;
     protected LocalDate birthDate;
-    Person()
-    {
+    protected String gender;
+    Person(){
 
     }
     Person(String[] personData) {
+        //firstName lastName phoneNumber birthDate gender
         setFirstName(personData[0]);
         setLastName(personData[1]);
-        setLastName(personData[2]);
-
+        setPhoneNumber(personData[2]);
+        setBirthDate(personData[3]);
+        setGender(personData[4]);
     }
+
     public String getFirstName() {
         return firstName;
     }
@@ -34,6 +37,14 @@ public abstract class Person {
         this.lastName = lastName;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getGender() {
         return gender;
     }
@@ -42,12 +53,13 @@ public abstract class Person {
         this.gender = gender;
     }
 
+
     public LocalDate getBirthDate() {
         return birthDate;
     }
 
     public void setBirthDate(String birthDate) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        this.birthDate = LocalDate.parse(birthDate,formatter);
+        this.birthDate = LocalDate.parse(birthDate, formatter);
     }
 }
