@@ -26,6 +26,10 @@ public class Post {
     Stage stage;
     Parent root;
     Scene comment_scene;
+    private boolean check_if_liked=false;
+    public int counter=0;
+    @FXML
+    Label like_counter=new Label("0");
     private int post_ID;
     private LocalDate post_created_on = LocalDate.now();
     private String  post_caption;
@@ -86,11 +90,14 @@ public class Post {
     }
     public void displaycaption(Post post)
     {
-
         caption.setText(post.post_caption);
     }
+    public void displaycounter(Post post)
+    {
+        like_counter.setText(Integer.toString(counter));
+    }
     /*public void switchtofeedscene(ActionEvent event) throws IOException {
-       Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("feed")));
+       Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("feed.fxml")));
        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
        feed_scene=new Scene(root);
        stage.setScene(feed_scene);
@@ -104,5 +111,17 @@ public class Post {
        comment_scene=new Scene(root);
        stage.setScene(comment_scene);
        stage.show();
+    }
+    public void postliked(ActionEvent event) throws IOException {
+        check_if_liked=!check_if_liked;
+        changecounter(check_if_liked);
+        like_counter.setText(Integer.toString(counter));
+    }
+    public void changecounter(boolean check_if_liked)
+    {
+        if(check_if_liked)
+        counter++;
+        else
+            counter--;
     }
 }

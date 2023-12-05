@@ -18,10 +18,11 @@ public class HelloApplication extends Application {
         FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
         root=loader.load();
         Post post=loader.getController();
-        post.setPost_caption("EZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+        post.setPost_caption("EZZZZZZZutfiyvhZZZZZZZZZZZZZZZZZZZ");
         post.setPost_privacy("Public");
         post.displaycaption(post);
         post.displayprivacy(post);
+        post.displaycounter(post);
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();

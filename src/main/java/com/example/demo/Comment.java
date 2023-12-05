@@ -1,9 +1,21 @@
 package com.example.demo;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Comment {
 
+    Stage stage;
+    Parent root;
+    Scene post_scene;
     private long comment_ID;
     private long post_ID;
     private long user_ID;
@@ -58,6 +70,20 @@ public class Comment {
         this.comment_created_on=comment.comment_created_on;
         comment_ID++;
 
+    }
+    public void switchtopostscene(ActionEvent event) throws IOException {
+        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
+        root=loader.load();
+        Post post=loader.getController();
+        post.setPost_caption("EZZZZZZZutfiyvhZZZZZZZZZZZZZZZZZZZ");
+        post.setPost_privacy("Public");
+        post.displaycaption(post);
+        post.displayprivacy(post);
+        post.displaycounter(post);
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        post_scene=new Scene(root);
+        stage.setScene(post_scene);
+        stage.show();
     }
 
 

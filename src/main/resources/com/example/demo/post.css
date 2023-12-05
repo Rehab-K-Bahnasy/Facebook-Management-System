@@ -1,0 +1,46 @@
+#button {
+    -fx-align-items: center;
+    -fx-background-color: linear-gradient(to right, #AF40FF, #5B42F3 50%, #00DDEB);
+    -fx-border: 0;
+    -fx-border-radius: 8px;
+    -fx-box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    -fx-box-sizing: border-box;
+    -fx-color: #FFFFFF;
+    -fx-display: flex;
+    -fx-font-family: "Phantomsans", sans-serif;
+    -fx-justify-content: center;
+    -fx-line-height: 1em;
+    -fx-padding: 3px;
+    -fx-text-decoration: none;
+    -fx-user-select: none;
+    -webkit-user-select: none;
+    -fx-touch-action: manipulation;
+    -fx-white-space: nowrap;
+    -fx-cursor: hand; /* JavaFX equivalent for pointer cursor */
+
+    /* Pseudo-classes for hover and active states */
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 6px;
+
+    /* Style for active and hover states */
+    -fx-background-color: rgb(5, 6, 45), linear-gradient(to left, #AF40FF, #5B42F3 50%, #00DDEB);
+}
+
+#button:hover {
+    -fx-outline: 0;
+}
+
+#button span {
+    -fx-background-color: rgb(5, 6, 45);
+    -fx-padding: 16px 24px;
+    -fx-border-radius: 6px;
+    -fx-width: 100%;
+    -fx-height: 100%;
+    -fx-transition: 300ms;
+}
+
+#button:hover span {
+    -fx-background: none;
+}
+
+
