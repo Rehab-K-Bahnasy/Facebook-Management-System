@@ -2,6 +2,7 @@ package user;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Map;
 
 public abstract class Person {
     protected String firstName;
@@ -9,16 +10,14 @@ public abstract class Person {
     protected String phoneNumber;
     protected LocalDate birthDate;
     protected String gender;
-    Person(){
 
-    }
-    Person(String[] personData) {
-        //firstName lastName phoneNumber birthDate gender
-        setFirstName(personData[0]);
-        setLastName(personData[1]);
-        setPhoneNumber(personData[2]);
-        setBirthDate(personData[3]);
-        setGender(personData[4]);
+
+    Person(Map personData) {
+        setFirstName((String) personData.get("first name"));
+        setLastName((String) personData.get("last name"));
+        setPhoneNumber((String) personData.get("phone number"));
+        setBirthDate((String) personData.get("birthdate"));
+        setGender((String) personData.get("gender"));
     }
 
     public String getFirstName() {
