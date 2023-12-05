@@ -1,51 +1,39 @@
 package user;
+import java.util.ArrayList;
+import java.util.List;
+public class User extends Person{
+    private String email;
+    private String password;
+    private List<String> friends;
 
-import java.time.LocalDate;
-
-public abstract class Person {
-    protected String firstName;
-    protected String lastName;
-    protected String gender;
-    protected LocalDate birthDate;
-    Person()
-    {
-
-    }
-    Person(String[] personData) {
-        setFirstName(personData[0]);
-        setLastName(personData[1]);
-        setLastName(personData[2]);
+    public User(String[] userData) {
+        setEmail(userData[0]);
+        setPassword(userData[1]);
+        this.friends = new ArrayList<>();
 
     }
-    public String getFirstName() {
-        return firstName;
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public boolean checkPasswordMatch(String inputPassword) {
+        return password.equals(inputPassword);
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public List<String> getFriends() {
+        return friends;
     }
 
-    public String getLastName() {
-        return lastName;
+    public void addFriend(String friendUsername) {
+        friends.add(friendUsername);
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void removeFriend(String friendUsername) {
+        friends.remove(friendUsername);
     }
 }
