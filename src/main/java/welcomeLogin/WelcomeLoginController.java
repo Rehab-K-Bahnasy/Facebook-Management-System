@@ -1,6 +1,5 @@
 package welcomeLogin;
 
-import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +12,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.EventObject;
 
 public class WelcomeLoginController {
     @FXML
@@ -60,11 +58,6 @@ public class WelcomeLoginController {
     }
 
     public void createNewAccount(ActionEvent event) throws IOException {
-        WelcomeLogin.fxmlLoader = new FXMLLoader(WelcomeLogin.class.getResource("CreateAccountScene.fxml"));
-        WelcomeLogin.root = WelcomeLogin.fxmlLoader.load();
-        WelcomeLogin.mainStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        WelcomeLogin.scene = new Scene(WelcomeLogin.root);
-        WelcomeLogin.mainStage.setScene(WelcomeLogin.scene);
-        WelcomeLogin.mainStage.show();
+        WelcomeLogin.switchToScene(event,"CreateAccountScene.fxml");
     }
 }
