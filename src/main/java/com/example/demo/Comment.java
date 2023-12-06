@@ -72,7 +72,7 @@ public class Comment {
 
     }
     public void switchtopostscene(ActionEvent event) throws IOException {
-        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
+        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("FullPostScene.fxml")));
         root=loader.load();
         Post post=loader.getController();
         post.setPost_caption("EZZZZZZZutfiyvhZZZZZZZZZZZZZZZZZZZ");
