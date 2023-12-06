@@ -1,7 +1,9 @@
 package welcomeLogin;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -9,10 +11,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class WelcomeLogin extends Application {
-    public static Stage mainStage;
-    public static Parent root;
-    public static Scene scene;
-    public static FXMLLoader fxmlLoader;
+    private static Stage mainStage;
+    private static Parent root;
+    private static Scene scene;
+    private static FXMLLoader fxmlLoader;
     @Override
     public void start(Stage stage) throws IOException {
         fxmlLoader = new FXMLLoader(WelcomeLogin.class.getResource("WelcomeScene.fxml"));
@@ -22,6 +24,14 @@ public class WelcomeLogin extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         mainStage = stage;
+        stage.show();
+    }
+    public static void switchToScene(ActionEvent event,String file) throws IOException {
+        fxmlLoader = new FXMLLoader(WelcomeLogin.class.getResource(file));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
         stage.show();
     }
     public static void main(String[] args) {
