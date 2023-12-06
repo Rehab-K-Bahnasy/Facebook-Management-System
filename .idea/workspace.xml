@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Fixed GUI packages">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/createAccount/CreateAccountScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/CreateAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/CreateAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/welcomeLogin/CreateAccountScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/CreateAccountScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "createAccount",
+    "last_opened_file_path": "F:/senond year/MM/src/main/resources/welcomeLogin",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -64,7 +71,15 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\senond year\MM\src\main\resources\welcomeLogin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\senond year\MM\src\main\resources\createAccount" />
+      <recent name="F:\senond year\MM\src\main\resources\welcomeLogin" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="welcomeLogin" />
       <recent name="createAccount" />
     </key>
   </component>
@@ -87,7 +102,7 @@
       <module name="theSocialNetwork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="createAccount.*" />
+          <option name="PATTERN" value="welcomeLogin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,9 +127,20 @@
       <updated>1701195701166</updated>
       <workItem from="1701195702237" duration="3000" />
     </task>
+    <task id="LOCAL-00001" summary="Added show password design.">
+      <option name="closed" value="true" />
+      <created>1701872894014</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701872894014</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Added show password design." />
+    <MESSAGE value="Fixed GUI packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed GUI packages" />
   </component>
 </project>

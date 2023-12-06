@@ -4,11 +4,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.Pane;
+import javafx.scene.control.Alert;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
 
 import java.io.IOException;
+import java.util.EventObject;
 
 public class CreateAccountController {
     @FXML
@@ -17,23 +21,7 @@ public class CreateAccountController {
     private TextField passwordText;
     @FXML
     private CheckBox showPassword;
-    public void createNewAccount(ActionEvent event) throws IOException {
-        WelcomeLogin.fxmlLoader = new FXMLLoader(WelcomeLogin.class.getResource("WelcomeScene.fxml"));
-        WelcomeLogin.root = WelcomeLogin.fxmlLoader.load();
-        WelcomeLogin.mainStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        WelcomeLogin.scene = new Scene(WelcomeLogin.root);
-        WelcomeLogin.mainStage.setScene(WelcomeLogin.scene);
-        WelcomeLogin.mainStage.show();
-    }
-    public void passwordVisibility() {
-        if (showPassword.isSelected()) {
-            passwordText.setText(passwordField.getText());
-            passwordText.setVisible(true);
-            passwordField.setVisible(false);
-            return;
-        }
-        passwordField.setText(passwordText.getText());
-        passwordField.setVisible(true);
-        passwordText.setVisible(false);
+    public void toLogin (ActionEvent event) throws IOException {
+        WelcomeLogin.switchToScene(event,"WelcomeScene.fxml");
     }
 }
