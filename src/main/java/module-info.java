@@ -6,5 +6,4 @@ module com.example.demo {
 
     opens welcomeLogin to javafx.fxml;
     exports welcomeLogin;
-
 }
