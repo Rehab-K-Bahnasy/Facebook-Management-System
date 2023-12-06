@@ -1,7 +1,7 @@
 package user;
 
 import org.json.simple.JSONObject;
-
+import java.util.Random;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +9,9 @@ import java.util.Objects;
 
 public class User extends Person {
     private String username;
+    Random random = new Random();
+
+    final short key = (short) random.nextInt(Short.MAX_VALUE + 1);
     private String email;
     private String password;
 
@@ -59,6 +62,11 @@ public class User extends Person {
         return checkUsernameMatch(identifier) ||
                 checkEmailMatch(identifier) ||
                 checkPhoneNumberMatch(identifier);
+    }
+    public boolean hasMatchingIdentity(User identifier) {
+        return checkUsernameMatch(identifier.getUsername()) ||
+                checkEmailMatch(identifier.getEmail()) ||
+                checkPhoneNumberMatch(identifier.getPhoneNumber());
     }
 
     public JSONObject toJsonObject() {

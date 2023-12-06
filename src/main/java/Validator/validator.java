@@ -1,5 +1,7 @@
 package validator;
 
+import user.User;
+
 import java.util.Arrays;
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -41,55 +43,51 @@ public class validator {
     }
 
     /**
-     * checks if the mail exists
-     * @param mail - the mail you want to use
+     * checks if the user exists
+     * @param user - the user you want to check
      * @param users - the entire Users database
-     * @return the mail is used or not
+     * @return the user is used or not
      */
-    public static boolean checkMail(char[] mail, User[] users) {
-        boolean found = true;
-        for (User user : users) {
-            if (!Arrays.equals(user.getMail, mail)) {
-                found = false;
-                break;
-            }
+    public static boolean checkUser(User user, User[] users) {
+        for (User user_check : users) {
+            if (user_check.hasMatchingIdentity(user)) return true;
         }
-        return found;
+        return false;
     }
     
-    /**
-     * checks if the username exists
-     * @param username - the username you want to use
-     * @param users - the entire Users database
-     * @return the username is used or not
-     */
-    public static boolean checkUsername(char[] username, User[] users) {
-        boolean found = true;
-        for (User user : users) {
-            if (!Arrays.equals(user.getUsername, username)) {
-                found = false;
-                break;
-            }
-        }
-        return found;
-    }
-
-    /**
-     * checks if the phone exists
-     * @param phone - the phone you want to use
-     * @param users - the entire Users database
-     * @return the phone is used or not
-     */
-    public static boolean checkPhone(char[] phone, User[] users) {
-        boolean found = true;
-        for (User user : users) {
-            if (!Arrays.equals(user.getPhone, phone)) {
-                found = false;
-                break;
-            }
-        }
-        return found;
-    }
+//    /**
+//     * checks if the username exists
+//     * @param username - the username you want to use
+//     * @param users - the entire Users database
+//     * @return the username is used or not
+//     */
+//    public static boolean checkUsername(char[] username, User[] users) {
+//        boolean found = true;
+//        for (User user : users) {
+//            if (!Arrays.equals(user.getUsername, username)) {
+//                found = false;
+//                break;
+//            }
+//        }
+//        return found;
+//    }
+//
+//    /**
+//     * checks if the phone exists
+//     * @param phone - the phone you want to use
+//     * @param users - the entire Users database
+//     * @return the phone is used or not
+//     */
+//    public static boolean checkPhone(char[] phone, User[] users) {
+//        boolean found = true;
+//        for (User user : users) {
+//            if (!Arrays.equals(user.getPhone, phone)) {
+//                found = false;
+//                break;
+//            }
+//        }
+//        return found;
+//    }
 
     /**
      * checks if the person is adult or not
