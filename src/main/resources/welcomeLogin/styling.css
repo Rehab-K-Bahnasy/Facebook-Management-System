@@ -60,6 +60,7 @@
 }
 .showPasswordBox .box {
     -fx-background-color: #ffffff;
+    -fx-background-radius: 9px;
     -fx-border-color: #999999;
     -fx-border-width: 2px;
     -fx-border-radius: 4px;
