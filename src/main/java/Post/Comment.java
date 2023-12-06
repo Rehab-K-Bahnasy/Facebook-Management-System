@@ -1,15 +1,10 @@
-package com.example.demo;
+package Post;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Comment {
 
@@ -71,20 +66,20 @@ public class Comment {
         comment_ID++;
 
     }
-    public void switchtopostscene(ActionEvent event) throws IOException {
-        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("FullPostScene.fxml")));
-        root=loader.load();
-        Post post=loader.getController();
-        post.setPost_caption("EZZZZZZZutfiyvhZZZZZZZZZZZZZZZZZZZ");
-        post.setPost_privacy("Public");
-        post.displaycaption(post);
-        post.displayprivacy(post);
-        post.displaycounter(post);
-        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-        post_scene=new Scene(root);
-        stage.setScene(post_scene);
-        stage.show();
-    }
+//    public void switchtopostscene(ActionEvent event) throws IOException {
+//        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("PostScene.fxml")));
+//        root=loader.load();
+//        Post post=loader.getController();
+//        post.setPost_caption("EZZZZZZZutfiyvhZZZZZZZZZZZZZZZZZZZ");
+//        post.setPost_privacy("Public");
+//        post.displaycaption(post);
+//        post.displayprivacy(post);
+//        post.displaycounter(post);
+//        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+//        post_scene=new Scene(root);
+//        stage.setScene(post_scene);
+//        stage.show();
+//    }
 
 
 }

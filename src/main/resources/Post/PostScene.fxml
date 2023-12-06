@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.PostController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1024.0">
+         <image>
+            <Image url="@fullPost.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="usernameLabel" layoutX="90.0" layoutY="150.0" prefHeight="29.0" prefWidth="114.0" styleClass="usernameLabel" stylesheets="@post.css" text="\@MoBakry04" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="90.0" layoutY="86.0" prefHeight="57.0" prefWidth="196.0" styleClass="nameLabel" stylesheets="@post.css" text="Mo Bakry">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="privacyLabel" layoutX="233.0" layoutY="151.0" styleClass="privacyLabel" stylesheets="@post.css" text="public">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="90.0" layoutY="460.0" styleClass="dateLabel" stylesheets="@post.css" text="Wed Dec 06 17:51:48 EET 2023" />
+      <Label fx:id="captionLabel" layoutX="90.0" layoutY="281.0" styleClass="captionLabel" stylesheets="@post.css" text="t7yati l team OOP">
+         <font>
+            <Font name="Tajawal" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="176.0" layoutY="500.0" mnemonicParsing="false" stylesheets="@post.css" text="Comment">
+         <font>
+            <Font name="Andalus" size="12.0" />
+         </font></Button>
+      <ToggleButton fx:id="likeButton" layoutX="90.0" layoutY="500.0" mnemonicParsing="false" onAction="#changeLiked" styleClass="button" stylesheets="@post.css" text="Like" />
+      <Label fx:id="likesCounterLabel" layoutX="90.0" layoutY="545.0" text="101 Likes" />
+      <Label fx:id="commentsCounterLabel" layoutX="176.0" layoutY="545.0" text="202 Comments" />
+   </children>
+</AnchorPane>

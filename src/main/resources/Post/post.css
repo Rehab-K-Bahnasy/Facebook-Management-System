@@ -1,0 +1,96 @@
+/*#button {*/
+/*    -fx-align-items: center;*/
+/*    -fx-background-color: linear-gradient(to right, #AF40FF, #5B42F3 50%, #00DDEB);*/
+/*    -fx-border: 0;*/
+/*    -fx-border-radius: 8px;*/
+/*    -fx-box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;*/
+/*    -fx-box-sizing: border-box;*/
+/*    -fx-color: #FFFFFF;*/
+/*    -fx-display: flex;*/
+/*    -fx-font-family: "Phantomsans", sans-serif;*/
+/*    -fx-justify-content: center;*/
+/*    -fx-line-height: 1em;*/
+/*    -fx-padding: 3px;*/
+/*    -fx-text-decoration: none;*/
+/*    -fx-user-select: none;*/
+/*    -webkit-user-select: none;*/
+/*    -fx-touch-action: manipulation;*/
+/*    -fx-white-space: nowrap;*/
+/*    -fx-cursor: hand; !* JavaFX equivalent for pointer cursor *!*/
+
+/*    !* Pseudo-classes for hover and active states *!*/
+/*    -fx-background-insets: 0, 1, 2;*/
+/*    -fx-background-radius: 6px;*/
+
+/*    !* Style for active and hover states *!*/
+/*    -fx-background-color: rgb(5, 6, 45), linear-gradient(to left, #AF40FF, #5B42F3 50%, #00DDEB);*/
+/*}*/
+
+/*#button:hover {*/
+/*    -fx-outline: 0;*/
+/*}*/
+
+/*#button span {*/
+/*    -fx-background-color: rgb(5, 6, 45);*/
+/*    -fx-padding: 16px 24px;*/
+/*    -fx-border-radius: 6px;*/
+/*    -fx-width: 100%;*/
+/*    -fx-height: 100%;*/
+/*    -fx-transition: 300ms;*/
+/*}*/
+
+/*#button:hover span {*/
+/*    -fx-background: none;*/
+/*}*/
+
+.nameLabel {
+    -fx-font-family: Tajawal;
+    -fx-font-weight: bold;
+    -fx-font-size: 48;
+}
+
+.usernameLabel {
+    -fx-font-family: Tajawal;
+    -fx-font-weight: 300;
+    -fx-font-size: 20;
+    -fx-text-fill: rgba(74, 69, 67, 0.70);
+}
+
+.privacyLabel {
+    -fx-font-family: Tajawal;
+    -fx-font-weight: 300;
+    -fx-font-size: 20;
+    -fx-text-fill: rgba(74, 69, 67, 0.7);
+}
+
+.captionLabel {
+    -fx-font-family: Tajawal;
+    -fx-font-size: 48;
+}
+
+.dateLabel {
+    -fx-font-family: Tajawal;
+    -fx-font-size: 18;
+    -fx-text-fill: rgba(74, 69, 67, 0.7);
+}
+
+.button {
+    -fx-background-color: #709354;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: 700;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 30px;
+    -fx-cursor: hand;
+    -fx-background-radius: 15px 5px 15px 15px;
+    -fx-border-color: transparent;
+}
+
+.button:hover {
+    -fx-background-color: #597a38;
+}
+
+.button:pressed {
+    -fx-background-color: #35502c;
+}
