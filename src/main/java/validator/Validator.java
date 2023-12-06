@@ -4,10 +4,8 @@ import user.User;
 
 import java.util.Arrays;
 import java.time.LocalDate;
-import java.util.Scanner;
-import java.time.format.DateTimeFormatter;
 
-public class validator {
+public class Validator {
     /**
      * encrypt the string 
      * @param _string - the string you want to encrypt
