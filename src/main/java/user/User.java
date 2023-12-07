@@ -63,12 +63,6 @@ public class User extends Person {
                 checkEmailMatch(identifier) ||
                 checkPhoneNumberMatch(identifier);
     }
-    public boolean hasMatchingIdentity(User identifier) {
-        return checkUsernameMatch(identifier.getUsername()) ||
-                checkEmailMatch(identifier.getEmail()) ||
-                checkPhoneNumberMatch(identifier.getPhoneNumber());
-    }
-
     public JSONObject toJsonObject() {
         Map<String, Object> userMapping = new HashMap<>();
         userMapping.put("username", username);
