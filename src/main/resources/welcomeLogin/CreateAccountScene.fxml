@@ -19,10 +19,10 @@
             <Image url="@socioBG.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="604.0" layoutY="640.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="180.0" styleClass="loginButton" stylesheets="@styling.css" text="Sign Up" />
-      <TextField focusTraversable="false" layoutX="806.0" layoutY="211.0" prefHeight="40.0" prefWidth="160.0" promptText="Last name" styleClass="field" stylesheets="@styling.css" />
-      <TextField focusTraversable="false" layoutX="606.0" layoutY="211.0" prefHeight="40.0" prefWidth="160.0" promptText="First name" styleClass="field" stylesheets="@styling.css" />
-      <TextField focusTraversable="false" layoutX="606.0" layoutY="316.0" prefHeight="40.0" prefWidth="360.0" promptText="Email" styleClass="field" stylesheets="@styling.css" />
+      <Button fx:id="sign_up" layoutX="604.0" layoutY="640.0" mnemonicParsing="false" onAction="#signUp" prefHeight="45.0" prefWidth="180.0" styleClass="loginButton" stylesheets="@styling.css" text="Sign Up" />
+      <TextField fx:id="last_name" focusTraversable="false" layoutX="806.0" layoutY="211.0" prefHeight="40.0" prefWidth="160.0" promptText="Last name" styleClass="field" stylesheets="@styling.css" />
+      <TextField fx:id="first_name" focusTraversable="false" layoutX="606.0" layoutY="211.0" prefHeight="40.0" prefWidth="160.0" promptText="First name" styleClass="field" stylesheets="@styling.css" />
+      <TextField fx:id="email" focusTraversable="false" layoutX="606.0" layoutY="316.0" prefHeight="40.0" prefWidth="360.0" promptText="Email" styleClass="field" stylesheets="@styling.css" />
       <TextField fx:id="confirm_password_text" accessibleRole="PASSWORD_FIELD" focusTraversable="false" layoutX="606.0" layoutY="416.0" prefHeight="40.0" prefWidth="360.0" promptText="Confirm your password" styleClass="field" stylesheets="@styling.css" visible="false" />
       <Label layoutX="605.0" layoutY="590.0" prefHeight="30.0" styleClass="showPasswordBox" stylesheets="@styling.css" text="Gender" textFill="#514141">
          <font>
@@ -30,20 +30,20 @@
          </font>
       </Label>
       <Button layoutX="790.0" layoutY="648.0" mnemonicParsing="false" onAction="#toLogin" prefHeight="30.0" prefWidth="201.0" styleClass="creatAccountButton" stylesheets="@styling.css" text="Already have an account?" />
-      <RadioButton fx:id="radioButton1" layoutX="682.0" layoutY="592.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" text="Female" wrapText="true">
+      <RadioButton fx:id="female" layoutX="682.0" layoutY="592.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" text="Female" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="radioButton2" layoutX="802.0" layoutY="590.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="81.0" stylesheets="@styling.css" text="Male" AnchorPane.bottomAnchor="103.60000000000002">
+      <RadioButton fx:id="male" layoutX="802.0" layoutY="590.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="81.0" stylesheets="@styling.css" text="Male" AnchorPane.bottomAnchor="103.60000000000002">
          <font>
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <DatePicker focusTraversable="false" layoutX="605.0" layoutY="541.0" prefHeight="42.0" prefWidth="360.0" promptText="Date of birth" styleClass="field" stylesheets="@styling.css" />
-      <TextField focusTraversable="false" layoutX="606.0" layoutY="266.0" prefHeight="40.0" prefWidth="360.0" promptText="Username" styleClass="field" stylesheets="@styling.css" />
+      <DatePicker fx:id="birth_date" focusTraversable="false" layoutX="605.0" layoutY="541.0" prefHeight="42.0" prefWidth="360.0" promptText="Date of birth" styleClass="field" stylesheets="@styling.css" />
+      <TextField fx:id="username" focusTraversable="false" layoutX="606.0" layoutY="266.0" prefHeight="40.0" prefWidth="360.0" promptText="Username" styleClass="field" stylesheets="@styling.css" />
       <TextField fx:id="password_text" accessibleRole="PASSWORD_FIELD" focusTraversable="false" layoutX="606.0" layoutY="366.0" prefHeight="40.0" prefWidth="360.0" promptText="New password" styleClass="field" stylesheets="@styling.css" visible="false" />
-      <TextField focusTraversable="false" layoutX="605.0" layoutY="491.0" prefHeight="40.0" prefWidth="360.0" promptText="Phone number" styleClass="field" stylesheets="@styling.css" />
+      <TextField fx:id="phone_number" focusTraversable="false" layoutX="605.0" layoutY="491.0" prefHeight="40.0" prefWidth="360.0" promptText="Phone number" styleClass="field" stylesheets="@styling.css" />
       <PasswordField fx:id="password_field" focusTraversable="false" layoutX="606.0" layoutY="366.0" prefHeight="40.0" prefWidth="360.0" promptText="New password" styleClass="field" stylesheets="@styling.css" />
       <PasswordField fx:id="confirm_password_field" focusTraversable="false" layoutX="606.0" layoutY="416.0" prefHeight="40.0" prefWidth="360.0" promptText="Confirm your password" styleClass="field" stylesheets="@styling.css" />
       <CheckBox fx:id="show_password" layoutX="853.0" layoutY="462.0" mnemonicParsing="false" onAction="#passwordVisibility" prefHeight="21.0" prefWidth="134.0" styleClass="showPasswordBox" stylesheets="@styling.css" text="Show password" />
