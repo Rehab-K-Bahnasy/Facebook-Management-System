@@ -7,21 +7,41 @@ import javafx.stage.Stage;
 import java.time.LocalDate;
 
 public class Comment {
-
-    Stage stage;
-    Parent root;
-    Scene post_scene;
-    private long comment_ID;
-    private long post_ID;
-    private long user_ID;
-    private String [] comment_content = new String[10000];
+    private String username;
+    private int comment_ID;
+    private int post_ID;
+    private String[] comment_content = new String[10000];
     //private User [] comment_react = new User[10000];
     private LocalDate comment_created_on;
-    private Comment [] comment_reply = new Comment[10000];
+    private Comment[] comment_reply = new Comment[10000];
 
-    public void setComment_ID(long comment_ID) {
+    public Comment(String username,int comment_ID,int post_ID) {
+        setUsername(username);
+        setComment_ID(comment_ID);
+        setPost_ID(post_ID);
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public long getPost_ID() {
+        return post_ID;
+    }
+
+    public void setPost_ID(int post_ID) {
+        this.post_ID = post_ID;
+    }
+
+
+    public void setComment_ID(int comment_ID) {
         this.comment_ID = comment_ID;
     }
+
 
     public void setComment_content(String[] comment_content) {
         this.comment_content = comment_content;
@@ -35,9 +55,6 @@ public class Comment {
         this.comment_reply = comment_reply;
     }
 
-    public long getPost_ID() {
-        return post_ID;
-    }
 
     public Comment[] getComment_reply() {
         return comment_reply;
@@ -51,21 +68,19 @@ public class Comment {
         return comment_ID;
     }
 
-    public long getUser_ID() {
-        return user_ID;
-    }
 
     public String[] getComment_content() {
         return comment_content;
     }
 
     void addComment(Comment comment) {
-        this.comment_content=comment.comment_content;
-        this.user_ID=comment.user_ID;
-        this.comment_created_on=comment.comment_created_on;
+        this.comment_content = comment.comment_content;
+        this.username = comment.username;
+        this.comment_created_on = comment.comment_created_on;
         comment_ID++;
 
     }
+
 //    public void switchtopostscene(ActionEvent event) throws IOException {
 //        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("PostScene.fxml")));
 //        root=loader.load();

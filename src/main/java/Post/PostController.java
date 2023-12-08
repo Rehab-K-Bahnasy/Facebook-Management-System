@@ -81,6 +81,7 @@ public class PostController {
         setLikesCounterLabel();
         setCommentsCounterLabel();
     }
+
 //    /*public void switchtofeedscene(ActionEvent event) throws IOException {
 //       Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("feed.fxml")));
 //       stage=(Stage)((Node)event.getSource()).getScene().getWindow();

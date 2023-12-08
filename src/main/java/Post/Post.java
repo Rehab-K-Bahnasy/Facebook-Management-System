@@ -56,6 +56,7 @@ public class Post {
     public int getReacts() {
         return reacts_counter;
     }
+
     public void setComments(ArrayList<Comment> comments_on_post) {
         this.comments_on_post = comments_on_post;
     }
@@ -73,9 +74,10 @@ public class Post {
         this.privacy = post_privacy;
     }
 
-    public int getCommentsCounter(){
+    public int getCommentsCounter() {
         return comments_on_post.size();
     }
+
     public void modifyReacts(boolean check_if_liked) {
         if (check_if_liked)
             reacts_counter++;
