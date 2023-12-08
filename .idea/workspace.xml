@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Finished GUI Completely design">
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Finished Validator Backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/Validator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/CreateAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/CreateAccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/welcomeLogin/CreateAccountScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/CreateAccountScene.fxml" afterDir="false" />
@@ -61,6 +60,8 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "createAccount",
     "last_opened_file_path": "F:/senond year/MM/src/main/resources/welcomeLogin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -73,6 +74,8 @@
       <recent name="F:\senond year\MM\src\main\resources\welcomeLogin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\senond year\MM\src\main\java\validator" />
+      <recent name="F:\senond year\MM\src\main\java\welcomeLogin" />
       <recent name="F:\senond year\MM\src\main\resources\createAccount" />
       <recent name="F:\senond year\MM\src\main\resources\welcomeLogin" />
     </key>
@@ -124,6 +127,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701195701166</updated>
       <workItem from="1701195702237" duration="3000" />
+      <workItem from="1702008003858" duration="10425000" />
     </task>
     <task id="LOCAL-00001" summary="Added show password design.">
       <option name="closed" value="true" />
@@ -149,13 +153,25 @@
       <option name="project" value="LOCAL" />
       <updated>1701890236370</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished Validator Backend">
+      <option name="closed" value="true" />
+      <created>1701918037839</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701918037839</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added show password design." />
     <MESSAGE value="Fixed GUI packages" />
     <MESSAGE value="Finished GUI Completely design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished GUI Completely design" />
+    <MESSAGE value="Finished Validator Backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Validator Backend" />
   </component>
 </project>

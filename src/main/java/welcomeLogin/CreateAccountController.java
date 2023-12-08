@@ -1,52 +1,46 @@
 package welcomeLogin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
-import javafx.scene.Parent;
-import user.User;
 import validator.Validator;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.EventObject;
+
 
 public class CreateAccountController {
     @FXML
-    private static TextField first_name;
+    private TextField first_name;
     @FXML
-    private static TextField last_name;
+    private  TextField last_name;
     @FXML
-    private static TextField username;
+    private TextField username;
     @FXML
-    private static TextField email;
+    private TextField email;
     @FXML
-    private static TextField phone_number;
+    private  TextField phone_number;
     @FXML
-    private static DatePicker birth_date;
+    private  DatePicker birth_date;
     @FXML
-    private static RadioButton male;
+    private  RadioButton male;
     @FXML
-    private static RadioButton female;
+    private  RadioButton female;
     @FXML
-    private static PasswordField password_field;
+    private  PasswordField password_field;
     @FXML
-    private static PasswordField confirm_password_field;
+    private PasswordField confirm_password_field;
     @FXML
-    private static TextField password_text;
+    private TextField password_text;
     @FXML
-    private static TextField confirm_password_text;
+    private TextField confirm_password_text;
     @FXML
-    private static CheckBox show_password;
+    private CheckBox show_password;
     @FXML
-    private static Button sign_up;
+    private Button sign_up;
+    private String gender_check = null;
     @FXML
     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+
 
     public void passwordVisibility() {
         if (show_password.isSelected()) {
@@ -67,42 +61,67 @@ public class CreateAccountController {
         confirm_password_field.setVisible(true);
 
     }
-    public static String getFirstName(){
+    public void setGenderGroup(){
+        if(gender_check == null)
+        {
+            if(male.isSelected()){
+                gender_check = "M";
+            }
+            if(female.isSelected()){
+                gender_check = "F";
+            }
+        }
+        if(male.isSelected() && gender_check.equals("F")){
+            male.setSelected(true);
+            gender_check = "M";
+            female.setSelected(false);
+        }
+        else if(female.isSelected() && gender_check.equals("M")){
+            female.setSelected(true);
+            gender_check = "F";
+            male.setSelected(false);
+        }
+
+    }
+
+    public  String getFirstName(){
         return first_name.getText();
     }
-    public static String getLastName(){
+    public String getLastName(){
         return last_name.getText();
     }
-    public static String getEmail(){
+    public String getEmail(){
         return email.getText();
     }
-    public static String getUsername(){
+    public String getUsername(){
         return username.getText();
     }
-    public static String getPhoneNumber(){
+    public String getPhoneNumber(){
         return phone_number.getText();
     }
-    public static LocalDate getBirthdate(){
+    public LocalDate getBirthdate(){
         return birth_date.getValue();
     }
-    public static String getPassword(){
+    public String getPassword(){
         return password_field.getText();
     }
-    public static String getConfirmPassword(){
+    public String getConfirmPassword(){
         return confirm_password_field.getText();
     }
+    public boolean getMale(){
+        return male.isSelected();
+    }
+    public boolean getFemale(){
+        return female.isSelected();
+    }
     public void signUp() {
-        if (Validator.checkUsernameValidation() && !(Validator.checkPhoneNumberValidation())
-                && Validator.checkPasswordVerification() && Validator.checkEmailValidation() && Validator.checkAdult()) {
-            alert.setTitle("Welcome back ya m3lm");
-            alert.setHeaderText("Welcome back ya m3lm");
-            alert.showAndWait();
+         if (/*Validator.checkNameValidation(getFirstName()) &&Validator.checkNameValidation(getLastName())  && (Validator.checkPhoneNumberValidation(getPhoneNumber()))
+                && Validator.checkPasswordVerification(getPassword(),getConfirmPassword()) && Validator.checkEmailValidation(getEmail()) && !(Validator.checkAdult(getBirthdate()))*/ Validator.genderCheckValidation(getMale(),getFemale())) {
+           System.out.println(username.getText());
         }
-        alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Wrong login credentials");
-        alert.setHeaderText("We couldn't find an account with that username.\n" +
-                "Please check your credentials and try again.");
-        alert.showAndWait();
+         else
+        System.out.println("damn u");
+
     }
     public void toLogin (ActionEvent event) throws IOException {
         WelcomeLogin.switchToScene(event,"WelcomeScene.fxml");
