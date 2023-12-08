@@ -46,22 +46,22 @@ public class User extends Person {
         return password.equals(inputPassword);
     }
 
-    public boolean checkUsernameMatch(String inputUsername) {
+    public boolean hasUsernameMatch(String inputUsername) {
         return username.equals(inputUsername);
     }
 
-    public boolean checkEmailMatch(String inputEmail) {
+    public boolean hasEmailMatch(String inputEmail) {
         return username.equals(inputEmail);
     }
 
-    public boolean checkPhoneNumberMatch(String inputPhoneNumber) {
+    public boolean hasPhoneNumberMatch(String inputPhoneNumber) {
         return username.equals(inputPhoneNumber);
     }
 
     public boolean hasMatchingIdentity(String identifier) {
-        return checkUsernameMatch(identifier) ||
-                checkEmailMatch(identifier) ||
-                checkPhoneNumberMatch(identifier);
+        return hasUsernameMatch(identifier) ||
+                hasEmailMatch(identifier) ||
+                hasPhoneNumberMatch(identifier);
     }
     public JSONObject toJsonObject() {
         Map<String, Object> userMapping = new HashMap<>();
