@@ -3,6 +3,7 @@ package validator;
 import dataManager.DataManager;
 import user.User;
 import welcomeLogin.CreateAccountController;
+
 import java.lang.String;
 import java.util.Arrays;
 import java.time.LocalDate;
@@ -50,41 +51,62 @@ public class Validator extends DataManager {
 
     }
 
-    public static boolean checkPhoneNumberValidation(String phone_number) {
-        for (int i = 0; i < phone_number.length(); i++) {
-            char x = phone_number.charAt(i);
-            if (x < '0' || x > '9') {
-                return false;
-            }
-        }
-        return true;
+    public static boolean checkPhoneNumberFormat(String phone_number) {
+        String regex_phone_number = "^(\\+\\d{1,3}[- ]?)?\\(?\\d{3}\\)?[- ]?\\d{3}[- ]?\\d{4}$";
+        return phone_number.matches(regex_phone_number);
     }
 
-    public static boolean checkEmailValidation(String Email) {
-        String regex_mail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+.$";
+    public static boolean checkEmailFormat(String Email) {
+        String regex_mail = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
         return Email.matches(regex_mail);
     }
 
     public static boolean checkPasswordVerification(String password, String confirmation_password) {
         return password.equals(confirmation_password);
     }
-    public static boolean genderCheckValidation(boolean male,boolean female){
+
+    public static boolean genderCheck(boolean male, boolean female) {
         return male || female;
     }
+
     /**
      * checks if the user exists
-     *
      * @param identity - the string you want to check
      * @return the user is used or not
      */
     public static boolean checkUser(String identity) {
         for (User user_check : users) {
             if (user_check.hasMatchingIdentity(identity))
-                return true;
+                return false;
         }
-        return false;
+        return true;
     }
+    public static int checkEmail(String email) {
+        if (!checkEmailFormat(email))
+            return 1;
 
+        for (User user : users) {
+            if (user.hasMatchingIdentity(email))
+                return 2;
+        }
+        return 0;
+    }
+    public static boolean checkUniqueUsername(String username) {
+        for (User user : users) {
+            if (user.hasMatchingIdentity(username))
+                return false;
+        }
+        return true;
+    }
+    public static int checkPhone(String phone_number) {
+        if(!checkPhoneNumberFormat(phone_number))
+            return 1;
+        for (User user : users) {
+            if (user.hasMatchingIdentity(phone_number))
+                return 2;
+        }
+        return 0;
+    }
     /**
      * checks if the person is adult or not
      *
