@@ -1,3 +1,0 @@
-users.json:
-- Keys: {username, email, password, first name, last name, phone number, birthdate, gender}
-- Values: All values are strings

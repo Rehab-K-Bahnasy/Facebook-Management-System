@@ -1,13 +1,15 @@
 package user;
 
 import org.json.simple.JSONObject;
+
+import java.io.Serializable;
 import java.util.Random;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class User extends Person {
+public class User extends Person implements Serializable {
     private String username;
     Random random = new Random();
 
@@ -63,32 +65,17 @@ public class User extends Person {
                 hasEmailMatch(identifier) ||
                 hasPhoneNumberMatch(identifier);
     }
-    public JSONObject toJsonObject() {
-        Map<String, Object> userMapping = new HashMap<>();
-        userMapping.put("username", username);
-        userMapping.put("email", email);
-        userMapping.put("password", password);
-        userMapping.put("first name", firstName);
-        userMapping.put("last name", lastName);
-        userMapping.put("phone number", phoneNumber);
-        userMapping.put("birthdate", birthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
-        userMapping.put("gender", gender);
-
-        return new JSONObject(userMapping);
-    }
 
     @Override
     public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", birthDate=" + birthDate +
-                ", gender='" + gender + '\'' +
-                '}';
+        return "first name = " + firstName +
+                ", last name = " + lastName +
+                ", username=" + username +
+                ", email=" + email +
+                ", password=" + password +
+                ", phone number=" + phoneNumber +
+                ", birthdate = " + birthDate +
+                ", gender=" + gender;
     }
 
     @Override
