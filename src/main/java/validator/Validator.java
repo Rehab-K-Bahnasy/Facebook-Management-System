@@ -1,17 +1,19 @@
 package validator;
 
+import dataManager.DataManager;
 import user.User;
 import welcomeLogin.CreateAccountController;
 import java.lang.String;
 import java.util.Arrays;
 import java.time.LocalDate;
 
-public class Validator {
+public class Validator extends DataManager {
     /**
-     * encrypt the string 
+     * encrypt the string
+     *
      * @param _string - the string you want to encrypt
-     * @param key - the special key for the user
-    */
+     * @param key     - the special key for the user
+     */
     private static void transformString(char[] _string, short key) {
         for (int i = 0; i < _string.length; i++) {
             _string[i] *= key;
@@ -20,10 +22,11 @@ public class Validator {
 
     /**
      * encrypt the string
+     *
      * @param _string - the string you want to encrypt
-     * @param key - the special key for the user
+     * @param key     - the special key for the user
      * @return encrypted string
-    */
+     */
     private static char[] returnTransformedString(char[] _string, short key) {
         for (int i = 0; i < _string.length; i++) {
             _string[i] *= key;
@@ -32,79 +35,85 @@ public class Validator {
     }
 
     /**
-    * @param actual_password - the real password
-    * @param password - the string you want to check
-    * @return the password is right or not
-    */
+     * @param actual_password - the real password
+     * @param password        - the string you want to check
+     * @return the password is right or not
+     */
     public static boolean checkPassword(char[] actual_password, char[] password, short key) {
         transformString(password, key);
         return Arrays.equals(actual_password, password);
     }
-    public static boolean checkUsernameValidation(){
-        String username = CreateAccountController.getUsername();
-        for (int i = 0; i < username.length();i++) {
-            char x = username.charAt(i);
-            if( x >= '0' && x <= '9' )
-            {
-                return false;
-            }
-        }
-        return true;
+
+    public static boolean checkNameValidation(String name) {
+        String nameRegex = "^[a-zA-Z\\s\\-']+$";
+        return name.matches(nameRegex);
+
     }
-    public static boolean checkPhoneNumberValidation(){
-        String phone_number = CreateAccountController.getPhoneNumber();
-        for (int i = 0; i < phone_number.length();i++) {
+
+    public static boolean checkPhoneNumberValidation(String phone_number) {
+        for (int i = 0; i < phone_number.length(); i++) {
             char x = phone_number.charAt(i);
-            if( x < '0' || x > '9' ) {
+            if (x < '0' || x > '9') {
                 return false;
             }
         }
         return true;
     }
 
-    public static boolean checkEmailValidation(){
-        String Email = CreateAccountController.getEmail();
-        for (int i = 0; i < Email.length();i++) {
-            char x = Email.charAt(i);
-            if( x == '@' ) {
-                return true;
-            }
-        }
-        return false;
+    public static boolean checkEmailValidation(String Email) {
+        String regex_mail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+.$";
+        return Email.matches(regex_mail);
     }
 
-    public static boolean checkPasswordVerification(){
-        return CreateAccountController.getPassword().equals(CreateAccountController.getConfirmPassword());
+    public static boolean checkPasswordVerification(String password, String confirmation_password) {
+        return password.equals(confirmation_password);
+    }
+    public static boolean genderCheckValidation(boolean male,boolean female){
+        return male || female;
     }
     /**
      * checks if the user exists
-     * @param user - the user you want to check
-     * @param users - the entire Users database
+     *
+     * @param identity - the string you want to check
      * @return the user is used or not
      */
-    public static boolean checkUser(String identitiy, User[] users) {
+    public static boolean checkUser(String identity) {
         for (User user_check : users) {
-            if (user_check.hasMatchingIdentity(identitiy)) return true;
+            if (user_check.hasMatchingIdentity(identity))
+                return true;
         }
         return false;
     }
-    
+
     /**
-     * checks if the username exists
-     * @param username - the username you want to use
-     * @param users - the entire Users database
-     * @return the username is used or not
+     * checks if the person is adult or not
+     *
+     * @param date - the birth-date of the person
+     * @return the person is adult or not
      */
-    public static boolean checkUsername(String username, User[] users) {
-        boolean found = true;
-        for (User user : users) {
-            if (!user.checkUsernameMatch(username)){
-                found = false;
-                break;
-            }
+    public static boolean checkAdult(LocalDate date) {
+        if (!date.isAfter(LocalDate.now().minusYears(18))) {
+            return false;
         }
-        return found;
+        return true;
     }
+}
+//    /**
+//     * checks if the username exists
+//     * @param username - the username you want to use
+//     * @param users - the entire Users database
+//     * @return the username is used or not
+//     */
+//    public static boolean checkUsername(String username, User[] users) {
+//        boolean found = true;
+//        for (User user : users) {
+//            if (!user.checkUsernameMatch(username)){
+//                found = false;
+//                break;
+//            }
+//        }
+//        return found;
+//    }
 
 //    /**
 //     * checks if the phone exists
@@ -123,15 +132,3 @@ public class Validator {
 //        return found;
 //    }
 
-    /**
-     * checks if the person is adult or not
-     * @param birth_date - the birth-date of the person
-     * @return the person is adult or not
-     */
-    public static boolean checkAdult() {
-        if (!CreateAccountController.getBirthdate().isAfter(LocalDate.now().minusYears(18))) {
-            return false;
-        }
-        return true;
-    }
-}
