@@ -1,16 +1,16 @@
 package user;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
 
-public abstract class Person {
+public abstract class Person implements Serializable {
     protected String firstName;
     protected String lastName;
     protected String phoneNumber;
     protected LocalDate birthDate;
     protected String gender;
-
 
     Person(Map personData) {
         setFirstName((String) personData.get("first name"));

@@ -2,11 +2,12 @@ package dataManager;
 
 import user.User;
 
-import java.util.ArrayList;
 
-public class DataManager {
+import java.util.ArrayList;
+import java.util.Map;
+
+public abstract class DataManager {
     protected static ArrayList<User> users = new ArrayList<>();
-    protected final static String USERS_FILE_PATH = "src\\main\\resources\\dataManager\\users.json";
 
     public static User retrieveUser(String identifier) {
         for (var user : users) {
@@ -14,5 +15,9 @@ public class DataManager {
                 return user;
         }
         return null;
+    }
+
+    public static void addUser(Map userData) {
+        users.add(new User(userData));
     }
 }

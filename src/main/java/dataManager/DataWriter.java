@@ -1,35 +1,21 @@
 package dataManager;
 
-import org.json.simple.JSONArray;
 
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class DataWriter extends DataManager {
-    private static void writeJSONArrayToFile(JSONArray jsonArray, FileWriter writer) throws IOException {
-        writer.write("[\n");
-
-        for (var user : jsonArray) {
-            writer.write("\t");
-            writer.write(user.toString());
-            if (user != jsonArray.getLast())
-                writer.write(" ,");
-            writer.write("\n");
-        }
-        writer.write("]");
-    }
+    private final static String USERS_FILE_PATH = "src\\main\\resources\\dataManager\\users.ser";
 
     public static void writeUsersData() {
-        JSONArray jsonUsers = new JSONArray();
-        for (var user : users) {
-            jsonUsers.add(user.toJsonObject());
+        try (FileOutputStream file = new FileOutputStream(USERS_FILE_PATH)) {
+            ObjectOutputStream out = new ObjectOutputStream(file);
+            out.writeObject(users);
+            out.close();
         }
-
-        try (FileWriter writer = new FileWriter(USERS_FILE_PATH)) {
-            writeJSONArrayToFile(jsonUsers, writer);
-        } catch (IOException exp) {
-            System.out.println(exp);
+        catch (IOException ex) {
+            System.out.println("IOException is caught");
         }
     }
 }
