@@ -3,6 +3,6 @@ module com.example.demo {
     requires javafx.fxml;
 
 
-    opens Posts to javafx.fxml;
-    exports Posts;
+    opens Post to javafx.fxml;
+    exports Post;
 }

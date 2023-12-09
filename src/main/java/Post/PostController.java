@@ -1,9 +1,7 @@
-package Posts;
+package Post;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -12,7 +10,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class PostController {
     @FXML
@@ -100,15 +97,8 @@ public class PostController {
 //       stage.setScene(feed_scene);
 //       stage.show();
 //    }
-   @FXML
-    public void switchtocommentscene(ActionEvent event) throws IOException {
-        HelloApplication.switchToScene(event,"CommentScene.fxml");
-//       FXMLLoader loader =  new FXMLLoader(Comment.class.getResource("CommentScene.fxml"));
-//       root = loader.load();
-//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//         comment_scene= new Scene(root);
-//        stage.setScene(comment_scene);
-//        stage.show();
+    public void switch_to_comment_scene(ActionEvent event) throws IOException {
+        Starter.switchToScene(event,"CommentScene.fxml");
    }
 
 }
