@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="new post-comment design&#10;sperating functionality from GUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Post/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/PostController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,6 +191,7 @@
       <workItem from="1701874090523" duration="12674000" />
       <workItem from="1701909602040" duration="3758000" />
       <workItem from="1701914918466" duration="25000" />
+      <workItem from="1702137005364" duration="100000" />
     </task>
     <task id="LOCAL-00001" summary="zZz">
       <option name="closed" value="true" />

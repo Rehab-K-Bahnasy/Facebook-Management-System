@@ -1,87 +1,136 @@
-package Post;
+package com.example.demo;
 
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.control.Label;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.Node;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Objects;
 
+import javafx.scene.control.Button;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 public class Post {
-    private String username;
+
+    @FXML
+    Label created;
+    @FXML
+    Label priv;
+    @FXML
+    Label caption;
+    Stage stage;
+    Parent root;
+    Scene feed_scene;
+    Scene comment_scene;
+
+    private String author;
+
+    private String content;
     private int post_ID;
-    private LocalDate post_created_on;
-    private String post_caption;
-    private int reacts_counter;
+    private LocalDate post_created_on = LocalDate.now();
+    private String  post_caption;
+    private int post_reacts;
 
+    public Post (String author,String content){
+        this.author=author;
+        this.content=content;
+    }
     //private User [] users_tagged_in_post = new User[10000];
-    private ArrayList<Comment> comments_on_post = new ArrayList<>();
-    private String privacy;
+    private ArrayList<Comment> comments_on_post = new ArrayList<Comment>();
+    private String post_privacy;
 
-    Post(int post_ID, String post_caption, LocalDate post_created_on, String post_privacy) {
-        setID(post_ID);
-        setCaption(post_caption);
-        setCreatedOn(post_created_on);
-        setPrivacy(post_privacy);
+    public void setPost_reacts(int post_reacts) {
+        this.post_reacts = post_reacts;
     }
 
-    public String getUsername() {
-        return username;
+    public void setComments_on_post(ArrayList<Comment> comments_on_post) {
+        this.comments_on_post = comments_on_post;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public long getID() {
-        return post_ID;
-    }
-
-    public void setID(int post_ID) {
-        this.post_ID = post_ID;
-    }
-
-    public String getCreatedOn() {
-        return post_created_on.toString();
-    }
-
-    public void setCreatedOn(LocalDate post_created_on) {
-        this.post_created_on = post_created_on;
-    }
-
-    public String getCaption() {
-        return post_caption;
-    }
-
-    public void setCaption(String post_caption) {
+    public void setPost_caption(String post_caption) {
         this.post_caption = post_caption;
     }
 
-    public int getReacts() {
-        return reacts_counter;
+    public void setPost_ID(int post_ID) {
+        this.post_ID = post_ID;
     }
 
-    public void setComments(ArrayList<Comment> comments_on_post) {
-        this.comments_on_post = comments_on_post;
+    public void setPost_privacy(String post_privacy) {
+        this.post_privacy = post_privacy;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public int getPost_reacts() {
+        return post_reacts;
     }
 
     public ArrayList<Comment> getComments_on_post() {
         return comments_on_post;
     }
 
-
-    public String getPrivacy() {
-        return privacy;
+    public String getPost_caption() {
+        return post_caption;
     }
 
-    public void setPrivacy(String post_privacy) {
-        this.privacy = post_privacy;
+    public long getPost_ID() {
+        return post_ID;
     }
 
-    public int getCommentsCounter() {
-        return comments_on_post.size();
+    public String getPost_privacy() {
+        return post_privacy;
     }
 
-    public void modifyReacts(boolean check_if_liked) {
-        if (check_if_liked)
-            reacts_counter++;
-        else
-            reacts_counter--;
+    public LocalDate getPost_created_on() {
+        return post_created_on;
+    }
+
+    public void share() {
+        System.out.println("Post shared: \"" + content + "\" by " + author);
+    }
+    public void editPost(String newContent) {
+        System.out.println("Post edited by " + author + ":");
+        System.out.println("Old content: \"" + content + "\"");
+        System.out.println("New content: \"" + newContent + "\"");
+        content = newContent;
+    }
+    public void deletePost() {
+        System.out.println("Post deleted by " + author + ": \"" + content + "\"");
+        content = "";
+    }
+
+    public void displayprivacy(Post post)
+    {
+        priv.setText(post.post_privacy);
+    }
+    public void displaycaption(Post post)
+    {
+
+        caption.setText(post.post_caption);
+    }
+    /*public void switchtofeedscene(ActionEvent event) throws IOException {
+       Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("feed")));
+       stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+       feed_scene=new Scene(root);
+       stage.setScene(feed_scene);
+       stage.show();
+    }*/
+    public void switchtocommentscene(ActionEvent event) throws IOException {
+        Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("feed")));
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        comment_scene=new Scene(root);
+        stage.setScene(feed_scene);
+        stage.show();
     }
 }
