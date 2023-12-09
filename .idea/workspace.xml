@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="FINISHED CREATE ACCOUNT AND LOGIN. &#10;&#10;One bug found: no uniqueness check with email and phone number.">
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataManager/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataManager/DataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/CreateAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/CreateAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/welcomeLogin/WelcomeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/welcomeLogin/WelcomeScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,29 +24,37 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="abdllrhmanzedan &lt;abdom.zedan@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="createAccount" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Rehab-K-Bahnasy&quot;
+    &quot;assignee&quot;: &quot;abdllrhmanzedan&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="792e09ca-1600-40c2-b1f0-1cbfe5c09889" />
-        <option name="url" value="https://github.com/Rehab-K-Bahnasy/Facebook-Management-System.git" />
+        <option name="accountId" value="75a9f0fb-93f0-4f5f-8e76-d035de507d31" />
+        <option name="url" value="https://github.com/Rehab-K-Bahnasy/Facebook-Management-System" />
       </UrlAndAccount>
     </option>
   </component>
@@ -49,46 +66,85 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/senond year/MM/src/main/resources/welcomeLogin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Facebook-Management-System/src/JSON.jar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4643678&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\senond year\MM\src\main\resources\welcomeLogin" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\senond year\MM\src\main\java\validator" />
-      <recent name="F:\senond year\MM\src\main\java\welcomeLogin" />
-      <recent name="F:\senond year\MM\src\main\resources\createAccount" />
-      <recent name="F:\senond year\MM\src\main\resources\welcomeLogin" />
+      <recent name="D:\Facebook-Management-System\src\main\resources\welcomeLogin" />
+      <recent name="D:\Facebook-Management-System\src" />
+      <recent name="D:\Facebook-Management-System\src\main\resources\createAccount" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="welcomeLogin" />
-      <recent name="createAccount" />
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.WelcomeLogin">
     <configuration name="CreateAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="creatAccount.CreateAccount" />
+      <option name="MAIN_CLASS_NAME" value="welcomeLogin.CreateAccount" />
       <module name="theSocialNetwork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="creatAccount.*" />
+          <option name="PATTERN" value="welcomeLogin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dataManager.DataManager" />
+      <module name="theSocialNetwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dataManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dataManager.DataReader" />
+      <module name="theSocialNetwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dataManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dataManager.DataWriter" />
+      <module name="theSocialNetwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dataManager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,7 +168,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.WelcomeLogin" />
+        <item itemvalue="Application.DataManager" />
         <item itemvalue="Application.CreateAccount" />
+        <item itemvalue="Application.DataWriter" />
+        <item itemvalue="Application.DataReader" />
       </list>
     </recent_temporary>
   </component>
@@ -125,71 +184,86 @@
       <option name="presentableId" value="Default" />
       <updated>1701195701166</updated>
       <workItem from="1701195702237" duration="3000" />
-      <workItem from="1702008003858" duration="26414000" />
+      <workItem from="1701687088417" duration="6147000" />
+      <workItem from="1701693977460" duration="10772000" />
+      <workItem from="1701723583593" duration="5000" />
+      <workItem from="1701730513878" duration="553000" />
+      <workItem from="1701731159461" duration="2212000" />
+      <workItem from="1701733463123" duration="11228000" />
+      <workItem from="1701777242918" duration="288000" />
+      <workItem from="1701807839871" duration="2786000" />
+      <workItem from="1701811581571" duration="1191000" />
+      <workItem from="1701828743656" duration="1752000" />
+      <workItem from="1702067119439" duration="34000" />
+      <workItem from="1702069903857" duration="462000" />
+      <workItem from="1702070467487" duration="5059000" />
+      <workItem from="1702086405456" duration="821000" />
+      <workItem from="1702131529080" duration="688000" />
+      <workItem from="1702132237591" duration="3751000" />
     </task>
-    <task id="LOCAL-00001" summary="Added show password design.">
+    <task id="LOCAL-00001" summary="zZz">
       <option name="closed" value="true" />
-      <created>1701872894014</created>
+      <created>1701651047043</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1701872894014</updated>
+      <updated>1701651047043</updated>
     </task>
-    <task id="LOCAL-00002" summary="Fixed GUI packages">
+    <task id="LOCAL-00002" summary="Finalized welcome/login design&#10;Added: login validation, show password box and create account">
       <option name="closed" value="true" />
-      <created>1701877460840</created>
+      <created>1701691713686</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1701877460840</updated>
+      <updated>1701691713687</updated>
     </task>
-    <task id="LOCAL-00003" summary="Finished GUI Completely design">
+    <task id="LOCAL-00003" summary="-setBirthData: takes String instead of localDate&#10;-Fixed: create account button in welcomeLogin">
       <option name="closed" value="true" />
-      <created>1701890236370</created>
+      <created>1701693217780</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1701890236370</updated>
+      <updated>1701693217780</updated>
     </task>
-    <task id="LOCAL-00004" summary="Finished Validator Backend">
+    <task id="LOCAL-00004" summary="-Added: create account package and scene(not finished)">
       <option name="closed" value="true" />
-      <created>1701918037839</created>
+      <created>1701698499683</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1701918037839</updated>
+      <updated>1701698499683</updated>
     </task>
-    <task id="LOCAL-00005" summary="Finished linking the validation to the GUI">
+    <task id="LOCAL-00005" summary="Added json library for file manager">
       <option name="closed" value="true" />
-      <created>1702018573702</created>
+      <created>1701730712817</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1702018573702</updated>
+      <updated>1701730712817</updated>
     </task>
-    <task id="LOCAL-00006" summary="Fixed date validation">
+    <task id="LOCAL-00006" summary="updates and fixes to User and Person. added: DataWriter,DataReader and users.json&#10;Reading and Writing users data: DONE">
       <option name="closed" value="true" />
-      <created>1702052029885</created>
+      <created>1701744517769</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1702052029885</updated>
+      <updated>1701744517769</updated>
     </task>
-    <task id="LOCAL-00007" summary="Fixed the nulls in the validation">
+    <task id="LOCAL-00007" summary="Adding Field managers.&#10;Sperating check mail,username,phone to manage their fields speratly">
       <option name="closed" value="true" />
-      <created>1702081703539</created>
+      <created>1702028785984</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1702081703539</updated>
+      <updated>1702028785984</updated>
     </task>
-    <task id="LOCAL-00008" summary="FINISHED CREATE ACCOUNT AND LOGIN. &#10;&#10;One bug found: no uniqueness check with email and phone number.">
+    <task id="LOCAL-00008" summary="Change data manager system to serialization&#10;Implementing Serializable interface in User.java &amp; Person.java">
       <option name="closed" value="true" />
-      <created>1702086194304</created>
+      <created>1702075098358</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1702086194304</updated>
+      <updated>1702075098358</updated>
     </task>
     <option name="localTasksCounter" value="9" />
     <servers />
@@ -198,21 +272,6 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/Validator" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -224,14 +283,14 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added show password design." />
-    <MESSAGE value="Fixed GUI packages" />
-    <MESSAGE value="Finished GUI Completely design" />
-    <MESSAGE value="Finished Validator Backend" />
-    <MESSAGE value="Finished linking the validation to the GUI" />
-    <MESSAGE value="Fixed date validation" />
-    <MESSAGE value="Fixed the nulls in the validation" />
-    <MESSAGE value="FINISHED CREATE ACCOUNT AND LOGIN. &#10;&#10;One bug found: no uniqueness check with email and phone number." />
-    <option name="LAST_COMMIT_MESSAGE" value="FINISHED CREATE ACCOUNT AND LOGIN. &#10;&#10;One bug found: no uniqueness check with email and phone number." />
+    <MESSAGE value="zZz" />
+    <MESSAGE value="Finalized welcome/login design&#10;Added: login validation, show password box and create account" />
+    <MESSAGE value="-setBirthData: takes String instead of localDate&#10;-Fixed: create account button in welcomeLogin" />
+    <MESSAGE value="-Added: create account package and scene(not finished)" />
+    <MESSAGE value="Added json library for file manager" />
+    <MESSAGE value="updates and fixes to User and Person. added: DataWriter,DataReader and users.json&#10;Reading and Writing users data: DONE" />
+    <MESSAGE value="Adding Field managers.&#10;Sperating check mail,username,phone to manage their fields speratly" />
+    <MESSAGE value="Change data manager system to serialization&#10;Implementing Serializable interface in User.java &amp; Person.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change data manager system to serialization&#10;Implementing Serializable interface in User.java &amp; Person.java" />
   </component>
 </project>

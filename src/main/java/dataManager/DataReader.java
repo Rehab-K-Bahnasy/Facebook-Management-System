@@ -18,7 +18,7 @@ public class DataReader extends DataManager {
             in.close();
             file.close();
         }
-        catch (IOException ex){
+        catch (IOException ex) {
             System.out.println("IOException is caught");
         }
         catch (ClassNotFoundException ex) {

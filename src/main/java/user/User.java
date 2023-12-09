@@ -43,37 +43,40 @@ public class User extends Person implements Serializable {
         this.password = password;
     }
 
-    public boolean checkPasswordMatch(String inputPassword) {
-        return password.equals(inputPassword);
+    public boolean hasPasswordMatch(String input_password) {
+        return password.equals(input_password);
     }
 
-    public boolean hasUsernameMatch(String inputUsername) {
-        return username.equals(inputUsername);
+    public boolean hasUsernameMatch(String input_username) {
+        return username.equals(input_username);
     }
 
-    public boolean hasEmailMatch(String inputEmail) {
-        return username.equals(inputEmail);
+    public boolean hasEmailMatch(String input_email) {
+        return email.equals(input_email);
     }
 
-    public boolean hasPhoneNumberMatch(String inputPhoneNumber) {
-        return username.equals(inputPhoneNumber);
+    public boolean hasPhoneNumberMatch(String input_phone_number) {
+        return phone_number.equals(input_phone_number);
     }
 
-    public boolean hasMatchingIdentity(String identifier) {
-        return hasUsernameMatch(identifier) ||
-                hasEmailMatch(identifier) ||
-                hasPhoneNumberMatch(identifier);
+    public boolean hasMatchingIdentity(String input_identifier) {
+        return hasUsernameMatch(input_identifier) ||
+                hasEmailMatch(input_identifier) ||
+                hasPhoneNumberMatch(input_identifier);
     }
 
+    public boolean hasMatchCredentials(String input_identifier, String input_password) {
+        return hasMatchingIdentity(input_identifier) && hasPasswordMatch(input_password);
+    }
     @Override
     public String toString() {
-        return "first name = " + firstName +
-                ", last name = " + lastName +
+        return "first name = " + first_name +
+                ", last name = " + last_name +
                 ", username=" + username +
                 ", email=" + email +
                 ", password=" + password +
-                ", phone number=" + phoneNumber +
-                ", birthdate = " + birthDate +
+                ", phone number=" + phone_number +
+                ", birthdate = " + birthdate +
                 ", gender=" + gender;
     }
 

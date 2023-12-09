@@ -2,48 +2,45 @@ package welcomeLogin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import validator.Validator;
 
 import java.io.IOException;
 
 public class WelcomeLoginController {
     @FXML
-    private TextField emailField;
+    private TextField identity_field;
     @FXML
-    private PasswordField passwordField;
+    private PasswordField password_field;
     @FXML
-    private TextField passwordText;
+    private TextField password_text;
     @FXML
-    private CheckBox showPassword;
+    private CheckBox show_password;
 
     public void passwordVisibility() {
-        if (showPassword.isSelected()) {
-            passwordText.setText(passwordField.getText());
-            passwordText.setVisible(true);
-            passwordField.setVisible(false);
+        if (show_password.isSelected()) {
+            password_text.setText(password_field.getText());
+            password_text.setVisible(true);
+            password_field.setVisible(false);
             return;
         }
-        passwordField.setText(passwordText.getText());
-        passwordField.setVisible(true);
-        passwordText.setVisible(false);
+        password_field.setText(password_text.getText());
+        password_field.setVisible(true);
+        password_text.setVisible(false);
     }
 
     public void login() {
-        String inputEmail = emailField.getText();
-        String inputPassword = passwordField.getText();
-        if (showPassword.isSelected())
-            inputPassword = passwordText.getText();
+        String input_identity = identity_field.getText();
+        String input_password = password_field.getText();
+        if (show_password.isSelected()) {
+            input_password = password_text.getText();
+        }
+
         Alert alert;
-        if(!Validator.checkLoginValidation(inputPassword,inputPassword))
-        {
+        if (!Validator.checkLoginValidation(input_identity, input_password)) {
             alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Wrong login credentials");
             alert.setHeaderText("We couldn't find an account with that username.\n" +
@@ -59,6 +56,6 @@ public class WelcomeLoginController {
     }
 
     public void createNewAccount(ActionEvent event) throws IOException {
-        WelcomeLogin.switchToScene(event,"CreateAccountScene.fxml");
+        WelcomeLogin.switchToScene(event, "CreateAccountScene.fxml");
     }
 }

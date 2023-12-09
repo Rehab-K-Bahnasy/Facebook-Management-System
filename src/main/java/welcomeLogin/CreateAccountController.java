@@ -181,8 +181,13 @@ public class CreateAccountController {
     }
 
     private boolean managePasswordField() {
-        //check password format
-        if (!Validator.checkPasswordVerification(password_field.getText(), confirm_password_field.getText())){
+        String password = password_field.getText();
+        String confirm_password = confirm_password_field.getText();
+        if(show_password.isSelected()) {
+            password = password_text.getText();
+            confirm_password = confirm_password_text.getText();
+        }
+        if (!Validator.checkPasswordVerification(password,confirm_password)){
             error_message += "Password doesn't match\n";
             password_field.setStyle("-fx-border-color: #9a0e0e");
             confirm_password_field.setStyle("-fx-border-color: #9a0e0e");
@@ -202,7 +207,6 @@ public class CreateAccountController {
         birth_date.setStyle(field_style);
         return true;
     }
-
 
     public String setGenderGroup() {
         if (gender_check == null) {
