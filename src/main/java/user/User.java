@@ -1,6 +1,5 @@
 package user;
 
-import org.json.simple.JSONObject;
 
 import java.io.Serializable;
 import java.util.Random;

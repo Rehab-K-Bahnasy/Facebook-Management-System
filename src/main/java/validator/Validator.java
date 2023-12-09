@@ -62,7 +62,7 @@ public class Validator extends DataManager {
     }
 
     public static boolean checkPasswordVerification(String password, String confirmation_password) {
-        return password.equals(confirmation_password);
+        return !(password.isEmpty()) && !(confirmation_password.isEmpty()) && password.equals(confirmation_password);
     }
 
     public static boolean genderCheck(boolean male, boolean female) {
@@ -96,7 +96,7 @@ public class Validator extends DataManager {
             if (user.hasMatchingIdentity(username))
                 return false;
         }
-        return true;
+        return !(username.isEmpty());
     }
     public static int checkPhone(String phone_number) {
         if(!checkPhoneNumberFormat(phone_number))
