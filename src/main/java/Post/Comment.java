@@ -1,15 +1,16 @@
 package Post;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Comment {
     private String username;
     private int comment_ID;
     private int post_ID;
-    private String[] comment_content = new String[10000];
+    private String comment_content;
     //private User [] comment_react = new User[10000];
     private LocalDate comment_created_on;
-    private Comment[] comment_reply = new Comment[10000];
+    private ArrayList<Comment> comment_reply = new ArrayList<>();
 
     public Comment(String username,int comment_ID,int post_ID) {
         setUsername(username);
@@ -39,7 +40,7 @@ public class Comment {
     }
 
 
-    public void setComment_content(String[] comment_content) {
+    public void setComment_content(String comment_content) {
         this.comment_content = comment_content;
     }
 
@@ -47,12 +48,12 @@ public class Comment {
         this.comment_created_on = comment_created_on;
     }
 
-    public void setComment_reply(Comment[] comment_reply) {
+    public void setComment_reply(ArrayList<Comment> comment_reply) {
         this.comment_reply = comment_reply;
     }
 
 
-    public Comment[] getComment_reply() {
+    public ArrayList<Comment> getComment_reply() {
         return comment_reply;
     }
 
@@ -65,7 +66,7 @@ public class Comment {
     }
 
 
-    public String[] getComment_content() {
+    public String getComment_content() {
         return comment_content;
     }
 

@@ -28,9 +28,6 @@ public class PostController {
     Label likesCounterLabel;
     @FXML
     Label commentsCounterLabel;
-    Parent root;
-    Stage stage;
-    Scene comment_scene;
     boolean liked = false;
     public static Post post= new Post(0,"hello world",LocalDate.now(),"public");
 
@@ -97,7 +94,7 @@ public class PostController {
 //       stage.setScene(feed_scene);
 //       stage.show();
 //    }
-    public void switch_to_comment_scene(ActionEvent event) throws IOException {
+   public void switch_to_comment_scene(ActionEvent event) throws IOException {
         Starter.switchToScene(event,"CommentScene.fxml");
    }
 

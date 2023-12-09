@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" afterDir="false" />
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Posts/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Posts/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Posts/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Posts/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Posts/CommentScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Posts/PostScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/PostScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Posts/fullPost.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/fullPost.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Posts/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Post/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,38 +18,39 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Class" />
+        <option value="CSS File" />
         <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="abdllrhmanzedan &lt;abdom.zedan@gmail.com&gt;" />
-      </list>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;abdllrhmanzedan&quot;
+    &quot;assignee&quot;: &quot;MoBakry04&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="75a9f0fb-93f0-4f5f-8e76-d035de507d31" />
-        <option name="url" value="https://github.com/Rehab-K-Bahnasy/Facebook-Management-System" />
+        <option name="accountId" value="0be8b186-5d38-443b-8970-e23cbd91e2ec" />
+        <option name="url" value="https://github.com/Rehab-K-Bahnasy/Facebook-Management-System.git" />
       </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectColorInfo">{
@@ -68,114 +61,40 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="sortByType" value="true" />
-    <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "post-comment",
-    "last_opened_file_path": "D:/Facebook-Management-System/src/JSON.jar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4643678",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;post-comment&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/openjfx-21.0.1_windows-x64_bin-sdk&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Facebook-Management-System\src\main\resources\welcomeLogin" />
-      <recent name="D:\Facebook-Management-System\src" />
-      <recent name="D:\Facebook-Management-System\src\main\resources\createAccount" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="welcomeLogin" />
-      <recent name="" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Starter">
-    <configuration name="CreateAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="welcomeLogin.CreateAccount" />
-      <module name="theSocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="welcomeLogin.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataManager.DataManager" />
-      <module name="theSocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dataManager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataManager.DataWriter" />
-      <module name="theSocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dataManager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Post.Starter" />
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Post.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WelcomeLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="welcomeLogin.WelcomeLogin" />
-      <module name="theSocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="welcomeLogin.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Starter" />
-        <item itemvalue="Application.WelcomeLogin" />
-        <item itemvalue="Application.DataManager" />
-        <item itemvalue="Application.CreateAccount" />
-        <item itemvalue="Application.DataWriter" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -186,98 +105,65 @@
       <option name="presentableId" value="Default" />
       <updated>1701195701166</updated>
       <workItem from="1701195702237" duration="3000" />
-      <workItem from="1701687088417" duration="6147000" />
-      <workItem from="1701693977460" duration="10772000" />
-      <workItem from="1701723583593" duration="5000" />
-      <workItem from="1701730513878" duration="553000" />
-      <workItem from="1701731159461" duration="2212000" />
-      <workItem from="1701733463123" duration="11228000" />
-      <workItem from="1701777242918" duration="288000" />
-      <workItem from="1701807839871" duration="2786000" />
-      <workItem from="1701811581571" duration="1191000" />
-      <workItem from="1701828743656" duration="1752000" />
-      <workItem from="1702067119439" duration="34000" />
-      <workItem from="1702069903857" duration="462000" />
-      <workItem from="1702070467487" duration="5059000" />
-      <workItem from="1702086405456" duration="821000" />
-      <workItem from="1702131529080" duration="688000" />
-      <workItem from="1702132237591" duration="4518000" />
-      <workItem from="1702150354257" duration="5000" />
-      <workItem from="1702154617356" duration="828000" />
+      <workItem from="1701290227981" duration="913000" />
+      <workItem from="1701363622791" duration="4588000" />
+      <workItem from="1701376399850" duration="5531000" />
+      <workItem from="1701429917348" duration="8308000" />
+      <workItem from="1701770691425" duration="7992000" />
+      <workItem from="1701807113265" duration="733000" />
+      <workItem from="1701870872896" duration="3447000" />
+      <workItem from="1702151199070" duration="1521000" />
+      <workItem from="1702152752270" duration="7727000" />
     </task>
-    <task id="LOCAL-00001" summary="zZz">
+    <task id="LOCAL-00001" summary="Added the comment class.">
       <option name="closed" value="true" />
-      <created>1701651047043</created>
+      <created>1701291095148</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1701651047043</updated>
+      <updated>1701291095148</updated>
     </task>
-    <task id="LOCAL-00002" summary="Finalized welcome/login design&#10;Added: login validation, show password box and create account">
+    <task id="LOCAL-00002" summary="Created The Post Class And Added The Setters And Getters For Both Post And Comment Classes">
       <option name="closed" value="true" />
-      <created>1701691713686</created>
+      <created>1701393978667</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1701691713687</updated>
+      <updated>1701393978667</updated>
     </task>
-    <task id="LOCAL-00003" summary="-setBirthData: takes String instead of localDate&#10;-Fixed: create account button in welcomeLogin">
+    <task id="LOCAL-00003" summary="Comment Button Sends You To Comment Scene">
       <option name="closed" value="true" />
-      <created>1701693217780</created>
+      <created>1701692994208</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1701693217780</updated>
+      <updated>1701692994208</updated>
     </task>
-    <task id="LOCAL-00004" summary="-Added: create account package and scene(not finished)">
+    <task id="LOCAL-00004" summary="Added Return Button In Comment And Added Like Counter And Played With The Buttons Design">
       <option name="closed" value="true" />
-      <created>1701698499683</created>
+      <created>1701777348181</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1701698499683</updated>
+      <updated>1701777348181</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added json library for file manager">
+    <task id="LOCAL-00005" summary="Seperating Post From GUI(a lot of errors)">
       <option name="closed" value="true" />
-      <created>1701730712817</created>
+      <created>1701874151288</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1701730712817</updated>
+      <updated>1701874151289</updated>
     </task>
-    <task id="LOCAL-00006" summary="updates and fixes to User and Person. added: DataWriter,DataReader and users.json&#10;Reading and Writing users data: DONE">
+    <task id="LOCAL-00006" summary="Testing">
       <option name="closed" value="true" />
-      <created>1701744517769</created>
+      <created>1702154629340</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1701744517769</updated>
+      <updated>1702154629340</updated>
     </task>
-    <task id="LOCAL-00007" summary="Adding Field managers.&#10;Sperating check mail,username,phone to manage their fields speratly">
-      <option name="closed" value="true" />
-      <created>1702028785984</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1702028785984</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Change data manager system to serialization&#10;Implementing Serializable interface in User.java &amp; Person.java">
-      <option name="closed" value="true" />
-      <created>1702075098358</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1702075098358</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Adjust attributes to follow the conventions.&#10;Fixed non-unique email/phone number (bug: closed).&#10;Fixed password doesn't match (bug: closed).">
-      <option name="closed" value="true" />
-      <created>1702136568228</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1702136568229</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,22 +174,45 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="post-comment" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="zZz" />
-    <MESSAGE value="Finalized welcome/login design&#10;Added: login validation, show password box and create account" />
-    <MESSAGE value="-setBirthData: takes String instead of localDate&#10;-Fixed: create account button in welcomeLogin" />
-    <MESSAGE value="-Added: create account package and scene(not finished)" />
-    <MESSAGE value="Added json library for file manager" />
-    <MESSAGE value="updates and fixes to User and Person. added: DataWriter,DataReader and users.json&#10;Reading and Writing users data: DONE" />
-    <MESSAGE value="Adding Field managers.&#10;Sperating check mail,username,phone to manage their fields speratly" />
-    <MESSAGE value="Change data manager system to serialization&#10;Implementing Serializable interface in User.java &amp; Person.java" />
-    <MESSAGE value="Adjust attributes to follow the conventions.&#10;Fixed non-unique email/phone number (bug: closed).&#10;Fixed password doesn't match (bug: closed)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjust attributes to follow the conventions.&#10;Fixed non-unique email/phone number (bug: closed).&#10;Fixed password doesn't match (bug: closed)." />
+    <MESSAGE value="Added the comment class." />
+    <MESSAGE value="Created The Post Class And Added The Setters And Getters For Both Post And Comment Classes" />
+    <MESSAGE value="Comment Button Sends You To Comment Scene" />
+    <MESSAGE value="Added Return Button In Comment And Added Like Counter And Played With The Buttons Design" />
+    <MESSAGE value="Seperating Post From GUI(a lot of errors)" />
+    <MESSAGE value="Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
