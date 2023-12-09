@@ -1,5 +1,7 @@
 package welcomeLogin;
 
+import dataManager.DataReader;
+import dataManager.DataWriter;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -35,6 +37,8 @@ public class WelcomeLogin extends Application {
         stage.show();
     }
     public static void main(String[] args) {
+        DataReader.readUsersData();
         launch();
+        DataWriter.writeUsersData();
     }
 }
