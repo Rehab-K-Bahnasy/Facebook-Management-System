@@ -6,42 +6,42 @@ import java.time.format.DateTimeFormatter;
 import java.util.Map;
 
 public abstract class Person implements Serializable {
-    protected String firstName;
-    protected String lastName;
-    protected String phoneNumber;
-    protected LocalDate birthDate;
-    protected String gender;
+    String first_name;
+    String last_name;
+    String phone_number;
+    LocalDate birthdate;
+    String gender;
 
     Person(Map personData) {
         setFirstName((String) personData.get("first name"));
         setLastName((String) personData.get("last name"));
         setPhoneNumber((String) personData.get("phone number"));
-        setBirthDate((String) personData.get("birthdate"));
+        setBirthdate((String) personData.get("birthdate"));
         setGender((String) personData.get("gender"));
     }
 
     public String getFirstName() {
-        return firstName;
+        return first_name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstName(String first_name) {
+        this.first_name = first_name;
     }
 
     public String getLastName() {
-        return lastName;
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String last_name) {
+        this.last_name = last_name;
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        return phone_number;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String phone_number) {
+        this.phone_number = phone_number;
     }
 
     public String getGender() {
@@ -52,13 +52,12 @@ public abstract class Person implements Serializable {
         this.gender = gender;
     }
 
-
-    public LocalDate getBirthDate() {
-        return birthDate;
+    public LocalDate getBirthdate() {
+        return birthdate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthdate(String birthDate) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        this.birthDate = LocalDate.parse(birthDate, formatter);
+        this.birthdate = LocalDate.parse(birthDate, formatter);
     }
 }

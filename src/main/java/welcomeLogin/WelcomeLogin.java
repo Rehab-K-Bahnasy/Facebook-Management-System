@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class WelcomeLogin extends Application {
-    private static Stage mainStage;
     private static Parent root;
     private static Scene scene;
     private static FXMLLoader fxmlLoader;
@@ -25,7 +24,6 @@ public class WelcomeLogin extends Application {
         stage.setTitle("SOCIO");
         stage.setScene(scene);
         stage.setResizable(false);
-        mainStage = stage;
         stage.show();
     }
     public static void switchToScene(ActionEvent event,String file) throws IOException {

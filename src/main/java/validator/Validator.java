@@ -74,8 +74,7 @@ public class Validator extends DataManager {
         if(DataManager.retrieveUser(identity)==null)
             return false;
 
-           return DataManager.retrieveUser(identity).checkPasswordMatch(password);
-
+           return DataManager.retrieveUser(identity).hasPasswordMatch(password);
     }
     public static int checkEmail(String email) {
         if (!checkEmailFormat(email))

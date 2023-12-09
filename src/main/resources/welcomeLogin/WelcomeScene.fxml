@@ -16,17 +16,17 @@
             <Image url="@socioBG.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="emailField" focusTraversable="false" layoutX="607.0" layoutY="220.0" prefHeight="45.0" prefWidth="360.0" promptText="Email address or username" styleClass="field" stylesheets="@styling.css">
+      <TextField fx:id="identity_field" focusTraversable="false" layoutX="607.0" layoutY="220.0" prefHeight="45.0" prefWidth="360.0" promptText="Email address or username" styleClass="field" stylesheets="@styling.css">
          <font>
             <Font name="Roboto Light" size="12.0" />
          </font>
       </TextField>
-      <TextField fx:id="passwordText" focusTraversable="false" layoutX="607.0" layoutY="280.0" prefHeight="45.0" prefWidth="360.0" promptText="Password" styleClass="field" visible="false">
+      <TextField fx:id="password_text" focusTraversable="false" layoutX="607.0" layoutY="280.0" prefHeight="45.0" prefWidth="360.0" promptText="Password" styleClass="field" visible="false">
          <font>
             <Font name="Roboto Light" size="12.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="passwordField" focusTraversable="false" layoutX="607.0" layoutY="280.0" prefHeight="45.0" prefWidth="360.0" promptText="Password" styleClass="field" stylesheets="@styling.css">
+      <PasswordField fx:id="password_field" focusTraversable="false" layoutX="607.0" layoutY="280.0" prefHeight="45.0" prefWidth="360.0" promptText="Password" styleClass="field" stylesheets="@styling.css">
          <font>
             <Font name="Roboto Light" size="12.0" />
          </font>
@@ -36,6 +36,6 @@
             <Font name="Roboto Bold" size="14.0" />
          </font></Button>
       <Button fx:id="CreatAccountButton" layoutX="806.0" layoutY="394.0" mnemonicParsing="false" onAction="#createNewAccount" prefHeight="32.0" prefWidth="174.0" styleClass="creatAccountButton" stylesheets="@styling.css" text="Creat new account" />
-      <CheckBox fx:id="showPassword" layoutX="607.0" layoutY="340.0" mnemonicParsing="false" onAction="#passwordVisibility" prefHeight="21.0" prefWidth="134.0" styleClass="showPasswordBox" stylesheets="@styling.css" text="Show password" />
+      <CheckBox fx:id="show_password" layoutX="607.0" layoutY="340.0" mnemonicParsing="false" onAction="#passwordVisibility" prefHeight="21.0" prefWidth="134.0" styleClass="showPasswordBox" stylesheets="@styling.css" text="Show password" />
    </children>
 </AnchorPane>
