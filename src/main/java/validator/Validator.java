@@ -65,35 +65,31 @@ public class Validator extends DataManager {
         return !(password.isEmpty()) && !(confirmation_password.isEmpty()) && password.equals(confirmation_password);
     }
 
-    public static boolean genderCheck(boolean male, boolean female) {
-        return male || female;
-    }
-
     /**
      * checks if the user exists
      * @param identity - the string you want to check
      * @return the user is used or not
      */
-    public static boolean checkUser(String identity) {
-        for (User user_check : users) {
-            if (user_check.hasMatchingIdentity(identity))
-                return false;
-        }
-        return true;
+    public static boolean checkLoginValidation(String identity , String password ) {
+        if(DataManager.retrieveUser(identity)==null)
+            return false;
+
+           return DataManager.retrieveUser(identity).checkPasswordMatch(password);
+
     }
     public static int checkEmail(String email) {
         if (!checkEmailFormat(email))
             return 1;
 
         for (User user : users) {
-            if (user.hasMatchingIdentity(email))
+            if (user.hasEmailMatch(email))
                 return 2;
         }
         return 0;
     }
     public static boolean checkUniqueUsername(String username) {
         for (User user : users) {
-            if (user.hasMatchingIdentity(username))
+            if (user.hasUsernameMatch(username))
                 return false;
         }
         return !(username.isEmpty());
@@ -102,7 +98,7 @@ public class Validator extends DataManager {
         if(!checkPhoneNumberFormat(phone_number))
             return 1;
         for (User user : users) {
-            if (user.hasMatchingIdentity(phone_number))
+            if (user.hasPhoneNumberMatch(phone_number))
                 return 2;
         }
         return 0;

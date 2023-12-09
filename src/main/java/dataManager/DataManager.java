@@ -17,7 +17,7 @@ public abstract class DataManager {
         return null;
     }
 
-    public static void addUser(Map userData) {
-        users.add(new User(userData));
+    public static void addUser(Map<Object, Object> user_map) {
+        users.add(new User(user_map));
     }
 }

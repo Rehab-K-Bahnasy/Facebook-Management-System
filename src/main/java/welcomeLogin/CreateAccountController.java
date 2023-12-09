@@ -1,5 +1,6 @@
 package welcomeLogin;
 
+import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -7,6 +8,9 @@ import validator.Validator;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class CreateAccountController {
@@ -43,46 +47,6 @@ public class CreateAccountController {
     private String gender_check = null;
     private String field_style = null;
     private String error_message;
-    public void passwordVisibility() {
-        if (show_password.isSelected()) {
-            password_text.setText(password_field.getText());
-            confirm_password_text.setText(confirm_password_field.getText());
-            password_field.setVisible(false);
-            confirm_password_field.setVisible(false);
-            password_text.setVisible(true);
-            confirm_password_text.setVisible(true);
-            return;
-        }
-
-        password_field.setText(password_text.getText());
-        confirm_password_field.setText(confirm_password_text.getText());
-        password_text.setVisible(false);
-        confirm_password_text.setVisible(false);
-        password_field.setVisible(true);
-        confirm_password_field.setVisible(true);
-
-    }
-
-    public void setGenderGroup() {
-        if (gender_check == null) {
-            if (male.isSelected()) {
-                gender_check = "M";
-            }
-            if (female.isSelected()) {
-                gender_check = "F";
-            }
-        }
-        if (male.isSelected() && gender_check.equals("F")) {
-            male.setSelected(true);
-            gender_check = "M";
-            female.setSelected(false);
-        } else if (female.isSelected() && gender_check.equals("M")) {
-            female.setSelected(true);
-            gender_check = "F";
-            male.setSelected(false);
-        }
-
-    }
 
     public String getFirstName() {
         return first_name.getText();
@@ -138,13 +102,24 @@ public class CreateAccountController {
         canSignUp &= managePasswordField();
         canSignUp &= manageDateField();
         canSignUp &= (getFemale() | getMale());
-        System.out.println(canSignUp);
 
         if (canSignUp) {
+            Map <Object, Object> user_map = new HashMap<>();
+            user_map.put("email",getEmail());
+            user_map.put("username",getUsername());
+            user_map.put("first name",getFirstName());
+            user_map.put("last name",getLastName());
+            user_map.put("password",getPassword());
+            user_map.put("gender",setGenderGroup());
+            user_map.put("birthdate", getBirthdate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
+            user_map.put("phone number",getPhoneNumber());
+            DataManager.addUser(user_map);
+            alert.setAlertType(Alert.AlertType.INFORMATION);
             alert.setTitle("HELLOZ");
             alert.setHeaderText("Welcome to SOC-IO <3");
             alert.showAndWait();
         } else {
+            alert.setAlertType(Alert.AlertType.ERROR);
             alert.setTitle("invalid credentials");
             alert.setHeaderText(error_message);
             alert.showAndWait();
@@ -228,6 +203,47 @@ public class CreateAccountController {
         return true;
     }
 
+
+    public String setGenderGroup() {
+        if (gender_check == null) {
+            if (male.isSelected()) {
+                gender_check = "M";
+            }
+            if (female.isSelected()) {
+                gender_check = "F";
+            }
+        }
+        if (male.isSelected() && gender_check.equals("F")) {
+            male.setSelected(true);
+            gender_check = "M";
+            female.setSelected(false);
+        } else if (female.isSelected() && gender_check.equals("M")) {
+            female.setSelected(true);
+            gender_check = "F";
+            male.setSelected(false);
+        }
+        return gender_check;
+    }
+
+    public void passwordVisibility() {
+        if (show_password.isSelected()) {
+            password_text.setText(password_field.getText());
+            confirm_password_text.setText(confirm_password_field.getText());
+            password_field.setVisible(false);
+            confirm_password_field.setVisible(false);
+            password_text.setVisible(true);
+            confirm_password_text.setVisible(true);
+            return;
+        }
+
+        password_field.setText(password_text.getText());
+        confirm_password_field.setText(confirm_password_text.getText());
+        password_text.setVisible(false);
+        confirm_password_text.setVisible(false);
+        password_field.setVisible(true);
+        confirm_password_field.setVisible(true);
+
+    }
     public void toLogin(ActionEvent event) throws IOException {
         WelcomeLogin.switchToScene(event, "WelcomeScene.fxml");
     }
