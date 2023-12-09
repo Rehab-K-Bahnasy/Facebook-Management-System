@@ -137,17 +137,24 @@ public class CreateAccountController {
         canSignUp &= managePhoneNumberField();
         canSignUp &= managePasswordField();
         canSignUp &= manageDateField();
-        canSignUp &= manageDateField();
-        canSignUp &= getFemale() | getMale();
+        canSignUp &= (getFemale() | getMale());
+        System.out.println(canSignUp);
 
-        if (canSignUp)
-            System.out.println("welcome ya 3asl");
-        else
-            System.out.println("damn you");
+        if (canSignUp) {
+            alert.setTitle("HELLOZ");
+            alert.setHeaderText("Welcome to SOC-IO <3");
+            alert.showAndWait();
+        } else {
+            alert.setTitle("invalid credentials");
+            alert.setHeaderText(error_message);
+            alert.showAndWait();
+            error_message = "";
+        }
     }
 
     private boolean manageNameFields(TextField field) {
-        if (!Validator.checkNameValidation(field.getText())) {
+
+        if ((field.getText() != null) && !Validator.checkNameValidation(field.getText())) {
             if (!error_message.startsWith("Name")) {
                 error_message += "Name can't contain numbers\n";
             }
@@ -162,25 +169,25 @@ public class CreateAccountController {
         if (!Validator.checkUniqueUsername(username.getText())) {
             error_message += "Username must be unique\n";
             username.setStyle("-fx-border-color: #9a0e0e");
-            return true;
+            return false;
         }
         username.setStyle(field_style);
-        return false;
+        return true;
     }
 
     private boolean manageEmailField() {
         int error = Validator.checkEmail(email.getText());
         if (error > 0) {
             if (error == 1)
-                error_message += "Email should follow the given format";
+                error_message += "Email should follow the given format\n";
             else
-                error_message += "Email must be unique";
+                error_message += "Email must be unique\n";
 
             email.setStyle("-fx-border-color: #9a0e0e");
-            return true;
+            return false;
         }
         email.setStyle(field_style);
-        return false;
+        return true;
     }
 
     private boolean managePhoneNumberField() {
@@ -192,10 +199,10 @@ public class CreateAccountController {
                 error_message += "Phone number is used before\n";
 
             phone_number.setStyle("-fx-border-color: #9a0e0e");
-            return true;
+            return false;
         }
         phone_number.setStyle(field_style);
-        return false;
+        return true;
     }
 
     private boolean managePasswordField() {
@@ -204,21 +211,21 @@ public class CreateAccountController {
             error_message += "Password doesn't match\n";
             password_field.setStyle("-fx-border-color: #9a0e0e");
             confirm_password_field.setStyle("-fx-border-color: #9a0e0e");
-            return true;
+            return false;
         }
         password_field.setStyle(field_style);
         confirm_password_field.setStyle(field_style);
-        return false;
+        return true;
     }
 
     private boolean manageDateField() {
-        if (!Validator.checkAdult(birth_date.getValue())) {
+        if ((birth_date.getValue() == null) || !Validator.checkAdult(birth_date.getValue())) {
             error_message += "You must be more than 13 to join SOC-IO";
             birth_date.setStyle("-fx-border-color: #9a0e0e");
-            return true;
+            return false;
         }
         birth_date.setStyle(field_style);
-        return false;
+        return true;
     }
 
     public void toLogin(ActionEvent event) throws IOException {
