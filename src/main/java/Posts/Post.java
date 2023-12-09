@@ -1,4 +1,4 @@
-package Post;
+package Posts;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

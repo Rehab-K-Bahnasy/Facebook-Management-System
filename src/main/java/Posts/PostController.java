@@ -1,10 +1,18 @@
-package Post;
+package Posts;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class PostController {
     @FXML
@@ -23,8 +31,11 @@ public class PostController {
     Label likesCounterLabel;
     @FXML
     Label commentsCounterLabel;
+    Parent root;
+    Stage stage;
+    Scene comment_scene;
     boolean liked = false;
-    public static Post post;
+    public static Post post= new Post(0,"hello world",LocalDate.now(),"public");
 
     private void setNameLabel() {
         nameLabel.setText(post.getCaption());
@@ -88,15 +99,16 @@ public class PostController {
 //       feed_scene=new Scene(root);
 //       stage.setScene(feed_scene);
 //       stage.show();
-//    }*/
-//    @FXML
-//    public void switchtocommentscene(ActionEvent event) throws IOException {
-//        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("comment.fxml")));
-//        root=loader.load();
-//        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-//        comment_scene=new Scene(root);
+//    }
+   @FXML
+    public void switchtocommentscene(ActionEvent event) throws IOException {
+        HelloApplication.switchToScene(event,"CommentScene.fxml");
+//       FXMLLoader loader =  new FXMLLoader(Comment.class.getResource("CommentScene.fxml"));
+//       root = loader.load();
+//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//         comment_scene= new Scene(root);
 //        stage.setScene(comment_scene);
 //        stage.show();
-//    }
+   }
 
 }

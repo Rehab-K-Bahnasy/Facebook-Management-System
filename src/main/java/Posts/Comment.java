@@ -1,8 +1,4 @@
-package Post;
-
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+package Posts;
 
 import java.time.LocalDate;
 
@@ -81,7 +77,7 @@ public class Comment {
 
     }
 
-//    public void switchtopostscene(ActionEvent event) throws IOException {
+//   public void switchtopostscene(ActionEvent event) throws IOException {
 //        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("PostScene.fxml")));
 //        root=loader.load();
 //        Post post=loader.getController();

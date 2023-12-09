@@ -8,19 +8,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.PostController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Posts.PostController">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1024.0">
          <image>
             <Image url="@fullPost.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="usernameLabel" layoutX="90.0" layoutY="150.0" prefHeight="29.0" prefWidth="114.0" styleClass="usernameLabel" stylesheets="@post.css" text="\@MoBakry04" textAlignment="CENTER">
+      <Label fx:id="usernameLabel" layoutX="90.0" layoutY="150.0" prefHeight="30.0" prefWidth="121.0" styleClass="usernameLabel" stylesheets="@post.css" text="\@MoBakry04" textAlignment="CENTER">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="nameLabel" layoutX="90.0" layoutY="86.0" prefHeight="57.0" prefWidth="196.0" styleClass="nameLabel" stylesheets="@post.css" text="Mo Bakry">
+      <Label fx:id="nameLabel" layoutX="90.0" layoutY="86.0" prefHeight="70.0" prefWidth="244.0" styleClass="nameLabel" stylesheets="@post.css" text="Mo Bakry">
          <font>
             <Font size="36.0" />
          </font>
@@ -36,7 +36,7 @@
             <Font name="Tajawal" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="176.0" layoutY="500.0" mnemonicParsing="false" stylesheets="@post.css" text="Comment">
+      <Button layoutX="176.0" layoutY="500.0" mnemonicParsing="false" onAction="#switchtocommentscene" stylesheets="@post.css" text="Comment">
          <font>
             <Font name="Andalus" size="12.0" />
          </font></Button>
