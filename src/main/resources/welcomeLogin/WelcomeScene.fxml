@@ -35,7 +35,7 @@
          <font>
             <Font name="Roboto Bold" size="14.0" />
          </font></Button>
-      <Button fx:id="CreatAccountButton" layoutX="806.0" layoutY="394.0" mnemonicParsing="false" onAction="#createNewAccount" prefHeight="32.0" prefWidth="174.0" styleClass="creatAccountButton" stylesheets="@styling.css" text="Creat new account" />
+      <Button fx:id="CreatAccountButton" layoutX="806.0" layoutY="394.0" mnemonicParsing="false" onAction="#createNewAccount" prefHeight="32.0" prefWidth="174.0" styleClass="creatAccountButton" stylesheets="@styling.css" text="Create new account" />
       <CheckBox fx:id="show_password" layoutX="607.0" layoutY="340.0" mnemonicParsing="false" onAction="#passwordVisibility" prefHeight="21.0" prefWidth="134.0" styleClass="showPasswordBox" stylesheets="@styling.css" text="Show password" />
    </children>
 </AnchorPane>
