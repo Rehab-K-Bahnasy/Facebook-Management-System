@@ -13,6 +13,7 @@ import java.util. ResourceBundle;
 
 
 public class CommentsController implements Initializable {
+
     @FXML
     private VBox cardLayoout;
     private List<Comment> recentlyAdded;
@@ -48,6 +49,18 @@ public class CommentsController implements Initializable {
         Comment comment3 = new Comment("parlerererererer",3,1);
         comment3.setComment_content("hello bye bye");
         commentList.add(comment3);
+
+        Comment comment4 = new Comment("parlerererererer",4,1);
+        comment4.setComment_content("hello bye bye");
+        commentList.add(comment4);
+
+        Comment comment5 = new Comment("parlerererererer",5,1);
+        comment5.setComment_content("hello bye bye");
+        commentList.add(comment5);
+
+        Comment comment6 = new Comment("parlerererererer",6,1);
+        comment6.setComment_content("hello bye bye");
+        commentList.add(comment6);
        return commentList;
     }
 }

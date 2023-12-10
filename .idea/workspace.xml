@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Changed The Comment Fxml.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Post/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentsScene.fxml" afterDir="false" />
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Added CommentScene.fxml , CommentController , CommentsController.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/CommentsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentsScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +117,7 @@
       <workItem from="1702166666644" duration="398000" />
       <workItem from="1702221889386" duration="181000" />
       <workItem from="1702222091956" duration="25000" />
-      <workItem from="1702222142017" duration="6139000" />
+      <workItem from="1702222142017" duration="6785000" />
     </task>
     <task id="LOCAL-00001" summary="Added the comment class.">
       <option name="closed" value="true" />
@@ -178,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702165806268</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added CommentScene.fxml , CommentController , CommentsController.">
+      <option name="closed" value="true" />
+      <created>1702233922232</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702233922232</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +220,8 @@
     <MESSAGE value="Seperating Post From GUI(a lot of errors)" />
     <MESSAGE value="Testing" />
     <MESSAGE value="Changed The Comment Fxml." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed The Comment Fxml." />
+    <MESSAGE value="Added CommentScene.fxml , CommentController , CommentsController." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CommentScene.fxml , CommentController , CommentsController." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

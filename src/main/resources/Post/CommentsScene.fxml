@@ -8,7 +8,7 @@
    <children>
       <ScrollPane layoutX="95.0" layoutY="85.0" prefHeight="572.0" prefWidth="851.0">
          <content>
-            <VBox prefHeight="820.0" prefWidth="835.0" />
+            <VBox fx:id="cardLayoout" prefHeight="820.0" prefWidth="835.0" />
          </content>
       </ScrollPane>
    </children>
