@@ -95,7 +95,7 @@ public class PostController {
 //       stage.show();
 //    }
    public void switch_to_comment_scene(ActionEvent event) throws IOException {
-        Starter.switchToScene(event,"CommentScene.fxml");
+        Starter.switchToScene(event,"CommentsScene.fxml");
    }
 
 }

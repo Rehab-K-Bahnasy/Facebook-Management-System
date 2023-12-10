@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Comment {
+
     private String username;
     private int comment_ID;
     private int post_ID;
