@@ -1,0 +1,109 @@
+.circle {
+    -fx-background-color: rgb(74, 69, 67);
+    -fx-text-fill: #fff;
+    -fx-background-radius: 50em;
+    -fx-min-width: 62px;
+    -fx-min-height: 62px;
+    -fx-max-width: 62px;
+    -fx-max-height: 62px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.circle:hover {
+    -fx-background-color: #1e2c1c;
+}
+
+.field {
+    -fx-background-color: rgba(255, 255, 255, 0.88);
+    -fx-border-color: rgba(73, 133, 52, 0.48);
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+    -fx-font-family: "Arial";
+    -fx-font-size: 13px;
+    -fx-padding: 8px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-prompt-text-fill: #999;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.03), 1, 1, -1, -1);
+}
+.field:focused {
+    -fx-border-color: #35502c;
+}
+
+.searchButton {
+    -fx-background-color: rgba(255, 255, 255, 0.88);
+    -fx-border-color: rgba(73, 133, 52, 0.48);
+    -fx-cursor: hand;
+    -fx-border-width: 1px;
+    -fx-text-fill: rgba(51, 51, 51, 0.89);
+    -fx-font-family: Arial;
+    -fx-font-weight: 400;
+    -fx-font-size: 13px;
+    -fx-padding: 8px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-prompt-text-fill: #999;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.03), 1, 1, -1, -1);
+}
+.searchButton:hover {
+    -fx-background-color: rgba(210, 210, 210, 0.88);
+    -fx-border-color: #35502c;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+.searchButton:pressed {
+    -fx-background-color: rgba(140, 140, 140, 0.88);
+    -fx-border-color: #203119;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+
+.Button {
+    -fx-background-color: #709354;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 30px;
+    -fx-cursor: hand;
+    -fx-background-radius: 15px 5px 15px 15px;
+    -fx-border-color: transparent;
+}
+
+.Button:hover {
+    -fx-background-color: #597a38;
+}
+
+.Button:pressed {
+    -fx-background-color: #35502c;
+}
+
+.cancelButton {
+    -fx-background-color: #a92424;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 30px;
+    -fx-cursor: hand;
+    -fx-background-radius: 15px 5px 15px 15px;
+    -fx-border-color: transparent;
+}
+
+.cancelButton:hover {
+    -fx-background-color: #9d2323;
+}
+
+.cancelButton:pressed {
+    -fx-background-color: #671616;
+}
+
+.label {
+    -fx-font-family: Arial;
+    -fx-font-weight: 700;
+    -fx-font-size: 24;
+    -fx-text-fill: #4a4442;
+}
