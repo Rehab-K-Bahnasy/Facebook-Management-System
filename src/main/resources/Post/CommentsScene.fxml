@@ -12,6 +12,6 @@
             <VBox fx:id="cardLayoout" prefHeight="820.0" prefWidth="835.0" />
          </content>
       </ScrollPane>
-      <Button layoutX="43.0" layoutY="29.0" mnemonicParsing="false" prefWidth="100.0" stylesheets="@styling.css" text="Back" />
+      <Button layoutX="43.0" layoutY="29.0" mnemonicParsing="false" onAction="#switch_to_post_scene" prefWidth="100.0" stylesheets="@styling.css" text="Back" />
    </children>
 </AnchorPane>

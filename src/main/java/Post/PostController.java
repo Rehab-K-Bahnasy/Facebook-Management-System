@@ -58,7 +58,7 @@ public class PostController {
     }
 
     private void setLikesCounterLabel() {
-        like.setText(Integer.toString(post.getReacts()));
+        likes_counter.setText(Integer.toString(post.getReacts()));
     }
 
     private void setCommentsCounterLabel() {

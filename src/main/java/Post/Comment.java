@@ -6,9 +6,11 @@ import java.util.ArrayList;
 public class Comment {
 
     private String username;
+    private String name;
     private int comment_ID;
     private int post_ID;
     private String comment_content;
+    private int reacts_counter;
     //private User [] comment_react = new User[10000];
     private LocalDate comment_created_on;
     private ArrayList<Comment> comment_reply = new ArrayList<>();
@@ -25,6 +27,14 @@ public class Comment {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public long getPost_ID() {
@@ -71,28 +81,17 @@ public class Comment {
         return comment_content;
     }
 
-    void addComment(Comment comment) {
-        this.comment_content = comment.comment_content;
-        this.username = comment.username;
-        this.comment_created_on = comment.comment_created_on;
-        comment_ID++;
-
+    public int getReacts() {
+        return reacts_counter;
     }
 
-//   public void switchtopostscene(ActionEvent event) throws IOException {
-//        FXMLLoader loader =  new FXMLLoader(Objects.requireNonNull(getClass().getResource("PostScene.fxml")));
-//        root=loader.load();
-//        Post post=loader.getController();
-//        post.setPost_caption("EZZZZZZZutfiyvhZZZZZZZZZZZZZZZZZZZ");
-//        post.setPost_privacy("Public");
-//        post.displaycaption(post);
-//        post.displayprivacy(post);
-//        post.displaycounter(post);
-//        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-//        post_scene=new Scene(root);
-//        stage.setScene(post_scene);
-//        stage.show();
-//    }
+    public void modifyReacts(boolean check_if_liked) {
+        if (check_if_liked)
+            reacts_counter++;
+        else
+            reacts_counter--;
+    }
+
 
 
 }

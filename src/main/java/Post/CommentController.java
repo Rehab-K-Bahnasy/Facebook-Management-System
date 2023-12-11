@@ -11,11 +11,41 @@ public class CommentController {
     @FXML
     private Label caption;
     @FXML
-    private Label user;
+    private Label username;
+    @FXML
+    private Label name;
+    @FXML
+    private Button like;
+    @FXML
+    private Label likes_counter;
+    boolean liked;
+    Comment comment;
 
     public void setData(Comment comment)
     {
         caption.setText(comment.getComment_content());
-        user.setText(comment.getUsername());
+        username.setText(comment.getUsername());
+        name.setText(comment.getName());
+    }
+    private void setLikesCounterLabel() {
+        likes_counter.setText(Integer.toString(comment.getReacts()));
+    }
+
+    @FXML
+    private void changeLiked()  {
+        liked = !liked;
+        if (liked) {
+            like.setStyle("-fx-background-color: #35502c");
+            like.setText("Liked");
+        } else {
+            like.setStyle("-fx-background-color: #709354");
+            like.setText("Like");
+        }
+        try {
+            comment.modifyReacts(liked);
+        } catch (NullPointerException exception) {
+            System.out.println(exception.getMessage());
+        }
+        setLikesCounterLabel();
     }
 }
