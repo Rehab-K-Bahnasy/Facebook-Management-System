@@ -9,10 +9,9 @@ public class Post {
     private LocalDate post_created_on;
     private String post_caption;
     private int reacts_counter;
-
+    private String privacy;
     //private User [] users_tagged_in_post = new User[10000];
     private ArrayList<Comment> comments_on_post = new ArrayList<>();
-    private String privacy;
 
     Post(int post_ID, String post_caption, LocalDate post_created_on, String post_privacy) {
         setID(post_ID);
@@ -29,7 +28,7 @@ public class Post {
         this.username = username;
     }
 
-    public long getID() {
+    public int getID() {
         return post_ID;
     }
 
@@ -57,8 +56,8 @@ public class Post {
         return reacts_counter;
     }
 
-    public void setComments(ArrayList<Comment> comments_on_post) {
-        this.comments_on_post = comments_on_post;
+    public void addComment(Comment comment) {
+        comments_on_post.add(comment);
     }
 
     public ArrayList<Comment> getComments_on_post() {

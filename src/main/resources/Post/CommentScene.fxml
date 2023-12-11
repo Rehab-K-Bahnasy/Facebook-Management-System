@@ -6,28 +6,29 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.CommentController">
+<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="835.0" styleClass="vbox" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.CommentController">
    <children>
-      <Label fx:id="user" prefHeight="124.0" prefWidth="318.0" text="Mo Bakry">
+      <Label fx:id="name_label" layoutX="90.0" prefHeight="66.0" prefWidth="567.0" styleClass="nameLabel" stylesheets="@styling.css" text="Mo Bakry">
          <font>
             <Font size="39.0" />
          </font>
       </Label>
-      <Label fx:id="caption" prefHeight="150.0" prefWidth="806.0" text="t7yati l team OOP">
+      <Label fx:id="username_label" prefHeight="27.0" prefWidth="178.0" styleClass="usernameLabel" stylesheets="@styling.css" text="\@MoBakry04" />
+      <Label fx:id="caption" prefHeight="125.0" prefWidth="835.0" style="-fx-font-size: 30;" styleClass="captionLabel" stylesheets="@styling.css" text="t7yati l team OOP" wrapText="true">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane prefHeight="110.0" prefWidth="835.0" stylesheets="@styling.css">
          <children>
-            <Button fx:id="replies" layoutX="518.0" layoutY="39.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="226.0" text="Replies">
-               <font>
-                  <Font size="43.0" />
-               </font>
-            </Button>
-            <Button fx:id="like" layoutX="78.0" layoutY="39.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="226.0" text="Like">
+            <Button layoutX="14.0" layoutY="26.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" stylesheets="@styling.css" text="Like">
                <font>
                   <Font size="45.0" />
+               </font>
+            </Button>
+            <Button layoutX="212.0" layoutY="26.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" stylesheets="@styling.css" text="Replies">
+               <font>
+                  <Font size="43.0" />
                </font>
             </Button>
          </children>

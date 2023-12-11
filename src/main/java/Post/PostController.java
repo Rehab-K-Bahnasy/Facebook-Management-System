@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
 
@@ -13,61 +14,66 @@ import java.time.LocalDate;
 
 public class PostController {
     @FXML
-    Label nameLabel;
+    Label name;
     @FXML
-    Label usernameLabel;
+    Label username;
     @FXML
-    Label privacyLabel;
+    Label privacy;
     @FXML
-    Label captionLabel;
+    Label caption;
     @FXML
-    Label dateLabel;
+    Label date;
     @FXML
-    ToggleButton likeButton;
+    ToggleButton like;
     @FXML
-    Label likesCounterLabel;
+    Label likes_counter;
     @FXML
-    Label commentsCounterLabel;
-    boolean liked = false;
-    public static Post post= new Post(0,"hello world",LocalDate.now(),"public");
+    Label comments_counter;
+    @FXML
+    private TextField comment_field;
+    boolean liked;
+    public Post post= new Post(0,"hello world",LocalDate.now(),"public");
+    public void setPost(Post post) {
+        this.post = post;
+    }
 
     private void setNameLabel() {
-        nameLabel.setText(post.getCaption());
+        name.setText(post.getCaption());
     }
 
     private void setUsernameLabel() {
-        usernameLabel.setText(post.getUsername());
+        username.setText(post.getUsername());
     }
 
     private void setPrivacyLabel() {
-        privacyLabel.setText(post.getPrivacy());
+        privacy.setText(post.getPrivacy());
     }
 
     private void setCaptionLabel() {
-        captionLabel.setText(post.getCaption());
+        caption.setText(post.getCaption());
     }
 
     private void setDateLabel() {
-        dateLabel.setText(post.getCreatedOn());
+        date.setText(post.getCreatedOn());
     }
 
     private void setLikesCounterLabel() {
-        likesCounterLabel.setText(Integer.toString(post.getReacts()));
+        like.setText(Integer.toString(post.getReacts()));
     }
 
     private void setCommentsCounterLabel() {
-        likesCounterLabel.setText(Integer.toString(post.getCommentsCounter()));
+        likes_counter.setText(Integer.toString(post.getCommentsCounter()));
     }
 
     @FXML
-    private void changeLiked() {
+    private void changeLiked()  {
         liked = !liked;
         if (liked) {
-            likeButton.setStyle("-fx-background-color: #35502c");
-            likeButton.setText("Liked");
+            like.setStyle("-fx-background-color: #35502c");
+            like.setText("Liked");
         } else {
-            likeButton.setStyle("-fx-background-color: #709354");
-            likeButton.setText("Like");
+            like.setStyle("-fx-background-color: #709354");
+            like.setText("Like");
         }
         try {
             post.modifyReacts(liked);
@@ -76,7 +82,10 @@ public class PostController {
         }
         setLikesCounterLabel();
     }
-
+    @FXML
+    private void addComment() {
+        post.addComment(new Comment(username.getText(),0,post.getID()));
+    }
     public void setThePost() {
         setNameLabel();
         setUsernameLabel();

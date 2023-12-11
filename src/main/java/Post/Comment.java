@@ -15,8 +15,8 @@ public class Comment {
 
     public Comment(String username,int comment_ID,int post_ID) {
         setUsername(username);
-        setComment_ID(comment_ID);
         setPost_ID(post_ID);
+//        setComment_content(content);
     }
 
     public String getUsername() {

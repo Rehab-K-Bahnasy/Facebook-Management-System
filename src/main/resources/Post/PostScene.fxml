@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -15,33 +16,40 @@
             <Image url="@border.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="usernameLabel" layoutX="90.0" layoutY="150.0" prefHeight="30.0" prefWidth="121.0" styleClass="usernameLabel" stylesheets="@post.css" text="\@MoBakry04" textAlignment="CENTER">
+      <Label fx:id="username" layoutX="90.0" layoutY="150.0" prefHeight="30.0" prefWidth="143.0" styleClass="usernameLabel" stylesheets="@styling.css" text="\@MoBakry04" textAlignment="CENTER">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="nameLabel" layoutX="90.0" layoutY="86.0" prefHeight="70.0" prefWidth="244.0" styleClass="nameLabel" stylesheets="@post.css" text="Mo Bakry">
+      <Label fx:id="name" layoutX="90.0" layoutY="86.0" prefHeight="70.0" prefWidth="520.0" styleClass="nameLabel" stylesheets="@styling.css" text="Mo Bakry">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="privacyLabel" layoutX="233.0" layoutY="151.0" styleClass="privacyLabel" stylesheets="@post.css" text="public">
+      <Label fx:id="privacy" layoutX="233.0" layoutY="151.0" prefHeight="27.0" prefWidth="122.0" styleClass="privacyLabel" stylesheets="@styling.css" text="public">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="dateLabel" layoutX="90.0" layoutY="460.0" styleClass="dateLabel" stylesheets="@post.css" text="Wed Dec 06 17:51:48 EET 2023" />
-      <Label fx:id="captionLabel" layoutX="90.0" layoutY="281.0" styleClass="captionLabel" stylesheets="@post.css" text="t7yati l team OOP">
+      <Label fx:id="date" layoutX="90.0" layoutY="452.0" prefHeight="34.0" prefWidth="280.0" styleClass="dateLabel" stylesheets="@styling.css" text="Wed Dec 06 17:51:48 EET 2023" />
+      <Label fx:id="caption" layoutX="90.0" layoutY="181.0" prefHeight="274.0" prefWidth="837.0" styleClass="captionLabel" stylesheets="@styling.css" text="t7yati l team OOP" wrapText="true">
          <font>
             <Font name="Tajawal" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="176.0" layoutY="500.0" mnemonicParsing="false" onAction="#switch_to_comment_scene" stylesheets="@post.css" text="Comment">
+      <Button layoutX="234.0" layoutY="500.0" mnemonicParsing="false" onAction="#switch_to_comment_scene" prefWidth="110.0" stylesheets="@styling.css" text="Comments">
          <font>
             <Font name="Andalus" size="12.0" />
          </font></Button>
-      <ToggleButton fx:id="likeButton" layoutX="90.0" layoutY="500.0" mnemonicParsing="false" onAction="#changeLiked" styleClass="button" stylesheets="@post.css" text="Like" />
-      <Label fx:id="likesCounterLabel" layoutX="90.0" layoutY="545.0" text="101 Likes" />
-      <Label fx:id="commentsCounterLabel" layoutX="176.0" layoutY="545.0" text="202 Comments" />
+      <ToggleButton fx:id="like" layoutX="90.0" layoutY="500.0" mnemonicParsing="false" onAction="#changeLiked" prefWidth="110.0" styleClass="button" stylesheets="@styling.css" text="Like" />
+      <Label fx:id="likes_counter" layoutX="94.0" layoutY="545.0" text="101 Likes">
+         <font>
+            <Font name="Tajawal" size="14.0" />
+         </font></Label>
+      <Label fx:id="comments_counter" layoutX="234.0" layoutY="545.0" prefHeight="18.0" prefWidth="112.0" text="202 Comments">
+         <font>
+            <Font name="Tajawal" size="14.0" />
+         </font></Label>
+      <TextField fx:id="comment_field" focusTraversable="false" layoutX="447.0" layoutY="500.0" prefHeight="34.0" prefWidth="471.0" promptText="Write a comment" styleClass="field" stylesheets="@styling.css" />
    </children>
 </AnchorPane>
