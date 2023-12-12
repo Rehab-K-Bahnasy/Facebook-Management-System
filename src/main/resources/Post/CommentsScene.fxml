@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.CommentsController">
+   <children>
+      <ScrollPane layoutX="95.0" layoutY="85.0" prefHeight="572.0" prefWidth="851.0">
+         <content>
+            <VBox fx:id="cardLayoout" prefHeight="820.0" prefWidth="835.0" />
+         </content>
+      </ScrollPane>
+      <Button layoutX="43.0" layoutY="29.0" mnemonicParsing="false" onAction="#switch_to_post_scene" prefWidth="100.0" stylesheets="@styling.css" text="Back" />
+   </children>
+</AnchorPane>
