@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="added the fxml file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/conversation/Conversation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/conversation/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/conversation/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03-Dec-23_2_19_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03-Dec-23_2_19_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03-Dec-23_2_20_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03-Dec-23_2_20_AM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="fixed some unadded files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/Conversation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/Message.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +32,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Message-GroupChat" />
+        <entry key="$PROJECT_DIR$" value="Search-Page" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -167,10 +163,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.WelcomeLogin" />
-        <item itemvalue="Application.DataManager" />
-        <item itemvalue="Application.CreateAccount" />
         <item itemvalue="Application.DataWriter" />
         <item itemvalue="Application.DataReader" />
+        <item itemvalue="Application.DataManager" />
+        <item itemvalue="Application.CreateAccount" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +197,7 @@
       <workItem from="1702132237591" duration="3751000" />
       <workItem from="1702232147217" duration="327000" />
       <workItem from="1702233141210" duration="2029000" />
-      <workItem from="1702266071216" duration="732000" />
+      <workItem from="1702266071216" duration="6236000" />
     </task>
     <task id="LOCAL-00001" summary="zZz">
       <option name="closed" value="true" />
@@ -283,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702264221493</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed some unadded files">
+      <option name="closed" value="true" />
+      <created>1702303957908</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702303957908</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +315,7 @@
     <MESSAGE value="Change data manager system to serialization&#10;Implementing Serializable interface in User.java &amp; Person.java" />
     <MESSAGE value="added Message and it's gui without styling" />
     <MESSAGE value="added the fxml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the fxml file" />
+    <MESSAGE value="fixed some unadded files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some unadded files" />
   </component>
 </project>

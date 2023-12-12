@@ -25,13 +25,31 @@ public class HelloController {
     @FXML
     private Button send_button;
     ArrayList<Message> messages;
+    private byte sender_id;
+    private ArrayList<Byte> recipients_id;
+
     public void setToLabel(String to_user) {
         to_label.setText(to_user);
     }
 
-    public void initialize(User sender, User reciever) {
-
-        choose_a_message.getItems().addAll();
+    public void initialize(byte sender_id, ArrayList<Byte> recipients_id, ArrayList<Message> messages) {
+        this.sender_id = sender_id;
+        this.recipients_id = recipients_id;
+        this.messages = messages;
+        for (Message message : messages) {
+            if (message.getSenderId() == sender_id) {
+                if (message.getRecipientsId().equals(recipients_id)) {
+                    choose_a_message.getItems().add(message.getContent());
+                    continue;
+                }
+            }
+            for (Byte recipient : message.getRecipientsId()) {
+                if (sender_id == recipient) {
+                    choose_a_message.getItems().add(message.getContent());
+                    break;
+                }
+            }
+        }
         choose_a_message.setOnAction(event -> handleChoiceBoxSelection());
     }
 
@@ -47,18 +65,16 @@ public class HelloController {
     }
 
     public void SendButton(ActionEvent e) {
-        messages.add(new Message((byte)(messages.size() + 1) ,message_content.getText()));
+        messages.add(new Message(message_content.getText(), sender_id, recipients_id));
         NewMessageButton(new ActionEvent());
         addToHistory(messages.getLast().getDate().toString());
     }
     @FXML
     private void handleChoiceBoxSelection() {
         String selectedItem = (String) choose_a_message.getValue();
-        System.out.println("Selected item: " + selectedItem);
 
         for (Message message : messages) {
-            System.out.println("Content is" + selectedItem);
-            if (message.getDate().toString().equals(selectedItem)) {
+            if (message.getContent().equals(selectedItem)) {
                 message_content.setText(message.getContent());
                 break;
             }
