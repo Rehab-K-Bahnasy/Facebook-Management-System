@@ -8,7 +8,7 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
-public class CommentController {
+public class ReplyController {
     @FXML
     private VBox box;
     @FXML
@@ -52,7 +52,5 @@ public class CommentController {
         }
         setLikesCounterLabel();
     }
-    public void switch_to_replies_scene(ActionEvent event) throws IOException {
-        Starter.switchToScene(event,"RepliesScene.fxml");
-    }
+
 }

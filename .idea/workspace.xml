@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Post/RepliesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Post/ReplyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Post/RepliesScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Post/ReplyScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Post/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/CommentsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentsScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +51,8 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="75a9f0fb-93f0-4f5f-8e76-d035de507d31" />
-        <option name="url" value="https://github.com/Rehab-K-Bahnasy/Facebook-Management-System" />
+        <option name="accountId" value="0be8b186-5d38-443b-8970-e23cbd91e2ec" />
+        <option name="url" value="https://github.com/Rehab-K-Bahnasy/Facebook-Management-System.git" />
       </UrlAndAccount>
     </option>
   </component>

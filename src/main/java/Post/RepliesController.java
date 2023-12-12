@@ -1,4 +1,5 @@
 package Post;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,11 +10,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util. ResourceBundle;
+import java.util.ResourceBundle;
 
-
-public class CommentsController implements Initializable {
-
+public class RepliesController implements Initializable {
     @FXML
     private VBox cardLayoout;
     private List<Comment> recentlyAdded;
@@ -24,10 +23,10 @@ public class CommentsController implements Initializable {
         try {
             for (int i= 0; i < recentlyAdded.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation (getClass().getResource ( "CommentScene.fxml"));
+                fxmlLoader.setLocation (getClass().getResource ( "ReplyScene.fxml"));
                 VBox cardBox = fxmlLoader.load();
-                CommentController commentController= fxmlLoader.getController();
-                commentController.setData(recentlyAdded.get(i));
+                ReplyController replyController= fxmlLoader.getController();
+                replyController.setData(recentlyAdded.get(i));
                 cardLayoout.getChildren().add(cardBox);
             }
 
@@ -39,9 +38,9 @@ public class CommentsController implements Initializable {
     private List<Comment> recentlyAdded () {
         List<Comment> commentList = new ArrayList<>();
         Comment comment = new Comment("@Mobakry",1,1);
-       comment.setComment_content("hello hello");
-       comment.setName("Mobakry");
-       commentList.add(comment);
+        comment.setComment_content("hello hello");
+        comment.setName("Mobakry");
+        commentList.add(comment);
 
         Comment comment2 = new Comment("@bakry",2,1);
         comment2.setComment_content("hello hello hello");
@@ -67,9 +66,9 @@ public class CommentsController implements Initializable {
         comment6.setComment_content("hello bye bye");
         comment6.setName("Mobakry");
         commentList.add(comment6);
-       return commentList;
+        return commentList;
     }
-    public void switch_to_post_scene(ActionEvent event) throws IOException {
-        Starter.switchToScene(event,"PostScene.fxml");
+    public void switch_to_comments_scene(ActionEvent event) throws IOException {
+        Starter.switchToScene(event,"CommentsScene.fxml");
     }
 }

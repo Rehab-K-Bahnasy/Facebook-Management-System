@@ -26,7 +26,7 @@
                   <Font size="45.0" />
                </font>
             </Button>
-            <Button layoutX="212.0" layoutY="26.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" stylesheets="@styling.css" text="Replies">
+            <Button layoutX="212.0" layoutY="26.0" mnemonicParsing="false" onAction="#switch_to_replies_scene" prefHeight="40.0" prefWidth="120.0" stylesheets="@styling.css" text="Replies">
                <font>
                   <Font size="43.0" />
                </font>
