@@ -5,6 +5,9 @@ module com.example.demo {
 
     opens welcomeLogin to javafx.fxml;
     opens userDashaboard to javafx.fxml;
+    opens Post to javafx.fxml;
     exports welcomeLogin;
     exports userDashaboard;
+    exports Post;
+
 }
