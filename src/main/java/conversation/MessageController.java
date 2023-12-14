@@ -1,18 +1,12 @@
 package conversation;
 
-import conversation.Message;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import user.User;
 
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
-public class HelloController {
+public class MessageController {
 
     @FXML
     private Label to_label;
@@ -25,26 +19,22 @@ public class HelloController {
     @FXML
     private Button send_button;
     ArrayList<Message> messages;
-    private byte sender_id;
-    private ArrayList<Byte> recipients_id;
+    private String sender_username;
+    private ArrayList<String> recipients_usernames;
 
-    public void setToLabel(String to_user) {
-        to_label.setText(to_user);
-    }
-
-    public void initialize(byte sender_id, ArrayList<Byte> recipients_id, ArrayList<Message> messages) {
-        this.sender_id = sender_id;
-        this.recipients_id = recipients_id;
+    public void initialize(String sender_username, ArrayList<String> recipients_usernames, ArrayList<Message> messages) {
+        this.sender_username = sender_username;
+        this.recipients_usernames = recipients_usernames;
         this.messages = messages;
         for (Message message : messages) {
-            if (message.getSenderId() == sender_id) {
-                if (message.getRecipientsId().equals(recipients_id)) {
+            if (message.getSenderUsername() == sender_username) {
+                if (message.getRecipientsUsernames().equals(recipients_usernames)) {
                     choose_a_message.getItems().add(message.getContent());
                     continue;
                 }
             }
-            for (Byte recipient : message.getRecipientsId()) {
-                if (sender_id == recipient) {
+            for (String recipient : message.getRecipientsUsernames()) {
+                if (sender_username == recipient) {
                     choose_a_message.getItems().add(message.getContent());
                     break;
                 }
@@ -65,7 +55,7 @@ public class HelloController {
     }
 
     public void SendButton(ActionEvent e) {
-        messages.add(new Message(message_content.getText(), sender_id, recipients_id));
+        messages.add(new Message(message_content.getText(), sender_username, recipients_usernames));
         NewMessageButton(new ActionEvent());
         addToHistory(messages.getLast().getDate().toString());
     }
