@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
-import settings.SettingsController;
 import welcomeLogin.WelcomeLogin;
 
 import java.io.IOException;

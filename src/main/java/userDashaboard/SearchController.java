@@ -9,7 +9,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.layout.StackPane;
-import settings.SettingsController;
 
 import java.io.IOException;
 import java.net.URL;

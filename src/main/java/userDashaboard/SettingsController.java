@@ -1,4 +1,4 @@
-package settings;
+package userDashaboard;
 
 import dataManager.DataManager;
 import javafx.event.ActionEvent;
@@ -10,7 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import user.User;
-import userDashaboard.HomePageController;
 
 import java.io.IOException;
 

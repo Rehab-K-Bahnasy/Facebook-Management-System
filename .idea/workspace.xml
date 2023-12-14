@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Added Search-Page branch">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/settings/SettingsScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/settings/homepage_bg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataManager/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataManager/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/settings/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/settings/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/SettingsScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/settings/SettingsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/SettingsScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/settings/homepage_bg.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,13 +79,14 @@
       <recent name="F:\senond year\MM\src\main\resources\welcomeLogin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\senond year\demo1\Facebook-Management-System\src\main\resources\userDashaboard" />
       <recent name="F:\senond year\demo1\Facebook-Management-System\src\main\resources\settings" />
       <recent name="F:\senond year\MM\src\main\java\validator" />
       <recent name="F:\senond year\MM\src\main\java\welcomeLogin" />
       <recent name="F:\senond year\MM\src\main\resources\createAccount" />
-      <recent name="F:\senond year\MM\src\main\resources\welcomeLogin" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="userDashaboard" />
       <recent name="welcomeLogin" />
       <recent name="createAccount" />
     </key>
