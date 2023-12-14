@@ -1,22 +1,28 @@
 package user;
-
+import java.sql.Array;
+import java.util.*;
+import Friend.Friend;
 import org.json.simple.JSONObject;
 
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 
 public class User extends Person {
     private String username;
     private String email;
     private String password;
+    private List<Friend> allFriends;
+
+
+
 
     public User(Map userData) {
         super(userData);
         setUsername((String) userData.get("username"));
         setEmail((String) userData.get("email"));
         setPassword((String) userData.get("password"));
+        allFriends = new ArrayList<>();
+
+
     }
 
     public String getUsername() {
@@ -54,6 +60,13 @@ public class User extends Person {
     public boolean checkPhoneNumberMatch(String inputPhoneNumber) {
         return username.equals(inputPhoneNumber);
     }
+
+    public List<Friend> getAllFriends() {
+        return Collections.unmodifiableList(allFriends);
+    }
+
+
+
 
     public boolean hasMatchingIdentity(String identifier) {
         return checkUsernameMatch(identifier) ||
