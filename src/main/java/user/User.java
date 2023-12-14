@@ -2,6 +2,7 @@ package user;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 
@@ -10,6 +11,7 @@ public class User extends Person implements Serializable {
     private String email;
     private String phone_number;
     private String password;
+    private ArrayList<Message> messages;
 
     public User(Map userData) {
         super(userData);
@@ -17,6 +19,7 @@ public class User extends Person implements Serializable {
         setEmail((String) userData.get("email"));
         setPhoneNumber((String) userData.get("phone number"));
         setPassword((String) userData.get("password"));
+        messages = new ArrayList<>();
     }
 
     public String getUsername() {
@@ -77,6 +80,10 @@ public class User extends Person implements Serializable {
 
     public boolean hasMatchCredentials(String input_identifier, String input_password) {
         return hasMatchingIdentity(input_identifier) && hasPasswordMatch(input_password);
+    }
+
+    public void send_message(Message message) {
+        messages.add(message);
     }
 
     @Override

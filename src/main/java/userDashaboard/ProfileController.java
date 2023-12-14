@@ -30,8 +30,11 @@ public class ProfileController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        ProfileController profile = fxmlLoader.getController();
-        profile.setProfile(user);
+        if(user!=null)
+        {
+            ProfileController profile = fxmlLoader.getController();
+            profile.setProfile(user);
+        }
     }
 
     @FXML

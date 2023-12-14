@@ -5,25 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/NameUsername.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/ProfileScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/MessagingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/MessagingScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataManager/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataManager/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/SearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/SearchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/SearchScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/SettingsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/SettingsScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/homepage_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/bar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/homepage_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/homepage_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/icons.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/styling.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +39,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Post-Comment-V2" />
+        <entry key="$PROJECT_DIR$" value="conversation" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,38 +70,32 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "homePage",
-    "last_opened_file_path": "D:/Facebook-Management-System/src/main/resources/userDashaboard",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4643678",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homePage&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Facebook-Management-System/src/main/resources/userDashaboard&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4643678&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Facebook-Management-System\src\main\resources\userDashaboard" />
-      <recent name="D:\Facebook-Management-System\src\main\resources\homePage" />
+      <recent name="C:\Users\alhas\OneDrive\MyProjects\Facebook-Management-System\src\main\resources\conversation" />
       <recent name="D:\Facebook-Management-System\src\main\resources\welcomeLogin" />
       <recent name="D:\Facebook-Management-System\src" />
       <recent name="D:\Facebook-Management-System\src\main\resources\createAccount" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Facebook-Management-System\src\main\resources\welcomeLogin" />
-      <recent name="D:\Facebook-Management-System\src\main\resources" />
-      <recent name="D:\Facebook-Management-System\src\main\resources\homePage\homePage" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="welcomeLogin" />
@@ -217,8 +203,10 @@
       <workItem from="1702086405456" duration="821000" />
       <workItem from="1702131529080" duration="688000" />
       <workItem from="1702132237591" duration="3751000" />
-      <workItem from="1702164053396" duration="12577000" />
-      <workItem from="1702303112888" duration="1912000" />
+      <workItem from="1702232147217" duration="327000" />
+      <workItem from="1702233141210" duration="2029000" />
+      <workItem from="1702266071216" duration="6236000" />
+      <workItem from="1702594352621" duration="799000" />
     </task>
     <task id="LOCAL-00001" summary="zZz">
       <option name="closed" value="true" />
@@ -284,15 +272,31 @@
       <option name="project" value="LOCAL" />
       <updated>1702075098358</updated>
     </task>
-    <task id="LOCAL-00009" summary="Adding Home page design.&#10;Linking HomePage with welcomeLogin by login and logout.&#10;Adding settings design (not finished).&#10;Linking HomePage with settings.">
+    <task id="LOCAL-00009" summary="added Message and it's gui without styling">
       <option name="closed" value="true" />
-      <created>1702177388415</created>
+      <created>1702233203053</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1702177388415</updated>
+      <updated>1702233203053</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added the fxml file">
+      <option name="closed" value="true" />
+      <created>1702264221493</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702264221493</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed some unadded files">
+      <option name="closed" value="true" />
+      <created>1702303957908</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702303957908</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +322,9 @@
     <MESSAGE value="updates and fixes to User and Person. added: DataWriter,DataReader and users.json&#10;Reading and Writing users data: DONE" />
     <MESSAGE value="Adding Field managers.&#10;Sperating check mail,username,phone to manage their fields speratly" />
     <MESSAGE value="Change data manager system to serialization&#10;Implementing Serializable interface in User.java &amp; Person.java" />
-    <MESSAGE value="Adding Home page design.&#10;Linking HomePage with welcomeLogin by login and logout.&#10;Adding settings design (not finished).&#10;Linking HomePage with settings." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Home page design.&#10;Linking HomePage with welcomeLogin by login and logout.&#10;Adding settings design (not finished).&#10;Linking HomePage with settings." />
+    <MESSAGE value="added Message and it's gui without styling" />
+    <MESSAGE value="added the fxml file" />
+    <MESSAGE value="fixed some unadded files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some unadded files" />
   </component>
 </project>

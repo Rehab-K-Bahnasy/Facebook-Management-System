@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
+import user.Message;
 import welcomeLogin.WelcomeLogin;
 
 import java.io.IOException;
@@ -21,6 +22,10 @@ public class HomePageController {
     @FXML
     private void search(ActionEvent event) throws IOException {
         SearchController.switchToSearch(event);
+    }
+    @FXML
+    private void message(ActionEvent event) throws IOException {
+        MessagingController.switchToMessage(event);
     }
     @FXML
     private void logout(ActionEvent event) throws IOException {

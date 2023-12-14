@@ -19,7 +19,7 @@
          </image>
       </ImageView>
       <Button layoutX="62.0" layoutY="158.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
-      <Button layoutX="62.0" layoutY="264.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
+      <Button layoutX="62.0" layoutY="264.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" onAction="#message" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
       <Button layoutX="62.0" layoutY="370.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" onAction="#search" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
       <Button layoutX="62.0" layoutY="475.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
       <Button layoutX="62.0" layoutY="581.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" onAction="#settings" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />

@@ -9,15 +9,15 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userDashaboard.SearchController">
     <children>
-      <ImageView fitHeight="720.0" fitWidth="1024.0">
-         <image>
-            <Image url="@bg.png" />
-         </image>
-      </ImageView>
+        <ImageView fitHeight="720.0" fitWidth="1024.0">
+            <image>
+                <Image url="@bg.png" />
+            </image>
+        </ImageView>
         <TextField fx:id="search_bar" layoutX="45.0" layoutY="190.0" prefHeight="35.0" prefWidth="520.0" styleClass="field" stylesheets="@styling.css" />
         <ListView fx:id="list_view" focusTraversable="false" layoutX="45.0" layoutY="225.0" prefHeight="295.0" prefWidth="520.0" styleClass="list" stylesheets="@styling.css" visible="false" />
         <Button defaultButton="true" layoutX="580.0" layoutY="190.0" mnemonicParsing="false" onAction="#search" styleClass="Button" stylesheets="@styling.css" text="Search" />
-      <Button layoutX="929.0" layoutY="33.0" mnemonicParsing="false" onAction="#back" styleClass="Button" stylesheets="@styling.css" text="Back" />
-      <Button layoutX="705.0" layoutY="190.0" mnemonicParsing="false" onAction="#goToProfile" styleClass="Button" stylesheets="@styling.css" text="Go to profile" />
+        <Button layoutX="929.0" layoutY="33.0" mnemonicParsing="false" onAction="#back" styleClass="Button" stylesheets="@styling.css" text="Back" />
+        <Button layoutX="705.0" layoutY="190.0" mnemonicParsing="false" styleClass="Button" stylesheets="@styling.css" text="Add" />
     </children>
 </AnchorPane>

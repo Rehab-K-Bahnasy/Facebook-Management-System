@@ -34,9 +34,10 @@ public class SearchController {
 
     @FXML
     private void goToProfile(ActionEvent event) throws IOException {
-        String username = list_view.getSelectionModel().getSelectedItem().username;
-
-        ProfileController.switchToProfile(event, DataManager.retrieveUser(username));
+        var selectedItem = list_view.getSelectionModel().getSelectedItem();
+        if(selectedItem!=null) {
+            ProfileController.switchToProfile(event, DataManager.retrieveUser(selectedItem.username));
+        }
     }
 
     private List<NameUsername> searchResults(String search_word) {
