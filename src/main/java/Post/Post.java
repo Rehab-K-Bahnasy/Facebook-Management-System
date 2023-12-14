@@ -13,12 +13,13 @@ public class Post {
     //private User [] users_tagged_in_post = new User[10000];
     private ArrayList<Comment> comments_on_post = new ArrayList<>();
 
-    Post(int post_ID, String post_caption, LocalDate post_created_on, String post_privacy) {
+   public Post(int post_ID, String post_caption, LocalDate post_created_on, String post_privacy) {
         setID(post_ID);
         setCaption(post_caption);
         setCreatedOn(post_created_on);
         setPrivacy(post_privacy);
     }
+
 
     public String getUsername() {
         return username;
