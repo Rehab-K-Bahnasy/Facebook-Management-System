@@ -2,24 +2,20 @@ package user;
 
 
 import java.io.Serializable;
-import java.util.Random;
-import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
 public class User extends Person implements Serializable {
     private String username;
-    Random random = new Random();
-
-    final short key = (short) random.nextInt(Short.MAX_VALUE + 1);
     private String email;
+    private String phone_number;
     private String password;
 
     public User(Map userData) {
         super(userData);
         setUsername((String) userData.get("username"));
         setEmail((String) userData.get("email"));
+        setPhoneNumber((String) userData.get("phone number"));
         setPassword((String) userData.get("password"));
     }
 
@@ -37,6 +33,14 @@ public class User extends Person implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phone_number;
+    }
+
+    public void setPhoneNumber(String phone_number) {
+        this.phone_number = phone_number;
     }
 
     public void setPassword(String password) {
@@ -65,9 +69,16 @@ public class User extends Person implements Serializable {
                 hasPhoneNumberMatch(input_identifier);
     }
 
+    public boolean hasSimilarities(String input) {
+        boolean name_similarity = first_name.contains(input) || last_name.contains(input);
+        boolean username_similarity = username.contains(input);
+        return name_similarity || username_similarity;
+    }
+
     public boolean hasMatchCredentials(String input_identifier, String input_password) {
         return hasMatchingIdentity(input_identifier) && hasPasswordMatch(input_password);
     }
+
     @Override
     public String toString() {
         return "first name = " + first_name +

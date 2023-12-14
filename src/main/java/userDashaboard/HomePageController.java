@@ -18,7 +18,10 @@ public class HomePageController {
     private void settings(ActionEvent event) throws IOException {
         SettingsController.switchToSettings(event);
     }
-
+    @FXML
+    private void search(ActionEvent event) throws IOException {
+        SearchController.switchToSearch(event);
+    }
     @FXML
     private void logout(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -42,4 +45,5 @@ public class HomePageController {
         stage.setScene(scene);
         stage.show();
     }
+
 }

@@ -8,14 +8,12 @@ import java.util.Map;
 public abstract class Person implements Serializable {
     String first_name;
     String last_name;
-    String phone_number;
     LocalDate birthdate;
     String gender;
 
     Person(Map personData) {
         setFirstName((String) personData.get("first name"));
         setLastName((String) personData.get("last name"));
-        setPhoneNumber((String) personData.get("phone number"));
         setBirthdate((String) personData.get("birthdate"));
         setGender((String) personData.get("gender"));
     }
@@ -36,12 +34,8 @@ public abstract class Person implements Serializable {
         this.last_name = last_name;
     }
 
-    public String getPhoneNumber() {
-        return phone_number;
-    }
-
-    public void setPhoneNumber(String phone_number) {
-        this.phone_number = phone_number;
+    public String getName() {
+        return first_name + " " + last_name;
     }
 
     public String getGender() {

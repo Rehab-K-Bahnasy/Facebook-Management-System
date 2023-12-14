@@ -10,22 +10,22 @@
    <children>
       <ImageView fitHeight="720.0" fitWidth="1024.0">
          <image>
-            <Image url="@homepage_bg.png" />
+            <Image url="@bg.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="569.25" fitWidth="150.0" layoutX="20.0" layoutY="130.0">
          <image>
-            <Image url="@homepage_bar.png" />
+            <Image url="@bar.png" />
          </image>
       </ImageView>
       <Button layoutX="62.0" layoutY="158.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
       <Button layoutX="62.0" layoutY="264.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
-      <Button layoutX="62.0" layoutY="370.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
+      <Button layoutX="62.0" layoutY="370.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" onAction="#search" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
       <Button layoutX="62.0" layoutY="475.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
       <Button layoutX="62.0" layoutY="581.0" maxHeight="82.0" maxWidth="82.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" onAction="#settings" prefHeight="55.0" prefWidth="55.0" styleClass="circle" stylesheets="@styling.css" />
       <ImageView disable="true" fitHeight="502.0" fitWidth="60.0" layoutX="63.0" layoutY="161.0" style="-fx-cursor: hand;">
          <image>
-            <Image url="@homepage_icons.png" />
+            <Image url="@icons.png" />
          </image>
       </ImageView>
       <TextField focusTraversable="false" layoutX="295.0" layoutY="40.0" prefHeight="30.0" prefWidth="360.0" promptText="Seek and you shall find" styleClass="field" stylesheets="@styling.css" />

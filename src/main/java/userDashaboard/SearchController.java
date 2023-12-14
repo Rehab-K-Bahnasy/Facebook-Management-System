@@ -1,82 +1,59 @@
 package userDashaboard;
+
+import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.layout.StackPane;
+import user.User;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.ResourceBundle;
-import java.util.stream.Collectors;
 
 
 public class SearchController {
-
-
-
-
-    ArrayList<String> words = new ArrayList<>(  // it depends
-            Arrays.asList("Eman Saleh", "Salma", "Rehab", "Heba", "Omnia",
-                    "Friends", "Animal", "Human", "Humans", "Alhassan", "Life",
-                    "Zedan", "Abdelrahman", "222", "Amr Yasser", "Dog", "Bakry",
-                    "Subscribe!", "SoftwareEngineeringStudent", "You got this!!",
-                    "Super Human", "Super", "Like")
-    );
+    @FXML
+    private TextField search_bar;
+    @FXML
+    private ListView<NameUsername> list_view;
+    private static final ArrayList<User> users = DataManager.getUsers();
 
     @FXML
-    private TextField searchBar;
+    private void search() {
+        list_view.setVisible(true);
+        list_view.getItems().clear();
+        var search_results = searchResults(search_bar.getText());
+        list_view.getItems().addAll(search_results);
+    }
 
     @FXML
-    private ListView<String> listView;
+    private void goToProfile(ActionEvent event) throws IOException {
+        String username = list_view.getSelectionModel().getSelectedItem().username;
 
+        ProfileController.switchToProfile(event, DataManager.retrieveUser(username));
+    }
+
+    private List<NameUsername> searchResults(String search_word) {
+        List<NameUsername> results = new ArrayList<>();
+        for (var user : users) {
+            if (user.hasSimilarities(search_word)) {
+                results.add(new NameUsername(user.getName(), user.getUsername()));
+            }
+        }
+        return results;
+    }
 
     @FXML
-    void search(ActionEvent event) { // button
-
-        listView.getItems().clear();
-        listView.getItems().addAll(searchList(searchBar.getText(), words));
-        listView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-
-            // Open a new window when a specific item is selected
-            openNewWindow(newValue);
-
-        });
+    private void back(ActionEvent event) throws IOException {
+        HomePageController.switchToHomePage(event);
     }
 
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        listView.getItems().addAll(words);
-
-    }
-    private void openNewWindow(String message) {
-        Stage newStage = new Stage();
-        StackPane newRoot = new StackPane();
-        newRoot.getChildren().add(new javafx.scene.control.Label(message));
-        Scene newScene = new Scene(newRoot, 500, 400);
-        newStage.setTitle("a friend chat");
-        newStage.setScene(newScene);
-        newStage.show();
-    }
-    private List<String> searchList(String searchWords, List<String> listOfStrings) {
-
-        List<String> searchWordsArray = Arrays.asList(searchWords.trim().split(" "));
-
-        return listOfStrings.stream().filter(input -> {
-            return searchWordsArray.stream().allMatch(word ->
-                    input.toLowerCase().contains(word.toLowerCase()));
-        }).collect(Collectors.toList());
-    }
     public static void switchToSearch(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SettingsController.class.getResource("SearchScene.fxml"));
         Parent root = fxmlLoader.load();
@@ -85,6 +62,4 @@ public class SearchController {
         stage.setScene(scene);
         stage.show();
     }
-
-
 }
