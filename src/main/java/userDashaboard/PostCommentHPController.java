@@ -27,8 +27,8 @@ public class PostCommentHPController implements Initializable {
                 FXMLLoader fxmlLoader=new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("PostScene.fxml"));
                 VBox vbox=fxmlLoader.load();
-               PostController postController=fxmlLoader.getController();
-               postController.setData(p);
+               PostController postcontroller=fxmlLoader.getController(); ///the use
+               postcontroller.setData(p);
                HomePageController.postscontainer.getChildren().add(vbox);
             }
         }
