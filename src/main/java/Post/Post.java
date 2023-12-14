@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class Post {
     private String username;
+    private String name;
     private int post_ID;
     private LocalDate post_created_on;
     private String post_caption;
@@ -20,6 +21,13 @@ public class Post {
         setPrivacy(post_privacy);
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public String getUsername() {
         return username;

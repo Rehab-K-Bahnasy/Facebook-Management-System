@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,8 +24,9 @@ import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 public class HomePageController implements Initializable {
 ///////////////////////////////
-     private VBox postscontainer;
     @FXML
+    private VBox postscontainer;
+
     private List<Post> postss;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -34,7 +36,7 @@ public class HomePageController implements Initializable {
             for(Post p:postss)
             {
                 FXMLLoader fxmlLoader= new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("PostScene.fxml"));
+                fxmlLoader.setLocation(Post.class.getResource("PostScene.fxml"));
                 VBox vbox=fxmlLoader.load();
                 PostController postcontroller=fxmlLoader.getController(); ///the use
                 postcontroller.setData(p);
@@ -55,6 +57,8 @@ public class HomePageController implements Initializable {
         for(int i=0;i<4;i++)
         {
             post=new Post(312,"hello world", LocalDate.now(),"public");
+            post.setUsername("@mobakry");
+            post.setName("mohamed");
             listpost.add(post);
         }
 

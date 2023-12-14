@@ -77,6 +77,11 @@ public class Comment {
     }
 
 
+    public int getReacts_counter() {
+        return reacts_counter;
+    }
+
+
     public String getComment_content() {
         return comment_content;
     }

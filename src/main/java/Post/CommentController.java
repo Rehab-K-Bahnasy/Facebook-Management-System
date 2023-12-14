@@ -30,6 +30,7 @@ public class CommentController {
         caption.setText(comment.getComment_content());
         username.setText(comment.getUsername());
         name.setText(comment.getName());
+        likes_counter.setText(Integer.toString(comment.getReacts_counter()));
     }
     private void setLikesCounterLabel() {
         likes_counter.setText(Integer.toString(comment.getReacts()));

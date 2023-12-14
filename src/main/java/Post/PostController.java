@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,8 +18,8 @@ import java.time.LocalDate;
 public class PostController {
     @FXML
     Label name;
-//    @FXML
-//    Label id;
+    @FXML
+    VBox vBox;
     @FXML
     Label username;
     @FXML
@@ -43,7 +44,10 @@ public class PostController {
         privacy.setText(p.getPrivacy());
         caption.setText(p.getCaption());
         date.setText(p.getCreatedOn());
-
+        name.setText(p.getName());
+        username.setText(p.getUsername());
+        likes_counter.setText(Integer.toString(p.getReacts()));
+        comments_counter.setText(Integer.toString(p.getCommentsCounter()));
     }
 
 
@@ -51,33 +55,11 @@ public class PostController {
         this.post = post;
     }
 
-    private void setNameLabel() {
-        name.setText(post.getCaption());
-    }
-
-    private void setUsernameLabel() {
-        username.setText(post.getUsername());
-    }
-
-    private void setPrivacyLabel() {
-        privacy.setText(post.getPrivacy());
-    }
-
-    private void setCaptionLabel() {
-        caption.setText(post.getCaption());
-    }
-
-    private void setDateLabel() {
-        date.setText(post.getCreatedOn());
-    }
 
     private void setLikesCounterLabel() {
         likes_counter.setText(Integer.toString(post.getReacts()));
     }
 
-    private void setCommentsCounterLabel() {
-        likes_counter.setText(Integer.toString(post.getCommentsCounter()));
-    }
 
 
     @FXML
