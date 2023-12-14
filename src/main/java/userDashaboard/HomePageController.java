@@ -1,65 +1,24 @@
 package userDashaboard;
-import  Post.*;
-import java.net.URL;
-import java.time.LocalDate;
-import java.util.*;
+
+import Post.PostController;
+import Post.Post;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import welcomeLogin.WelcomeLogin;
-import javafx.scene.layout.*;
 import java.io.IOException;
 
-public class HomePageController implements Initializable {
-   ////////////emaa
-   @FXML
-    private VBox postscontainer;
-    List<Post>postss;
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-                  postss=new ArrayList<>(getposts());
-                  try
-                  {
-                      for(Post p:postss)
-                      {
-                           FXMLLoader fxmlLoader=new FXMLLoader();
-                           fxmlLoader.setLocation(getClass().getResource("fxml/HomePageScene.fxml"));
-                           VBox vbox=fxmlLoader.load();
-                           PostController postController=fxmlLoader.getController();
-                           postController.setThePost(p);
+public class HomePageController  {
 
-                          postscontainer.getChildren().add(vbox);
-                      }
-                  }
-                  catch(IOException e)
-                    {
-                       e.printStackTrace();
-                    }
+    static VBox postscontainer;
 
-    }
-
-    public List<Post> getposts(){
-
-        List<Post> listpost=new ArrayList<>();
-        Post post;
-        for(int i=0;i<4;i++)
-        {
-            post=new Post(312,"hello world", LocalDate.now(),"public");
-              listpost.add(post);
-        }
-
-        return listpost;
-    }
-
-
-    ///////////emaa
     @FXML
     private void settings(ActionEvent event) throws IOException {
         SettingsController.switchToSettings(event);

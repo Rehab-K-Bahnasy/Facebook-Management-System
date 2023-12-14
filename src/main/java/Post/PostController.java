@@ -17,6 +17,8 @@ import java.time.LocalDate;
 public class PostController {
     @FXML
     Label name;
+//    @FXML
+//    Label id;
     @FXML
     Label username;
     @FXML
@@ -103,13 +105,14 @@ public class PostController {
 //       // setLikesCounterLabel();
 //       // setCommentsCounterLabel();
 //    }
-//    public void setData(Post p)
-//    {
-//        p.setID(p.getID());
-//        p.setCaption(p.getCaption());
-//        p.setPrivacy(p.getPrivacy());
-//        p.setCreatedOn(p.getCreatedOn());
-//    }
+    public void setData(Post p)
+    {
+         privacy.setText(p.getPrivacy());
+         caption.setText(p.getCaption());
+         date.setText(p.getCreatedOn());
+
+
+    }
 
     public void switch_to_comment_scene(ActionEvent event) throws IOException {
         Starter.switchToScene(event, "CommentsScene.fxml");
