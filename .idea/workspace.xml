@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="one more edit Post-Comment HomePage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/PostCommentHPController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/PostCommentHPController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/PostScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/PostScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/PostCommentHPController.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
       <workItem from="1702468606191" duration="5000" />
       <workItem from="1702504372185" duration="12111000" />
       <workItem from="1702550196760" duration="9799000" />
-      <workItem from="1702570672072" duration="1612000" />
+      <workItem from="1702570672072" duration="6940000" />
     </task>
     <task id="LOCAL؜-٠٠٠٠١" summary="Testing how to commit">
       <option name="closed" value="true" />
@@ -130,7 +131,15 @@
       <option name="project" value="LOCAL؜" />
       <updated>1702565120223</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL؜-٠٠٠٠٨" summary="one more edit Post-Comment HomePage">
+      <option name="closed" value="true" />
+      <created>1702575986250</created>
+      <option name="number" value="٠٠٠٠٨" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٠٨" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1702575986250</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +164,16 @@
     <MESSAGE value="adding posts to homepage" />
     <MESSAGE value="one more edit Post-Comment HomePage" />
     <option name="LAST_COMMIT_MESSAGE" value="one more edit Post-Comment HomePage" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

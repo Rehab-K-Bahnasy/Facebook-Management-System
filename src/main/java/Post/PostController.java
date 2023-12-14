@@ -36,7 +36,16 @@ public class PostController {
     @FXML
     private TextField comment_field;
     boolean liked;
-    public Post post = new Post(0, "hello world", LocalDate.now(), "public");
+    public Post post ;
+    public void setData(Post p)
+    {
+        this.post=p;
+        privacy.setText(p.getPrivacy());
+        caption.setText(p.getCaption());
+        date.setText(p.getCreatedOn());
+
+    }
+
 
     public void setPost(Post post) {
         this.post = post;
@@ -105,14 +114,6 @@ public class PostController {
 //       // setLikesCounterLabel();
 //       // setCommentsCounterLabel();
 //    }
-    public void setData(Post p)
-    {
-         privacy.setText(p.getPrivacy());
-         caption.setText(p.getCaption());
-         date.setText(p.getCreatedOn());
-
-
-    }
 
     public void switch_to_comment_scene(ActionEvent event) throws IOException {
         Starter.switchToScene(event, "CommentsScene.fxml");
