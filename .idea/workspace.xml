@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="adding posts to homepage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/PostCommentHPController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" afterDir="false" />
-    </list>
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="one more edit Post-Comment HomePage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +67,7 @@
       <workItem from="1702326728440" duration="3809000" />
       <workItem from="1702468606191" duration="5000" />
       <workItem from="1702504372185" duration="12111000" />
-      <workItem from="1702550196760" duration="4626000" />
+      <workItem from="1702550196760" duration="5859000" />
     </task>
     <task id="LOCAL؜-٠٠٠٠١" summary="Testing how to commit">
       <option name="closed" value="true" />
@@ -114,7 +109,15 @@
       <option name="project" value="LOCAL؜" />
       <updated>1702550435594</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL؜-٠٠٠٠٦" summary="one more edit Post-Comment HomePage">
+      <option name="closed" value="true" />
+      <created>1702555664205</created>
+      <option name="number" value="٠٠٠٠٦" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٠٦" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1702555664205</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +140,8 @@
     <MESSAGE value="Finished Settings GUI, Functionality:(not finished)&#10;&#10;Signed-off-by: abdllrhmanzedan &lt;abdom.zedan@gmail.com&gt;" />
     <MESSAGE value="Added a Search Window" />
     <MESSAGE value="adding posts to homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding posts to homepage" />
+    <MESSAGE value="one more edit Post-Comment HomePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="one more edit Post-Comment HomePage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
