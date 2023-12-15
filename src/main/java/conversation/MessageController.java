@@ -13,43 +13,40 @@ import userDashaboard.HomePageController;
 import userDashaboard.SettingsController;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.*;
 
 public class MessageController {
 
     @FXML
     private Label to_label;
     @FXML
-    private ComboBox choose_a_message;
+    private ComboBox sent_combo_box;
+    @FXML
+    private ComboBox received_combo_box;
     @FXML
     private TextArea message_content;
     @FXML
     private Button new_message_button;
     @FXML
     private Button send_button;
-    ArrayList<Message> messages;
+    ArrayList<Message> sent = new ArrayList<>();
+    ArrayList<Message> received = new ArrayList<>();
     private String sender_username;
-    private ArrayList<String> recipients_usernames;
+    private ArrayList<String> recipients_usernames = new ArrayList<>();
 
-    public void initialize(String sender_username, ArrayList<String> recipients_usernames, ArrayList<Message> messages) {
+    public void initialize(String sender_username, ArrayList<String> recipients_usernames, ArrayList<Message> sent, ArrayList<Message> received) {
         this.sender_username = sender_username;
         this.recipients_usernames = recipients_usernames;
-        this.messages = messages;
-        for (Message message : messages) {
-            if (message.getSenderUsername().equals(sender_username)) {
-                if (message.getRecipientsUsernames().equals(recipients_usernames)) {
-                    choose_a_message.getItems().add(message.getContent());
-                    continue;
-                }
-            }
-            for (String recipient : message.getRecipientsUsernames()) {
-                if (sender_username.equals(recipient)) {
-                    choose_a_message.getItems().add(message.getContent());
-                    break;
-                }
-            }
+        this.sent = sent;
+        this.received = received;
+        for (Message message : sent) {
+            sent_combo_box.getItems().addAll((int)message.getId());
         }
-        choose_a_message.setOnAction(event -> handleChoiceBoxSelection());
+        for (Message message : received) {
+            received_combo_box.getItems().addAll((int)message.getId());
+        }
+        sent_combo_box.setOnAction(event -> handleSentComboBoxSelection());
+        received_combo_box.setOnAction(event -> handleReceivedComboBoxSelection());
     }
     @FXML
     public static void switchToMessages(ActionEvent event) throws IOException {
@@ -60,28 +57,43 @@ public class MessageController {
         stage.setScene(scene);
         stage.show();
     }
-    public void addToHistory(String message) {
-        choose_a_message.getItems().add(message);
-        choose_a_message.setOnAction(event -> handleChoiceBoxSelection());
+    public void addToHistory(int message) {
+        sent_combo_box.getItems().addAll(message);
+        sent_combo_box.setOnAction(event -> handleSentComboBoxSelection());
+        received_combo_box.setOnAction(event -> handleReceivedComboBoxSelection());
     }
     public void NewMessageButton(ActionEvent e) {
-        choose_a_message.setValue(null);
+        sent_combo_box.setValue(null);
+        received_combo_box.setValue(null);
         message_content.setText(null);
         message_content.setEditable(true);
         send_button.setDisable(false);
     }
 
     public void SendButton(ActionEvent e) {
-        messages.add(new Message(message_content.getText(), sender_username, recipients_usernames));
+        sent.add(new Message(message_content.getText(), sender_username, recipients_usernames));
         NewMessageButton(new ActionEvent());
-        addToHistory(messages.getLast().getDate().toString());
+        addToHistory(sent.getLast().getId());
     }
     @FXML
-    private void handleChoiceBoxSelection() {
-        String selectedItem = (String) choose_a_message.getValue();
+    private void handleSentComboBoxSelection() {
+        int selectedItem = (int) sent_combo_box.getValue();
 
-        for (Message message : messages) {
-            if (message.getContent().equals(selectedItem)) {
+        for (Message message : sent) {
+            System.out.println(message.getContent());
+            if (message.getId() == (selectedItem)) {
+                message_content.setText(message.getContent());
+                break;
+            }
+        }
+        message_content.setEditable(false);
+    }
+    @FXML
+    private void handleReceivedComboBoxSelection() {
+        int selectedItem = (int) received_combo_box.getValue();
+
+        for (Message message : received) {
+            if (message.getId() == (selectedItem)) {
                 message_content.setText(message.getContent());
                 break;
             }
