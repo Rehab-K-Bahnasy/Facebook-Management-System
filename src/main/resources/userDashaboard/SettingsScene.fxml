@@ -26,7 +26,7 @@
       <TextField fx:id="email" focusTraversable="false" layoutX="34.0" layoutY="421.0" prefHeight="35.0" prefWidth="250.0" promptText="Email" styleClass="field" stylesheets="@styling.css" />
       <TextField fx:id="username" focusTraversable="false" layoutX="34.0" layoutY="487.0" prefHeight="35.0" prefWidth="250.0" promptText="Username" styleClass="field" stylesheets="@styling.css" />
       <TextField fx:id="phone_number" focusTraversable="false" layoutX="34.0" layoutY="283.0" prefHeight="35.0" prefWidth="250.0" promptText="Phone number" styleClass="field" stylesheets="@styling.css" />
-      <DatePicker fx:id="birthdate" layoutX="34.0" layoutY="349.0" prefHeight="35.0" prefWidth="250.0" styleClass="field" stylesheets="@../welcomeLogin/styling.css" />
+      <DatePicker fx:id="birthdate" editable="false" layoutX="34.0" layoutY="349.0" prefHeight="35.0" prefWidth="250.0" styleClass="field" stylesheets="@../welcomeLogin/styling.css" />
       <Label layoutX="37.0" layoutY="192.0" style="-fx-font-family: Tajawal; -fx-font-weight: 700; -fx-text-fill: #4a4442;" text="First name" />
       <Label layoutX="327.0" layoutY="192.0" style="-fx-font-family: Tajawal; -fx-font-weight: 700; -fx-text-fill: #4a4442;" text="Last name" />
       <Label layoutX="37.0" layoutY="258.0" style="-fx-font-family: Tajawal; -fx-font-weight: 700; -fx-text-fill: #4a4442;" text="Phone number" />

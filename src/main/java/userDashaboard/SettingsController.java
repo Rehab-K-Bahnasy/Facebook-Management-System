@@ -13,10 +13,6 @@ import user.User;
 import validator.Validator;
 
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 public class SettingsController {
     @FXML
@@ -61,7 +57,7 @@ public class SettingsController {
 
         if (result.isPresent()) {
             if (result.get() == ButtonType.OK) {
-                Boolean check_valid_changes = changeUserSettings();
+                boolean check_valid_changes = changeUserSettings();
                 if(check_valid_changes)
                 {
                     if(!email.getText().isEmpty())
@@ -76,9 +72,9 @@ public class SettingsController {
                         DataManager.getCurrentUser().setBirthdate(birthdate.getValue().toString());
                     if(!phone_number.getText().isEmpty())
                         DataManager.getCurrentUser().setPhoneNumber(phone_number.getText());
+
                     HomePageController.switchToHomePage(event);
                 }
-
             }
         }
     }
