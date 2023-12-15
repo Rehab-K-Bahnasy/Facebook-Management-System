@@ -1,5 +1,6 @@
 package welcomeLogin;
 
+import dataManager.DataManager;
 import userDashaboard.HomePageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +19,7 @@ public class WelcomeLoginController {
     @FXML
     private CheckBox show_password;
 
+   private static String CurrentUserIdentity;
     public void passwordVisibility() {
         if (show_password.isSelected()) {
             password_text.setText(password_field.getText());
@@ -46,6 +48,7 @@ public class WelcomeLoginController {
             alert.showAndWait();
             return;
         }
+        DataManager.setCurrentUser(DataManager.retrieveUser(input_identity));
         alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Welcome back ya m3lm");
         alert.setHeaderText("Welcome back ya m3lm");
@@ -59,5 +62,9 @@ public class WelcomeLoginController {
 
     public void createNewAccount(ActionEvent event) throws IOException {
         WelcomeLogin.switchToScene(event, "CreateAccountScene.fxml");
+    }
+    public static String getCurrentUserIdentity()
+    {
+        return CurrentUserIdentity;
     }
 }
