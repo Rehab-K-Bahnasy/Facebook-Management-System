@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="835.0" styleClass="vbox" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.CommentController">
+<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="720.0" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.CommentController">
    <children>
       <Label fx:id="name" layoutX="90.0" prefHeight="66.0" prefWidth="567.0" styleClass="nameLabel" stylesheets="@styling.css" text="Mo Bakry">
          <font>
@@ -19,7 +19,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <AnchorPane prefHeight="110.0" prefWidth="835.0" stylesheets="@styling.css">
+      <AnchorPane prefHeight="102.0" prefWidth="656.0" stylesheets="@styling.css">
          <children>
             <Button fx:id="like" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#changeLiked" prefHeight="40.0" prefWidth="120.0" stylesheets="@styling.css" text="Like">
                <font>

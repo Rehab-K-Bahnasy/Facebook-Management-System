@@ -121,3 +121,10 @@
 .field:focused {
     -fx-border-color: #35502c;
 }
+
+.Label {
+    -fx-font-family: Tajawal;
+    -fx-font-weight: bold;
+    -fx-font-size: 32;
+    -fx-text-fill: #4b4542;
+}

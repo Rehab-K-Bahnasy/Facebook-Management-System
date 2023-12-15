@@ -1,20 +1,65 @@
 package userDashaboard;
 
+import Post.Post;
+import Post.PostController;
+import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import user.Message;
 import welcomeLogin.WelcomeLogin;
 
 import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class HomePageController {
+public class HomePageController implements Initializable {
+    @FXML
+    private VBox posts_container;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        List<Post> posts = new ArrayList<>(getPosts());
+        for (var post : posts) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(Post.class.getResource("PostScene.fxml"));
+                VBox vbox = fxmlLoader.load();
+                PostController postcontroller = fxmlLoader.getController();
+                postcontroller.setData(post);
+                posts_container.getChildren().add(vbox);
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    public List<Post> getPosts() {
+
+        List<Post> list_post = new ArrayList<>();
+        Post post;
+        for (int i = 0; i < 4; i++) {
+            post = new Post(312, "hello world", LocalDate.now(), "public");
+            post.setUsername("@mobakry");
+            post.setName("mohamed");
+            list_post.add(post);
+        }
+
+        return list_post;
+    }
+
     @FXML
     private void settings(ActionEvent event) throws IOException {
         SettingsController.switchToSettings(event);

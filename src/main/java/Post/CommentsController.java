@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.VBox;
+import userDashaboard.HomePageController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,7 +25,7 @@ public class CommentsController implements Initializable {
         try {
             for (int i= 0; i < recentlyAdded.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation (getClass().getResource ( "CommentScene.fxml"));
+                fxmlLoader.setLocation (getClass().getResource("CommentScene.fxml"));
                 VBox cardBox = fxmlLoader.load();
                 CommentController commentController= fxmlLoader.getController();
                 commentController.setData(recentlyAdded.get(i));
@@ -71,5 +72,9 @@ public class CommentsController implements Initializable {
     }
     public void switch_to_post_scene(ActionEvent event) throws IOException {
         Starter.switchToScene(event,"PostScene.fxml");
+    }
+    @FXML
+    private void back(ActionEvent event) throws IOException {
+        HomePageController.switchToHomePage(event);
     }
 }
