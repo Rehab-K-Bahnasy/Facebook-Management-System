@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="handling some errors" />
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Removed messages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +31,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Search-Page" />
+        <entry key="$PROJECT_DIR$" value="homePage" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,25 +62,25 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;conversation&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alhas/OneDrive/MyProjects/Facebook-Management-System/src/main/resources/conversation&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.4643678&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "conversation",
+    "last_opened_file_path": "C:/Users/alhas/OneDrive/MyProjects/Facebook-Management-System/src/main/resources/conversation",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.4643678",
+    "settings.editor.selected.configurable": "preferences.general",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alhas\OneDrive\MyProjects\Facebook-Management-System\src\main\resources\conversation" />
@@ -89,13 +93,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="DataManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataManager.DataManager" />
+  <component name="RunManager" selected="Application.WelcomeLogin">
+    <configuration name="CreateAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="creatAccount.CreateAccount" />
       <module name="theSocialNetwork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dataManager.*" />
+          <option name="PATTERN" value="creatAccount.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,25 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataManager.DataReader" />
-      <module name="theSocialNetwork" />
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Post.HelloApplication" />
+      <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dataManager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataManager.DataWriter" />
-      <module name="theSocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dataManager.*" />
+          <option name="PATTERN" value="Post.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,6 +126,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="message.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Post.Starter" />
+      <module name="theSocialNetwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Post.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.WelcomeLogin" />
-        <item itemvalue="Application.DataWriter" />
-        <item itemvalue="Application.DataReader" />
-        <item itemvalue="Application.DataManager" />
+        <item itemvalue="Application.Starter" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.CreateAccount" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +197,7 @@
       <workItem from="1702232147217" duration="327000" />
       <workItem from="1702233141210" duration="2029000" />
       <workItem from="1702266071216" duration="6325000" />
-      <workItem from="1702594179223" duration="2686000" />
+      <workItem from="1702594179223" duration="2066000" />
     </task>
     <task id="LOCAL-00001" summary="zZz">
       <option name="closed" value="true" />
@@ -291,15 +295,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702404206705</updated>
     </task>
-    <task id="LOCAL-00013" summary="handling some errors">
+    <task id="LOCAL-00013" summary="Merging the friend class.">
       <option name="closed" value="true" />
-      <created>1702596269474</created>
+      <created>1702606600404</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1702596269474</updated>
+      <updated>1702606600404</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Removed messages">
+      <option name="closed" value="true" />
+      <created>1702607486631</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702607486631</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +341,8 @@
     <MESSAGE value="added the fxml file" />
     <MESSAGE value="fixed some unadded files" />
     <MESSAGE value="added group chat functions now waiting for linking" />
-    <MESSAGE value="handling some errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="handling some errors" />
+    <MESSAGE value="Merging the friend class." />
+    <MESSAGE value="Removed messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed messages" />
   </component>
 </project>
