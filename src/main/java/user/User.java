@@ -143,6 +143,7 @@ public class User extends Person implements Serializable {
     public void addFriend(User user) {
         var friend = new Friend(user);
         allFriends.add(friend);
+        friend.setFriendshipType(Friend.FriendshipType.ALL);
         updateFeed(friend.getPosts());
     }
     public void removeFriend(User user, Friend username) {

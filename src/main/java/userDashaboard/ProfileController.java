@@ -79,7 +79,14 @@ public class ProfileController implements Initializable {
         } else {
             add_button.setText("friends");
             restrict_button.setVisible(true);
+            if (curr_user.getFriend(user.getUsername()) != null){
+                if (curr_user.getFriend(user.getUsername()).getFriendshipType().equals(Friend.FriendshipType.RESTRICTED))
+                    restrict_button.setSelected(true);
+                else
+                    restrict_button.setSelected(false);
+            }
         }
+
     }
 
     @FXML
@@ -87,7 +94,13 @@ public class ProfileController implements Initializable {
         add_button.setText("friends");
         DataManager.getCurrentUser().addFriend(user);
     }
-
+    @FXML
+    private void restriction(){
+        if(!restrict_button.isSelected()) {
+            DataManager.getCurrentUser().getFriend(user.getUsername()).setFriendshipType(Friend.FriendshipType.RESTRICTED);
+        }
+            DataManager.getCurrentUser().getFriend(user.getUsername()).setFriendshipType(Friend.FriendshipType.ALL);
+    }
     @FXML
     private void restrict() {
         if (!restrict_button.isVisible()) {

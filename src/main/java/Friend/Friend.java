@@ -21,7 +21,6 @@ public class Friend extends User {
     public Friend(User user ){
         super(user);
 
-
     }
     public void setFriendshipType(FriendshipType friendshipType) {
         this.friendship_type = friendshipType;

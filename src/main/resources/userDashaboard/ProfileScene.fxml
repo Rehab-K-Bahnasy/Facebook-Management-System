@@ -26,6 +26,6 @@
       <Label fx:id="username" layoutX="23.0" layoutY="391.0" prefHeight="44.0" prefWidth="78.0" styleClass="profileUsername" stylesheets="@styling.css" text="\@zezo" />
       <Button layoutX="929.0" layoutY="35.0" mnemonicParsing="false" onAction="#back" styleClass="Button" stylesheets="@styling.css" text="Back" />
       <Button fx:id="add_button" layoutX="23.0" layoutY="439.0" mnemonicParsing="false" onAction="#addFriend" styleClass="Button" stylesheets="@styling.css" text="Friend" />
-      <CheckBox fx:id="restrict_button" layoutX="25.0" layoutY="490.0" mnemonicParsing="false" styleClass="showPasswordBox" stylesheets="@styling.css" text="Restricted" />
+      <CheckBox fx:id="restrict_button" layoutX="25.0" layoutY="490.0" mnemonicParsing="false" onAction="#restriction" styleClass="showPasswordBox" stylesheets="@styling.css" text="Restricted" />
    </children>
 </AnchorPane>

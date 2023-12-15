@@ -33,15 +33,17 @@ public class HomePageController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<Post> posts = new ArrayList<>(DataManager.getCurrentUser().getFeed());
         for (var post : posts) {
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(Post.class.getResource("PostScene.fxml"));
-                VBox vbox = fxmlLoader.load();
-                PostController postcontroller = fxmlLoader.getController();
-                postcontroller.setData(post);
-                posts_container.getChildren().add(vbox);
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
+           if(DataManager.getCurrentUser().getFriend(post.getCreatorUsername()).getFriendshipType().equals(FriendshipType.ALL) || post.getPrivacy().equals("public")) {
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader();
+                    fxmlLoader.setLocation(Post.class.getResource("PostScene.fxml"));
+                    VBox vbox = fxmlLoader.load();
+                    PostController postcontroller = fxmlLoader.getController();
+                    postcontroller.setData(post);
+                    posts_container.getChildren().add(vbox);
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
             }
         }
     }
