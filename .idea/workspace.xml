@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Merging the friend class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702404206705</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Merging the friend class.">
+      <option name="closed" value="true" />
+      <created>1702606600404</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702606600404</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +332,7 @@
     <MESSAGE value="added the fxml file" />
     <MESSAGE value="fixed some unadded files" />
     <MESSAGE value="added group chat functions now waiting for linking" />
-    <option name="LAST_COMMIT_MESSAGE" value="added group chat functions now waiting for linking" />
+    <MESSAGE value="Merging the friend class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merging the friend class." />
   </component>
 </project>
