@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Added &quot;Add friend&quot; functionality but not working.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="YASSSER 7AL EL ERROR BTA3 EL FRIEND.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702635920177</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="YASSSER 7AL EL ERROR BTA3 EL FRIEND.">
+      <option name="closed" value="true" />
+      <created>1702644230405</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702644230405</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +348,7 @@
     <MESSAGE value="Made alot of 7agat" />
     <MESSAGE value="Made a lot of 7agat" />
     <MESSAGE value="Added &quot;Add friend&quot; functionality but not working." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added &quot;Add friend&quot; functionality but not working." />
+    <MESSAGE value="YASSSER 7AL EL ERROR BTA3 EL FRIEND." />
+    <option name="LAST_COMMIT_MESSAGE" value="YASSSER 7AL EL ERROR BTA3 EL FRIEND." />
   </component>
 </project>
