@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Merging the friend class.">
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Designed GUI of MessagesScene and fixed some bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/ConversationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/ConversationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/message/ConversationC.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conversation/ConversationC.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/ConversationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/conversation/ConversationC.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +103,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.WelcomeLogin">
     <configuration name="CreateAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="creatAccount.CreateAccount" />
       <module name="theSocialNetwork" />
@@ -169,8 +171,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.WelcomeLogin" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Starter" />
         <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.CreateAccount" />
@@ -311,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702606600404</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Designed GUI of MessagesScene and fixed some bugs">
+      <option name="closed" value="true" />
+      <created>1702613023757</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702613023757</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +352,7 @@
     <MESSAGE value="fixed some unadded files" />
     <MESSAGE value="added group chat functions now waiting for linking" />
     <MESSAGE value="Merging the friend class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merging the friend class." />
+    <MESSAGE value="Designed GUI of MessagesScene and fixed some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Designed GUI of MessagesScene and fixed some bugs" />
   </component>
 </project>
