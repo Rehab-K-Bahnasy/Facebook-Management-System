@@ -8,13 +8,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.io.IOException;
 import java.time.LocalDate;
 
 public class PostController {
     @FXML
     Label name;
+//    @FXML
+//    Label id;
     @FXML
     Label username;
     @FXML
@@ -32,7 +36,7 @@ public class PostController {
     @FXML
     private TextField comment_field;
     boolean liked;
-    public Post post= new Post(0,"hello world",LocalDate.now(),"public");
+    public Post post;
     public void setPost(Post post) {
         this.post = post;
     }
@@ -65,8 +69,9 @@ public class PostController {
         likes_counter.setText(Integer.toString(post.getCommentsCounter()));
     }
 
+
     @FXML
-    private void changeLiked()  {
+    private void changeLiked() {
         liked = !liked;
         if (liked) {
             like.setStyle("-fx-background-color: #35502c");
@@ -82,29 +87,35 @@ public class PostController {
         }
         setLikesCounterLabel();
     }
+
     @FXML
     private void addComment() {
-        post.addComment(new Comment(username.getText(),0,post.getID()));
-    }
-    public void setThePost() {
-        setNameLabel();
-        setUsernameLabel();
-        setPrivacyLabel();
-        setCaptionLabel();
-        setDateLabel();
-        setLikesCounterLabel();
-        setCommentsCounterLabel();
+        post.addComment(new Comment(username.getText(), 0, post.getID()));
     }
 
-//    /*public void switchtofeedscene(ActionEvent event) throws IOException {
-//       Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("feed.fxml")));
-//       stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-//       feed_scene=new Scene(root);
-//       stage.setScene(feed_scene);
-//       stage.show();
+//    public void setThePost(Post p) {
+//       // setNameLabel();
+//       // setUsernameLabel();
+//        DateLabel.settext(p.getCreatedon());
+//        setPrivacyLabel(p.getPrivacy());
+//        setCaptionLabel(p.getCaption());
+//        setDateLabel(p.getCreatedOn());
+//        //(p.getID());
+//       // setLikesCounterLabel();
+//       // setCommentsCounterLabel();
 //    }
-   public void switch_to_comment_scene(ActionEvent event) throws IOException {
-        Starter.switchToScene(event,"CommentsScene.fxml");
-   }
+    public void setData(Post p)
+    {
+        this.post = p;
+         privacy.setText(p.getPrivacy());
+         caption.setText(p.getCaption());
+         date.setText(p.getCreatedOn());
+
+
+    }
+
+    public void switch_to_comment_scene(ActionEvent event) throws IOException {
+        Starter.switchToScene(event, "CommentsScene.fxml");
+    }
 
 }

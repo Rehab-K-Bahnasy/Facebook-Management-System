@@ -129,7 +129,7 @@ public class CreateAccountController {
 
     private boolean manageNameFields(TextField field) {
 
-        if ((field.getText() != null) && !Validator.checkNameValidation(field.getText())) {
+        if ( !Validator.checkNameValidation(field.getText())) {
             if (!error_message.startsWith("Name")) {
                 error_message += "Name can't contain numbers\n";
             }

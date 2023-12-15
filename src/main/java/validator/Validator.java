@@ -115,37 +115,4 @@ public class Validator extends DataManager {
         return false;
     }
 }
-//    /**
-//     * checks if the username exists
-//     * @param username - the username you want to use
-//     * @param users - the entire Users database
-//     * @return the username is used or not
-//     */
-//    public static boolean checkUsername(String username, User[] users) {
-//        boolean found = true;
-//        for (User user : users) {
-//            if (!user.checkUsernameMatch(username)){
-//                found = false;
-//                break;
-//            }
-//        }
-//        return found;
-//    }
-
-//    /**
-//     * checks if the phone exists
-//     * @param phone - the phone you want to use
-//     * @param users - the entire Users database
-//     * @return the phone is used or not
-//     */
-//    public static boolean checkPhone(char[] phone, User[] users) {
-//        boolean found = true;
-//        for (User user : users) {
-//            if (!Arrays.equals(user.getPhone, phone)) {
-//                found = false;
-//                break;
-//            }
-//        }
-//        return found;
-//    }
 
