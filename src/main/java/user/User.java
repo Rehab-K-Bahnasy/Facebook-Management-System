@@ -17,9 +17,8 @@ public class User extends Person implements Serializable {
     private String phone_number;
     private String password;
     private ArrayList<Friend> allFriends;
-
-    private static ArrayList<Message> sent_messages;
-    private static ArrayList<Message> received_message;
+    private static ArrayList<Message> sent_messages = new ArrayList<>();
+    private static ArrayList<Message> received_message = new ArrayList<>();
 
     private ArrayList<Post> posts;
     private ArrayList<Post> feed;

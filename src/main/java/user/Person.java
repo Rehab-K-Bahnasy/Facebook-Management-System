@@ -57,7 +57,7 @@ public abstract class Person implements Serializable {
     }
 
     public void setBirthdate(String birthDate) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         this.birthdate = LocalDate.parse(birthDate, formatter);
     }
 }

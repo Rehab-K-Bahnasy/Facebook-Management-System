@@ -33,11 +33,12 @@ public class MessageController {
     private String sender_username;
     private ArrayList<String> recipients_usernames = new ArrayList<>();
 
-    public void initialize(String sender_username, ArrayList<String> recipients_usernames, ArrayList<Message> sent, ArrayList<Message> received) {
-        this.sender_username = sender_username;
-        this.recipients_usernames = recipients_usernames;
-        this.sent = sent;
-        this.received = received;
+    public void initialize() {
+        for (var friend : DataManager.getCurrentUser().getAllFriends())
+            this.friends_combo_box.getItems().add(friend.getUsername());
+        this.sender_username = DataManager.getCurrentUser().getUsername();
+        this.sent = DataManager.getCurrentUser().getSent_messages();
+        this.received = DataManager.getCurrentUser().getReceived_message();
         for (Message message : sent) {
             sent_combo_box.getItems().addAll((int)message.getId());
         }
@@ -73,6 +74,9 @@ public class MessageController {
         sent.add(new Message(message_content.getText(), sender_username, recipients_usernames));
         NewMessageButton(new ActionEvent());
         addToHistory(sent.getLast().getId());
+        User.updateSentMessages(sender_username, sent.getLast());
+        for (var user : recipients_usernames)
+            User.updateReceivedMessages(user, sent.getLast());
     }
     @FXML
     private void handleFriendsComboBoxSelection() {
