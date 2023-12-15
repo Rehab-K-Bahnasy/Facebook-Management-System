@@ -2,6 +2,7 @@ package userDashaboard;
 
 import Post.Post;
 import Post.PostController;
+import conversation.MessageController;
 import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -47,6 +48,10 @@ public class HomePageController implements Initializable {
     @FXML
     private void settings(ActionEvent event) throws IOException {
         SettingsController.switchToSettings(event);
+    }
+    @FXML
+    private void message(ActionEvent event) throws IOException {
+        MessageController.switchToMessages(event);
     }
 
     @FXML

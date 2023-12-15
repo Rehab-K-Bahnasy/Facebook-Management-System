@@ -1,4 +1,4 @@
-package message;
+package conversation;
 
 import dataManager.DataReader;
 import dataManager.DataWriter;
@@ -17,7 +17,7 @@ public class Main extends Application {
     private static FXMLLoader fxmlLoader;
     @Override
     public void start(Stage stage) throws IOException {
-        fxmlLoader = new FXMLLoader(WelcomeLogin.class.getResource(".fxml"));
+        fxmlLoader = new FXMLLoader(Main.class.getResource("MessageScene.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root, 1024, 720);
         stage.setTitle("SOCIO");

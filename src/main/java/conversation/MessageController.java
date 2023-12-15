@@ -1,9 +1,18 @@
 package conversation;
 
+import dataManager.DataManager;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
+import userDashaboard.HomePageController;
+import userDashaboard.SettingsController;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MessageController {
@@ -27,14 +36,14 @@ public class MessageController {
         this.recipients_usernames = recipients_usernames;
         this.messages = messages;
         for (Message message : messages) {
-            if (message.getSenderUsername() == sender_username) {
+            if (message.getSenderUsername().equals(sender_username)) {
                 if (message.getRecipientsUsernames().equals(recipients_usernames)) {
                     choose_a_message.getItems().add(message.getContent());
                     continue;
                 }
             }
             for (String recipient : message.getRecipientsUsernames()) {
-                if (sender_username == recipient) {
+                if (sender_username.equals(recipient)) {
                     choose_a_message.getItems().add(message.getContent());
                     break;
                 }
@@ -42,7 +51,15 @@ public class MessageController {
         }
         choose_a_message.setOnAction(event -> handleChoiceBoxSelection());
     }
-
+    @FXML
+    public static void switchToMessages(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MessageController.class.getResource("MessageScene.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     public void addToHistory(String message) {
         choose_a_message.getItems().add(message);
         choose_a_message.setOnAction(event -> handleChoiceBoxSelection());
@@ -70,5 +87,9 @@ public class MessageController {
             }
         }
         message_content.setEditable(false);
+    }
+    @FXML
+    private void backToHomepage(ActionEvent event) throws IOException {
+        HomePageController.switchToHomePage(event);
     }
 }

@@ -1,6 +1,7 @@
 package user;
 
 import Friend.Friend;
+import conversation.Message;
 
 import java.io.Serializable;
 import java.util.*;
@@ -13,6 +14,12 @@ public class User extends Person implements Serializable {
     private String phone_number;
     private String password;
     private List<Friend> allFriends;
+
+    public ArrayList<Message> sent_messages;
+    public ArrayList<Message> recieved_message;
+
+
+
     private ArrayList<Post> posts;
     private ArrayList<Post> feed;
 

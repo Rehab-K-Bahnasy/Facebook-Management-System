@@ -4,6 +4,7 @@ import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import userDashaboard.HomePageController;
 import validator.Validator;
 
 import java.io.IOException;
@@ -88,7 +89,7 @@ public class CreateAccountController {
         return female.isSelected();
     }
 
-    public void signUp () {
+    public void signUp (ActionEvent event) throws IOException {
         if (field_style == null) {
             field_style = email.getStyle();
         }
@@ -117,7 +118,12 @@ public class CreateAccountController {
             alert.setAlertType(Alert.AlertType.INFORMATION);
             alert.setTitle("HELLOZ");
             alert.setHeaderText("Welcome to SOC-IO <3");
-            alert.showAndWait();
+            var result = alert.showAndWait();
+            if (result.isPresent()) {
+                if (result.get() == ButtonType.OK) {
+                    toLogin(event);
+                }
+            }
         } else {
             alert.setAlertType(Alert.AlertType.ERROR);
             alert.setTitle("invalid credentials");
