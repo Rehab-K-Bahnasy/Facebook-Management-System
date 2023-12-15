@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
+import userDashaboard.HomePageController;
 import userDashaboard.SettingsController;
 
 import java.io.IOException;
@@ -86,5 +87,9 @@ public class MessageController {
             }
         }
         message_content.setEditable(false);
+    }
+    @FXML
+    private void backToHomepage(ActionEvent event) throws IOException {
+        HomePageController.switchToHomePage(event);
     }
 }
