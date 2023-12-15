@@ -1,26 +1,26 @@
 .nameLabel {
     -fx-font-family: Tajawal;
     -fx-font-weight: bold;
-    -fx-font-size: 38;
+    -fx-font-size: 30;
 }
 
 .usernameLabel {
     -fx-font-family: Tajawal;
     -fx-font-weight: 300;
-    -fx-font-size: 18;
+    -fx-font-size: 15;
     -fx-text-fill: rgba(74, 69, 67, 0.70);
 }
 
 .privacyLabel {
     -fx-font-family: Tajawal;
     -fx-font-weight: 300;
-    -fx-font-size: 18;
+    -fx-font-size: 15;
     -fx-text-fill: rgba(74, 69, 67, 0.7);
 }
 
 .captionLabel {
     -fx-font-family: Tajawal;
-    -fx-font-size: 32;
+    -fx-font-size: 25;
 }
 
 .dateLabel {

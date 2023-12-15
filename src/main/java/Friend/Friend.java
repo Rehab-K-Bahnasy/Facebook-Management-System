@@ -18,10 +18,8 @@ public class Friend extends User {
         BLOCKED
     }
 
-    public Friend(User user ){
+    public Friend(User user){
         super(user);
-
-
     }
     public void setFriendshipType(FriendshipType friendshipType) {
         this.friendship_type = friendshipType;

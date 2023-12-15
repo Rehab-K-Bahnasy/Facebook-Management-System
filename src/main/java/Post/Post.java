@@ -12,16 +12,18 @@ public class Post implements Serializable {
     private int post_ID;
     private final LocalDate post_created_on;
     private String post_caption;
-    private int reacts_counter;
     private String privacy;
     private ArrayList<Comment> comments_on_post;
     private ArrayList<User> tagged_users;
+    private ArrayList<User> reactors;
 
     public Post(User creator, String post_caption, String post_privacy) {
         this.creator = creator;
         setCaption(post_caption);
         setPrivacy(post_privacy);
         comments_on_post = new ArrayList<>();
+        reactors = new ArrayList<>();
+        tagged_users = new ArrayList<>();
         post_created_on = LocalDate.now();
         setID(cnt);
         cnt++;
@@ -48,8 +50,8 @@ public class Post implements Serializable {
         this.post_ID = post_ID;
     }
 
-    public String getCreatedOn() {
-        return post_created_on.toString();
+    public LocalDate getCreatedOn() {
+        return post_created_on;
     }
 
     public String getCaption() {
@@ -61,12 +63,9 @@ public class Post implements Serializable {
     }
 
     public int getReacts() {
-        return reacts_counter;
+        return reactors.size();
     }
 
-    public void addComment(Comment comment) {
-        comments_on_post.add(comment);
-    }
 
     public ArrayList<Comment> getComments_on_post() {
         return comments_on_post;
@@ -80,22 +79,30 @@ public class Post implements Serializable {
         this.privacy = post_privacy;
     }
 
+    public void addComment(Comment comment) {
+        comments_on_post.add(comment);
+    }
     public int getCommentsCounter() {
         return comments_on_post.size();
     }
 
-    public void modifyReacts(boolean check_if_liked) {
-        if (check_if_liked)
-            reacts_counter++;
-        else
-            reacts_counter--;
+    public void setTaggedUsers(ArrayList<User> tagged_users) {
+        this.tagged_users = tagged_users;
+    }
+
+    public void addReact(User reactor) {
+        reactors.add(reactor);
+    }
+
+    public void removeReact(User reactor) {
+        reactors.remove(reactor);
+    }
+
+    public boolean hasUserLikedPost(User user) {
+        return reactors.contains(user);
     }
 
     public ArrayList<User> getTaggedUsers() {
         return this.tagged_users;
-    }
-
-    public void setTaggedUsers(ArrayList<User> tagged_users) {
-        this.tagged_users = tagged_users;
     }
 }

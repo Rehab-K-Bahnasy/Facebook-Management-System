@@ -1,60 +1,57 @@
 package Post;
 
+import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.io.IOException;
-import java.time.LocalDate;
 
 public class PostController {
     @FXML
-    Label name;
+    private Label name;
     @FXML
-    VBox vBox;
+    private Label username;
     @FXML
-    Label username;
+    private Label privacy;
     @FXML
-    Label privacy;
+    private Label caption;
     @FXML
-    Label caption;
+    private Label date;
     @FXML
-    Label date;
+    private ToggleButton like;
     @FXML
-    ToggleButton like;
+    private Label likes_counter;
     @FXML
-    Label likes_counter;
-    @FXML
-    Label comments_counter;
-    @FXML
-    private TextField comment_field;
+    private Label comments_counter;
+    private Post post;
     boolean liked;
-    public Post post;
 
-    public void setData(Post p) {
-        this.post = p;
-        privacy.setText(p.getPrivacy());
-        caption.setText(p.getCaption());
-        date.setText(p.getCreatedOn());
-        name.setText(p.getCreatorName());
-        username.setText(p.getCreatorUsername());
-        likes_counter.setText(Integer.toString(p.getReacts()));
-        comments_counter.setText(Integer.toString(p.getCommentsCounter()));
+    public void setData(Post post) {
+        this.post = post;
+        privacy.setText(post.getPrivacy());
+        caption.setText(post.getCaption());
+        date.setText(post.getCreatedOn().toString());
+        name.setText(post.getCreatorName());
+        username.setText(post.getCreatorUsername());
+        likes_counter.setText(Integer.toString(post.getReacts()));
+        comments_counter.setText(Integer.toString(post.getCommentsCounter()));
+        liked = post.hasUserLikedPost(DataManager.getCurrentUser());
+        if (liked) {
+            like.setStyle("-fx-background-color: #35502c");
+            like.setText("Liked");
+        } else {
+            like.setStyle("-fx-background-color: #709354");
+            like.setText("Like");
+        }
     }
 
     public void setPost(Post post) {
         this.post = post;
     }
-
 
     private void setLikesCounterLabel() {
         likes_counter.setText(Integer.toString(post.getReacts()));
@@ -70,33 +67,20 @@ public class PostController {
             like.setStyle("-fx-background-color: #709354");
             like.setText("Like");
         }
-        try {
-            post.modifyReacts(liked);
-        } catch (NullPointerException exception) {
-            System.out.println(exception.getMessage());
+        if (liked) {
+            post.addReact(DataManager.getCurrentUser());
+        } else {
+            post.removeReact(DataManager.getCurrentUser());
         }
         setLikesCounterLabel();
     }
 
     @FXML
     private void addComment() {
-        post.addComment(new Comment(username.getText(), 0, post.getID()));
+//        Comment comment = new Comment();
     }
-
-//    public void setThePost(Post p) {
-//       // setNameLabel();
-//       // setUsernameLabel();
-//        DateLabel.settext(p.getCreatedon());
-//        setPrivacyLabel(p.getPrivacy());
-//        setCaptionLabel(p.getCaption());
-//        setDateLabel(p.getCreatedOn());
-//        //(p.getID());
-//       // setLikesCounterLabel();
-//       // setCommentsCounterLabel();
-//    }
 
     public void switch_to_comment_scene(ActionEvent event) throws IOException {
         Starter.switchToScene(event, "CommentsScene.fxml");
     }
-
 }
