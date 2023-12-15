@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Merging the friend class." />
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Merging the friend class.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/message/ConversationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/ConversationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/message/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/message/ConversationC.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conversation/ConversationC.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,25 +65,25 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;homePage&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alhas/OneDrive/MyProjects/Facebook-Management-System/src/main/resources/conversation&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.4643678&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "User-V2",
+    "last_opened_file_path": "C:/Users/alhas/OneDrive/MyProjects/Facebook-Management-System/src/main/resources/conversation",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.4643678",
+    "settings.editor.selected.configurable": "preferences.general",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alhas\OneDrive\MyProjects\Facebook-Management-System\src\main\resources\conversation" />
@@ -84,12 +91,17 @@
       <recent name="D:\Facebook-Management-System\src" />
       <recent name="D:\Facebook-Management-System\src\main\resources\createAccount" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\senond year\demo1\Facebook-Management-System\src\main\resources\Conversation" />
+      <recent name="F:\senond year\demo1\Facebook-Management-System\src\main\resources\message" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="conversation" />
       <recent name="welcomeLogin" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WelcomeLogin">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="CreateAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="creatAccount.CreateAccount" />
       <module name="theSocialNetwork" />
@@ -117,11 +129,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="message.Main" />
+      <option name="MAIN_CLASS_NAME" value="conversation.Main" />
       <module name="theSocialNetwork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="message.*" />
+          <option name="PATTERN" value="conversation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,8 +169,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WelcomeLogin" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.WelcomeLogin" />
         <item itemvalue="Application.Starter" />
         <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.CreateAccount" />

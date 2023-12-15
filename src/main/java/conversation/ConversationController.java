@@ -1,4 +1,4 @@
-package message;
+package conversation;
 import conversation.MessageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
