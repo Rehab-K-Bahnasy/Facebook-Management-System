@@ -17,10 +17,11 @@ public abstract class Person implements Serializable {
         setBirthdate((String) personData.get("birthdate"));
         setGender((String) personData.get("gender"));
     }
-    Person(User user){
+
+    Person(User user) {
         setFirstName(user.getFirstName());
         setLastName(user.getLastName());
-        setBirthdate(user.getBirthdate().toString());
+        setBirthdate(user.getBirthdate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
         setGender(user.getGender());
     }
 
@@ -52,12 +53,12 @@ public abstract class Person implements Serializable {
         this.gender = gender;
     }
 
-    public LocalDate getBirthdate() {
-        return birthdate;
-    }
-
     public void setBirthdate(String birthDate) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         this.birthdate = LocalDate.parse(birthDate, formatter);
+    }
+
+    public LocalDate getBirthdate() {
+        return birthdate;
     }
 }

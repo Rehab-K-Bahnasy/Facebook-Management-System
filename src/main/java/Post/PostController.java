@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -37,10 +38,10 @@ public class PostController {
     @FXML
     private TextField comment_field;
     boolean liked;
-    public Post post ;
-    public void setData(Post p)
-    {
-        this.post=p;
+    public Post post;
+
+    public void setData(Post p) {
+        this.post = p;
         privacy.setText(p.getPrivacy());
         caption.setText(p.getCaption());
         date.setText(p.getCreatedOn());

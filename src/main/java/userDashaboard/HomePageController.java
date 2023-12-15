@@ -96,5 +96,4 @@ public class HomePageController implements Initializable {
 
         stage.show();
     }
-
 }

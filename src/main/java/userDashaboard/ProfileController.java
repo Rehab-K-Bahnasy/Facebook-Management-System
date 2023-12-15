@@ -52,6 +52,7 @@ public class ProfileController implements Initializable {
                 System.out.println(e.getMessage());
             }
         }
+        setProfile(user);
     }
 
     public static void setUser(User _user) {
@@ -75,9 +76,7 @@ public class ProfileController implements Initializable {
         } else if (!curr_user.isFriendWith(user.getUsername())) {
             add_button.setText("Add friend");
             restrict_button.setVisible(false);
-        }
-        else
-        {
+        } else {
             add_button.setText("friends");
             restrict_button.setVisible(true);
         }
@@ -86,7 +85,7 @@ public class ProfileController implements Initializable {
     @FXML
     private void addFriend() {
         add_button.setText("friends");
-        DataManager.getCurrentUser().addFriend(user , username.getText() );
+        DataManager.getCurrentUser().addFriend(user);
     }
 
     @FXML
@@ -103,10 +102,6 @@ public class ProfileController implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        if (user != null) {
-            ProfileController profile = fxmlLoader.getController();
-            profile.setProfile(user);
-        }
         stage.show();
     }
 
