@@ -2,10 +2,11 @@ package Friend;
 
 import user.User;
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class Friend extends User {
-    private Date friendship_date;
+    private LocalDate friendship_date;
     private FriendshipType friendship_type;
     public enum FriendshipType {
         ALL,
@@ -53,10 +54,10 @@ public class Friend extends User {
     public void closeFriend(Friend username){
         username.setFriendshipType(FriendshipType.CLOSE);
     }
-    public void setFriendshipDate(Date friendshipDate) {
-        this.friendship_date = (friendshipDate != null) ? friendshipDate : new Date();
+    public void setFriendshipDate(LocalDate friendshipDate) {
+        this.friendship_date = (friendshipDate != null) ? friendshipDate : new LocalDate();
     }
-    public Date getFriendshipDate() {
+    public LocalDate getFriendshipDate() {
         return friendship_date;
     }
 }

@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03-Dec-23_2_19_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03-Dec-23_2_19_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03-Dec-23_2_20_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03-Dec-23_2_20_AM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Finished Settings backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,19 +17,31 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="user_friend" />
+        <entry key="$PROJECT_DIR$" value="friend-class" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/Friend/Friend.java" root0="FORCE_HIGHLIGHTING" />
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rehab-K-Bahnasy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="792e09ca-1600-40c2-b1f0-1cbfe5c09889" />
+        <option name="url" value="https://github.com/Rehab-K-Bahnasy/Facebook-Management-System.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -53,10 +58,98 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Friend",
+    "last_opened_file_path": "F:/senond year/demo1/Facebook-Management-System/src/main/resources/settings",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\senond year\demo1\Facebook-Management-System\src\main\resources\settings" />
+      <recent name="F:\senond year\MM\src\main\resources\welcomeLogin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\senond year\demo1\Facebook-Management-System\src\main\resources\userDashaboard" />
+      <recent name="F:\senond year\demo1\Facebook-Management-System\src\main\resources\settings" />
+      <recent name="F:\senond year\MM\src\main\java\validator" />
+      <recent name="F:\senond year\MM\src\main\java\welcomeLogin" />
+      <recent name="F:\senond year\MM\src\main\resources\createAccount" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="userDashaboard" />
+      <recent name="welcomeLogin" />
+      <recent name="createAccount" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.WelcomeLogin">
+    <configuration name="CreateAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="creatAccount.CreateAccount" />
+      <module name="theSocialNetwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="creatAccount.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Post.HelloApplication" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Post.Starter" />
+      <module name="theSocialNetwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WelcomeLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="welcomeLogin.WelcomeLogin" />
+      <module name="theSocialNetwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="welcomeLogin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WelcomeLogin" />
+        <item itemvalue="Application.Starter" />
+        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.CreateAccount" />
+        <item itemvalue="Application.WelcomeLogin" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,24 +159,171 @@
       <option name="presentableId" value="Default" />
       <updated>1701195701166</updated>
       <workItem from="1701195702237" duration="3000" />
+      <workItem from="1702008003858" duration="28397000" />
+      <workItem from="1702114751426" duration="11166000" />
+      <workItem from="1702268849638" duration="6339000" />
+      <workItem from="1702381661044" duration="3727000" />
     </task>
+    <task id="LOCAL-00001" summary="Added show password design.">
+      <option name="closed" value="true" />
+      <created>1701872894014</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701872894014</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed GUI packages">
+      <option name="closed" value="true" />
+      <created>1701877460840</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701877460840</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Finished GUI Completely design">
+      <option name="closed" value="true" />
+      <created>1701890236370</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701890236370</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Finished Validator Backend">
+      <option name="closed" value="true" />
+      <created>1701918037839</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701918037839</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Finished linking the validation to the GUI">
+      <option name="closed" value="true" />
+      <created>1702018573702</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702018573702</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed date validation">
+      <option name="closed" value="true" />
+      <created>1702052029885</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702052029885</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed the nulls in the validation">
+      <option name="closed" value="true" />
+      <created>1702081703539</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702081703539</updated>
+    </task>
+    <task id="LOCAL-00008" summary="FINISHED CREATE ACCOUNT AND LOGIN. &#10;&#10;One bug found: no uniqueness check with email and phone number.">
+      <option name="closed" value="true" />
+      <created>1702086194304</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702086194304</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Some changes">
+      <option name="closed" value="true" />
+      <created>1702086657206</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702086657206</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed the history distortion.">
+      <option name="closed" value="true" />
+      <created>1702167083833</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702167083833</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixed the history distortion.">
+      <option name="closed" value="true" />
+      <created>1702467705351</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702467705351</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added Search-Page branch">
+      <option name="closed" value="true" />
+      <created>1702469081277</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702469081277</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Finished GUI of Settings">
+      <option name="closed" value="true" />
+      <created>1702580655390</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702580655390</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed the bug of the module">
+      <option name="closed" value="true" />
+      <created>1702580763443</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702580763443</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Finished Settings backend">
+      <option name="closed" value="true" />
+      <created>1702599486820</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702599486820</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/Search-Page" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/Message-GroupChat" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/Validator" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
-              <option name="FILTERS">
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/welcomeLogin" />
-                      </list>
-                    </value>
-                  </entry>
+                  <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
             </State>
@@ -93,6 +333,21 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Added show password design." />
+    <MESSAGE value="Fixed GUI packages" />
+    <MESSAGE value="Finished GUI Completely design" />
+    <MESSAGE value="Finished Validator Backend" />
+    <MESSAGE value="Finished linking the validation to the GUI" />
+    <MESSAGE value="Fixed date validation" />
+    <MESSAGE value="Fixed the nulls in the validation" />
+    <MESSAGE value="FINISHED CREATE ACCOUNT AND LOGIN. &#10;&#10;One bug found: no uniqueness check with email and phone number." />
+    <MESSAGE value="Some changes" />
+    <MESSAGE value="Fixed the history distortion." />
+    <MESSAGE value="Added Search-Page branch" />
+    <MESSAGE value="Finished GUI of Settings" />
+    <MESSAGE value="Fixed the bug of the module" />
+    <MESSAGE value="Finished Settings" />
+    <MESSAGE value="Finished Settings backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Settings backend" />
   </component>
 </project>
