@@ -8,8 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import userDashaboard.CreatPostController;
-import userDashaboard.HomePageController;
+import userDashboard.HomePageController;
 
 import java.io.IOException;
 import java.net.URL;

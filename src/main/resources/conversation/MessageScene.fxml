@@ -19,7 +19,7 @@
       <ComboBox fx:id="received_combo_box" layoutX="406.0" layoutY="22.0" onAction="#handleReceivedComboBoxSelection" prefHeight="55.0" prefWidth="281.0" stylesheets="@../Post/styling.css" />
       <Button fx:id="new_message_button" layoutX="680.0" layoutY="608.0" mnemonicParsing="false" onAction="#NewMessageButton" prefHeight="50.0" prefWidth="138.0" stylesheets="@../Post/styling.css" text="New Message" />
       <ComboBox fx:id="sent_combo_box" layoutX="716.0" layoutY="23.0" onAction="#handleSentComboBoxSelection" prefHeight="55.0" prefWidth="281.0" stylesheets="@../Post/styling.css" />
-      <Button layoutX="49.0" layoutY="614.0" mnemonicParsing="false" onAction="#backToHomepage" prefHeight="48.0" prefWidth="104.0" styleClass="cancelButton" stylesheets="@../userDashaboard/styling.css" text="Back" />
+      <Button layoutX="49.0" layoutY="614.0" mnemonicParsing="false" onAction="#backToHomepage" prefHeight="48.0" prefWidth="104.0" styleClass="cancelButton" stylesheets="@../userDashboard/styling.css" text="Back" />
       <ComboBox fx:id="friends_combo_box" layoutX="678.0" layoutY="541.0" onAction="#handleReceivedComboBoxSelection" prefHeight="55.0" prefWidth="293.0" promptText="Send To" styleClass="button" stylesheets="@../Post/styling.css" />
    </children>
 </Pane>

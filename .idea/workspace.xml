@@ -4,22 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Made shewya 7agat.">
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/userDashboard/NameUsername.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Post/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Post/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Post/RepliesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/RepliesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Post/ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/ReplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/CreatPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/CreatPostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/CommentsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentsScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/PostScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/PostScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/RepliesScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/RepliesScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/ReplyScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/ReplyScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Post/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataManager/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataManager/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataManager/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataManager/DataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataManager/DataWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataManager/DataWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/CreatPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/CreatPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/NameUsername.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/CreatePostScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/CreatePostScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/HomePageScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/ProfileScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/ProfileScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/SearchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/SearchScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/SettingsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/SettingsScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/user.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -43,7 +67,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="homePage" />
+        <entry key="$PROJECT_DIR$" value="homePage-v2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,50 +98,45 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "homePage",
-    "last_opened_file_path": "D:/Facebook-Management-System/src/main/resources/Post",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4643678",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homePage&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Facebook-Management-System/src/main/resources/userDashaboard&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4643678&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Facebook-Management-System\src\main\resources\Post" />
+      <recent name="D:\Facebook-Management-System\src\main\resources\userDashaboard" />
       <recent name="C:\Users\alhas\OneDrive\MyProjects\Facebook-Management-System\src\main\resources\conversation" />
       <recent name="D:\Facebook-Management-System\src\main\resources\welcomeLogin" />
       <recent name="D:\Facebook-Management-System\src" />
       <recent name="D:\Facebook-Management-System\src\main\resources\createAccount" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\senond year\demo1\Facebook-Management-System\src\main\resources\Conversation" />
-      <recent name="F:\senond year\demo1\Facebook-Management-System\src\main\resources\message" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="conversation" />
       <recent name="welcomeLogin" />
       <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.WelcomeLogin">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Post.HelloApplication" />
-      <module name="demo" />
+    <configuration name="CreateAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="welcomeLogin.CreateAccount" />
+      <module name="theSocialNetwork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Post.*" />
+          <option name="PATTERN" value="welcomeLogin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,12 +144,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="message.Main" />
+    <configuration name="DataWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dataManager.DataWriter" />
       <module name="theSocialNetwork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="message.*" />
+          <option name="PATTERN" value="dataManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homePage.HomePage" />
+      <module name="theSocialNetwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userDashboard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,26 +196,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="conversation.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="conversation.Main" />
-      <module name="theSocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="conversation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.WelcomeLogin" />
-        <item itemvalue="Application.conversation.Main" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Starter" />
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.CreateAccount" />
+        <item itemvalue="Application.HomePage" />
+        <item itemvalue="Application.DataWriter" />
       </list>
     </recent_temporary>
   </component>
@@ -214,9 +233,15 @@
       <workItem from="1702132237591" duration="3751000" />
       <workItem from="1702232147217" duration="327000" />
       <workItem from="1702233141210" duration="2029000" />
-      <workItem from="1702266071216" duration="6325000" />
-      <workItem from="1702594179223" duration="2066000" />
-      <workItem from="1702654784030" duration="12816000" />
+      <workItem from="1702266071216" duration="6236000" />
+      <workItem from="1702594352621" duration="799000" />
+      <workItem from="1702607047232" duration="56000" />
+      <workItem from="1702607124338" duration="13738000" />
+      <workItem from="1702621636203" duration="68000" />
+      <workItem from="1702621931399" duration="715000" />
+      <workItem from="1702623369761" duration="1606000" />
+      <workItem from="1702659825829" duration="2480000" />
+      <workItem from="1702672531335" duration="8176000" />
     </task>
     <task id="LOCAL-00001" summary="zZz">
       <option name="closed" value="true" />
@@ -306,108 +331,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702303957908</updated>
     </task>
-    <task id="LOCAL-00012" summary="added group chat functions now waiting for linking">
+    <task id="LOCAL-00012" summary="Made a lot of 7agat">
       <option name="closed" value="true" />
-      <created>1702404206705</created>
+      <created>1702621570957</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1702404206705</updated>
+      <updated>1702621570957</updated>
     </task>
-    <task id="LOCAL-00013" summary="Merging the friend class.">
-      <option name="closed" value="true" />
-      <created>1702606600404</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1702606600404</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Designed GUI of MessagesScene and fixed some bugs">
-      <option name="closed" value="true" />
-      <created>1702613023757</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1702613023757</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Linked message scene with homepage and added two arraylists for messages">
-      <option name="closed" value="true" />
-      <created>1702614450139</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1702614450139</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Added another combobox">
-      <option name="closed" value="true" />
-      <created>1702614672226</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1702614672226</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Fixed a bug in the sign up where user moves to login in after signing up">
-      <option name="closed" value="true" />
-      <created>1702616794820</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1702616794820</updated>
-    </task>
-    <task id="LOCAL-00018" summary="l3n allah el java">
-      <option name="closed" value="true" />
-      <created>1702644114740</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1702644114740</updated>
-    </task>
-    <task id="LOCAL-00019" summary="edits">
-      <option name="closed" value="true" />
-      <created>1702646676167</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1702646676167</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Linking friend and feed.">
-      <option name="closed" value="true" />
-      <created>1702654755454</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1702654755454</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Made shewya 7agat.">
-      <option name="closed" value="true" />
-      <created>1702659802730</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1702659802730</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="User">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="*" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -415,10 +353,10 @@
             <State>
               <option name="FILTERS">
                 <map>
-                  <entry key="user">
+                  <entry key="branch">
                     <value>
                       <list>
-                        <option value="*" />
+                        <option value="origin/post-comment" />
                       </list>
                     </value>
                   </entry>
@@ -442,16 +380,18 @@
     <MESSAGE value="added Message and it's gui without styling" />
     <MESSAGE value="added the fxml file" />
     <MESSAGE value="fixed some unadded files" />
-    <MESSAGE value="added group chat functions now waiting for linking" />
-    <MESSAGE value="Merging the friend class." />
-    <MESSAGE value="Designed GUI of MessagesScene and fixed some bugs" />
-    <MESSAGE value="Linked message scene with homepage and added two arraylists for messages" />
-    <MESSAGE value="Added another combobox" />
-    <MESSAGE value="Fixed a bug in the sign up where user moves to login in after signing up" />
-    <MESSAGE value="l3n allah el java" />
-    <MESSAGE value="edits" />
-    <MESSAGE value="Linking friend and feed." />
-    <MESSAGE value="Made shewya 7agat." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made shewya 7agat." />
+    <MESSAGE value="Made alot of 7agat" />
+    <MESSAGE value="Made a lot of 7agat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a lot of 7agat" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

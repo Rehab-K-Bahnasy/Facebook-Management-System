@@ -1,4 +1,4 @@
-package userDashaboard;
+package userDashboard;
 
 import Post.Post;
 import dataManager.DataManager;
@@ -14,14 +14,27 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+/**
+ * Manages the creation of user posts, allowing users to compose and submit new posts.
+ * Handles user interactions related to post creation and navigation.
+ *
+ * @author SOC-IO
+ * @version 1.0
+ */
 
 public class CreatPostController {
+
     @FXML
     private TextField content;
     @FXML
     private RadioButton public_button;
     @FXML
     private RadioButton private_button;
+
+    /**
+     * Creates a new post based on user input and adds it to the user's posts.
+     * Displays an information alert upon successful post creation.
+     */
     @FXML
     private void createPost() {
         String privacy;
@@ -40,10 +53,24 @@ public class CreatPostController {
         alert.setHeaderText("Your post has been uploaded");
         alert.showAndWait();
     }
+
+    /**
+     * Navigates back to the home page.
+     *
+     * @param event The ActionEvent triggering the navigation.
+     * @throws IOException If an I/O error occurs.
+     */
     @FXML
     private void back(ActionEvent event) throws IOException {
         HomePageController.switchToHomePage(event);
     }
+
+    /**
+     * Switches to the create post scene.
+     *
+     * @param event The ActionEvent triggering the switch.
+     * @throws IOException If an I/O error occurs.
+     */
     public static void switchToHomePage(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CreatPostController.class.getResource("CreatePostScene.fxml"));
         Parent root = fxmlLoader.load();

@@ -1,15 +1,29 @@
 package welcomeLogin;
 
 import dataManager.DataManager;
-import userDashaboard.HomePageController;
+import userDashboard.HomePageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import validator.Validator;
 
 import java.io.IOException;
+/**
+ * The `WelcomeLoginController` class handles user interactions for the welcome/login scene.
+ * It is associated with the "WelcomeScene.fxml" FXML file and provides methods for handling login attempts,
+ * creating new accounts, and managing password visibility.
+ * Utilizes the `DataManager` for user data management, `HomePageController` for scene switching,
+ * `Validator` for input validation, and JavaFX components for the graphical user interface.
+ *
+ * This controller includes methods for toggling password visibility, validating login credentials,
+ * and navigating to the home page or account creation scene based on user interactions.
+ *
+ * @author SOC-IO
+ * @version 1.0
+ */
 
 public class WelcomeLoginController {
+
     @FXML
     private TextField identity_field;
     @FXML
@@ -19,7 +33,12 @@ public class WelcomeLoginController {
     @FXML
     private CheckBox show_password;
 
-   private static String CurrentUserIdentity;
+    private static String CurrentUserIdentity;
+
+    /**
+     * Toggles the visibility of the password based on the state of the "Show Password" checkbox.
+     * Displays the plain text password or the password field accordingly.
+     */
     public void passwordVisibility() {
         if (show_password.isSelected()) {
             password_text.setText(password_field.getText());
@@ -32,6 +51,13 @@ public class WelcomeLoginController {
         password_text.setVisible(false);
     }
 
+    /**
+     * Handles the login attempt by validating the user's credentials and navigating to the home page on success.
+     * Displays appropriate alerts for successful login or incorrect credentials.
+     *
+     * @param event The ActionEvent triggering the login attempt.
+     * @throws IOException If an I/O error occurs during scene switching.
+     */
     public void login(ActionEvent event) throws IOException {
         String input_identity = identity_field.getText();
         String input_password = password_field.getText();
@@ -60,11 +86,22 @@ public class WelcomeLoginController {
         }
     }
 
+    /**
+     * Navigates to the account creation scene.
+     *
+     * @param event The ActionEvent triggering the scene switch.
+     * @throws IOException If an I/O error occurs during scene switching.
+     */
     public void createNewAccount(ActionEvent event) throws IOException {
         WelcomeLogin.switchToScene(event, "CreateAccountScene.fxml");
     }
-    public static String getCurrentUserIdentity()
-    {
+
+    /**
+     * Gets the current user's identity.
+     *
+     * @return The current user's identity.
+     */
+    public static String getCurrentUserIdentity() {
         return CurrentUserIdentity;
     }
 }
