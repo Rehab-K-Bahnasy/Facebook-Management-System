@@ -66,10 +66,6 @@ public class HomePageController implements Initializable {
         SearchController.switchToSearch(event);
     }
     @FXML
-    private void message(ActionEvent event) throws IOException {
-        MessagingController.switchToMessage(event);
-    }
-    @FXML
     private void logout(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("log out");

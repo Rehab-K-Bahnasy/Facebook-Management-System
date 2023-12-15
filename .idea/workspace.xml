@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Merging the friend class.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
-    </list>
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Merging the friend class." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,8 +158,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.WelcomeLogin" />
-        <item itemvalue="Application.Starter" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Starter" />
         <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.CreateAccount" />
       </list>

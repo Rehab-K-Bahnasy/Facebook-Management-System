@@ -9,41 +9,6 @@ import java.util.Arrays;
 import java.time.LocalDate;
 
 public class Validator extends DataManager {
-    /**
-     * encrypt the string
-     *
-     * @param _string - the string you want to encrypt
-     * @param key     - the special key for the user
-     */
-    private static void transformString(char[] _string, short key) {
-        for (int i = 0; i < _string.length; i++) {
-            _string[i] *= key;
-        }
-    }
-
-    /**
-     * encrypt the string
-     *
-     * @param _string - the string you want to encrypt
-     * @param key     - the special key for the user
-     * @return encrypted string
-     */
-    private static char[] returnTransformedString(char[] _string, short key) {
-        for (int i = 0; i < _string.length; i++) {
-            _string[i] *= key;
-        }
-        return _string;
-    }
-
-    /**
-     * @param actual_password - the real password
-     * @param password        - the string you want to check
-     * @return the password is right or not
-     */
-    public static boolean checkPassword(char[] actual_password, char[] password, short key) {
-        transformString(password, key);
-        return Arrays.equals(actual_password, password);
-    }
 
     public static boolean checkNameValidation(String name) {
         String nameRegex = "^[a-zA-Z\\s\\-']+$";
@@ -65,11 +30,7 @@ public class Validator extends DataManager {
         return !(password.isEmpty()) && !(confirmation_password.isEmpty()) && password.equals(confirmation_password);
     }
 
-    /**
-     * checks if the user exists
-     * @param identity - the string you want to check
-     * @return the user is used or not
-     */
+
     public static boolean checkLoginValidation(String identity , String password ) {
         if(DataManager.retrieveUser(identity)==null)
             return false;
@@ -102,12 +63,7 @@ public class Validator extends DataManager {
         }
         return 0;
     }
-    /**
-     * checks if the person is adult or not
-     *
-     * @param date - the birth-date of the person
-     * @return the person is adult or not
-     */
+
     public static boolean checkAdult(LocalDate date) {
         if (!date.isAfter(LocalDate.now().minusYears(18))) {
             return true;
