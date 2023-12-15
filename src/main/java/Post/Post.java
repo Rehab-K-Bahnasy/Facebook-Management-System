@@ -1,40 +1,43 @@
 package Post;
 
+import user.User;
+
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Post {
-    private String username;
-    private String name;
+public class Post implements Serializable {
+    private static int cnt = 0;
+    private final User creator;
     private int post_ID;
-    private LocalDate post_created_on;
+    private final LocalDate post_created_on;
     private String post_caption;
     private int reacts_counter;
     private String privacy;
-    //private User [] users_tagged_in_post = new User[10000];
-    private ArrayList<Comment> comments_on_post = new ArrayList<>();
+    private ArrayList<Comment> comments_on_post;
+    private ArrayList<User> tagged_users;
 
-   public Post(int post_ID, String post_caption, LocalDate post_created_on, String post_privacy) {
-        setID(post_ID);
+    public Post(User creator, String post_caption, String post_privacy) {
+        this.creator = creator;
         setCaption(post_caption);
-        setCreatedOn(post_created_on);
         setPrivacy(post_privacy);
+        comments_on_post = new ArrayList<>();
+        post_created_on = LocalDate.now();
+        setID(cnt);
+        cnt++;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Post(User creator, String post_caption, String post_privacy, ArrayList<User> tagged_users) {
+        this(creator, post_caption, post_privacy);
+        setTaggedUsers(tagged_users);
     }
 
-    public String getName() {
-        return name;
+    public String getCreatorName() {
+        return creator.getName();
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public String getCreatorUsername() {
+        return creator.getUsername();
     }
 
     public int getID() {
@@ -47,10 +50,6 @@ public class Post {
 
     public String getCreatedOn() {
         return post_created_on.toString();
-    }
-
-    public void setCreatedOn(LocalDate post_created_on) {
-        this.post_created_on = post_created_on;
     }
 
     public String getCaption() {
@@ -73,7 +72,6 @@ public class Post {
         return comments_on_post;
     }
 
-
     public String getPrivacy() {
         return privacy;
     }
@@ -91,5 +89,13 @@ public class Post {
             reacts_counter++;
         else
             reacts_counter--;
+    }
+
+    public ArrayList<User> getTaggedUsers() {
+        return this.tagged_users;
+    }
+
+    public void setTaggedUsers(ArrayList<User> tagged_users) {
+        this.tagged_users = tagged_users;
     }
 }

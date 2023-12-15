@@ -2,9 +2,11 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userDashaboard.ProfileController">
    <children>
@@ -13,9 +15,15 @@
             <Image url="@bg.png" />
          </image>
       </ImageView>
-      <Button layoutX="30.0" layoutY="132.0" maxHeight="118.0" maxWidth="119.0" minHeight="152.0" minWidth="152.0" mnemonicParsing="false" prefHeight="152.0" prefWidth="152.0" styleClass="profilePic" stylesheets="@styling.css" />
-      <Label fx:id="name" layoutX="237.0" layoutY="142.0" prefHeight="66.0" prefWidth="751.0" styleClass="nameLabel" stylesheets="@styling.css" text="Abdllrhman Zedan" />
-      <Label fx:id="username" layoutX="237.0" layoutY="202.0" prefHeight="44.0" prefWidth="768.0" styleClass="usernameLabel" stylesheets="@styling.css" text="\@zezo" />
+      <ScrollPane layoutX="205.0" layoutY="160.0" prefHeight="530.0" prefWidth="780.0">
+         <content>
+            <VBox fx:id="posts_container" prefHeight="525.0" prefWidth="760.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="name" layoutX="26.0" layoutY="304.0" prefHeight="99.0" prefWidth="179.0" styleClass="profileName" stylesheets="@styling.css" text="Abdllrhman Zedan" wrapText="true" />
+      <Button layoutX="21.0" layoutY="132.0" maxHeight="118.0" maxWidth="119.0" minHeight="152.0" minWidth="152.0" mnemonicParsing="false" prefHeight="152.0" prefWidth="152.0" styleClass="profilePic" stylesheets="@styling.css" />
+      <Label fx:id="username" layoutX="23.0" layoutY="391.0" prefHeight="44.0" prefWidth="78.0" styleClass="profileUsername" stylesheets="@styling.css" text="\@zezo" />
       <Button layoutX="929.0" layoutY="35.0" mnemonicParsing="false" onAction="#back" styleClass="Button" stylesheets="@styling.css" text="Back" />
+      <Button fx:id="add_button" layoutX="23.0" layoutY="439.0" mnemonicParsing="false" styleClass="Button" stylesheets="@styling.css" text="Friend" />
    </children>
 </AnchorPane>

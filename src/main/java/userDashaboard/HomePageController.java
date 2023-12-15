@@ -2,6 +2,7 @@ package userDashaboard;
 
 import Post.Post;
 import Post.PostController;
+import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,7 +29,7 @@ public class HomePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        List<Post> posts = new ArrayList<>(getPosts());
+        ArrayList<Post> posts = new ArrayList<>(DataManager.getCurrentUser().getFeed());
         for (var post : posts) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -43,28 +44,27 @@ public class HomePageController implements Initializable {
         }
     }
 
-    public List<Post> getPosts() {
-
-        List<Post> list_post = new ArrayList<>();
-        Post post;
-        for (int i = 0; i < 4; i++) {
-            post = new Post(312, "hello world", LocalDate.now(), "public");
-            post.setUsername("@mobakry");
-            post.setName("mohamed");
-            list_post.add(post);
-        }
-
-        return list_post;
-    }
-
     @FXML
     private void settings(ActionEvent event) throws IOException {
         SettingsController.switchToSettings(event);
     }
+
     @FXML
     private void search(ActionEvent event) throws IOException {
         SearchController.switchToSearch(event);
     }
+
+    @FXML
+    private void profile(ActionEvent actionEvent) throws IOException {
+        ProfileController.setLastScene("Home");
+        ProfileController.switchToProfile(actionEvent, DataManager.getCurrentUser());
+    }
+
+    @FXML
+    private void createPost(ActionEvent event) throws IOException {
+        CreatPostController.switchToHomePage(event);
+    }
+
     @FXML
     private void logout(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

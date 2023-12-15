@@ -44,12 +44,11 @@ public class PostController {
         privacy.setText(p.getPrivacy());
         caption.setText(p.getCaption());
         date.setText(p.getCreatedOn());
-        name.setText(p.getName());
-        username.setText(p.getUsername());
+        name.setText(p.getCreatorName());
+        username.setText(p.getCreatorUsername());
         likes_counter.setText(Integer.toString(p.getReacts()));
         comments_counter.setText(Integer.toString(p.getCommentsCounter()));
     }
-
 
     public void setPost(Post post) {
         this.post = post;
@@ -59,8 +58,6 @@ public class PostController {
     private void setLikesCounterLabel() {
         likes_counter.setText(Integer.toString(post.getReacts()));
     }
-
-
 
     @FXML
     private void changeLiked() {

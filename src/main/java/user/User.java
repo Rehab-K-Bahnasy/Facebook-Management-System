@@ -1,9 +1,11 @@
 package user;
 
 import Friend.Friend;
+
 import java.io.Serializable;
 import java.util.*;
-import java.time.format.DateTimeFormatter;
+
+import Post.*;
 
 public class User extends Person implements Serializable {
     private String username;
@@ -11,9 +13,8 @@ public class User extends Person implements Serializable {
     private String phone_number;
     private String password;
     private List<Friend> allFriends;
-
-
-
+    private ArrayList<Post> posts;
+    private ArrayList<Post> feed;
 
     public User(Map userData) {
         super(userData);
@@ -22,8 +23,8 @@ public class User extends Person implements Serializable {
         setPhoneNumber((String) userData.get("phone number"));
         setPassword((String) userData.get("password"));
         allFriends = new ArrayList<>();
-
-
+        posts = new ArrayList<>();
+        feed = new ArrayList<>();
     }
 
     public String getUsername() {
@@ -75,13 +76,10 @@ public class User extends Person implements Serializable {
                 hasEmailMatch(input_identifier) ||
                 hasPhoneNumberMatch(input_identifier);
     }
+
     public List<Friend> getAllFriends() {
         return Collections.unmodifiableList(allFriends);
     }
-
-
-
-
 
     public boolean hasSimilarities(String input) {
         boolean name_similarity = first_name.contains(input) || last_name.contains(input);
@@ -93,7 +91,32 @@ public class User extends Person implements Serializable {
         return hasMatchingIdentity(input_identifier) && hasPasswordMatch(input_password);
     }
 
+    public boolean isFriendWith(String username) {
+        for (var friend : allFriends) {
+            if(friend.hasMatchingIdentity(username)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    public void createPost(Post post) {
+        posts.add(post);
+        for (var friend : allFriends) {
+            friend.updateFeed(post);
+        }
+    }
+
+    public void updateFeed(Post post) {
+        feed.add(post);
+    }
+
+    public ArrayList<Post> getFeed() {
+        return feed;
+    }
+    public ArrayList<Post> getPosts() {
+        return posts;
+    }
 
     @Override
     public String toString() {

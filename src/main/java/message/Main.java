@@ -25,7 +25,7 @@ public class Main extends Application {
         stage.setResizable(false);
         stage.show();
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         DataReader.readUsersData();
         launch();
         DataWriter.writeUsersData();

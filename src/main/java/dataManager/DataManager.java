@@ -17,11 +17,12 @@ public abstract class DataManager {
         }
         return null;
     }
-    public static void setCurrentUser(User user){
+
+    public static void setCurrentUser(User user) {
         current_user = user;
     }
-    public static User getCurrentUser()
-    {
+
+    public static User getCurrentUser() {
         return current_user;
     }
 

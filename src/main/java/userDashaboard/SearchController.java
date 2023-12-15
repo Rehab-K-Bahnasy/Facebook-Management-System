@@ -35,8 +35,10 @@ public class SearchController {
     @FXML
     private void goToProfile(ActionEvent event) throws IOException {
         var selectedItem = list_view.getSelectionModel().getSelectedItem();
-        if(selectedItem!=null) {
-            ProfileController.switchToProfile(event, DataManager.retrieveUser(selectedItem.username));
+        if (selectedItem != null) {
+            var user = DataManager.retrieveUser(selectedItem.username);
+            ProfileController.setUser(user);
+            ProfileController.switchToProfile(event, user);
         }
     }
 

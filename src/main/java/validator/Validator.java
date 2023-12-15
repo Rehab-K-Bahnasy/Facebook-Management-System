@@ -65,7 +65,7 @@ public class Validator extends DataManager {
     }
 
     public static boolean checkAdult(LocalDate date) {
-        if (!date.isAfter(LocalDate.now().minusYears(18))) {
+        if (!date.isAfter(LocalDate.now().minusYears(13))) {
             return true;
         }
         return false;

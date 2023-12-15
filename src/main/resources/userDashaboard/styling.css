@@ -141,3 +141,14 @@
 }
 
 
+.profileName {
+    -fx-font-family: Tajawal;
+    -fx-font-weight: bold;
+    -fx-font-size: 28;
+}
+.profileUsername {
+    -fx-font-family: Tajawal;
+    -fx-font-weight: 300;
+    -fx-font-size: 20;
+    -fx-text-fill: rgba(74, 69, 67, 0.70);
+}

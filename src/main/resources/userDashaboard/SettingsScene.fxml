@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="720.0" fitWidth="1024.0">
          <image>
-            <Image url="@../userDashaboard/homepage_bg.png" />
+            <Image url="@bg.png" />
          </image>
       </ImageView>
       <Label layoutX="37.0" layoutY="120.0" prefHeight="58.0" prefWidth="289.0" stylesheets="@styling.css" text="Account Settings:" />
