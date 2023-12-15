@@ -63,8 +63,6 @@ public class MessageController {
         received_combo_box.setOnAction(event -> handleReceivedComboBoxSelection());
     }
     public void NewMessageButton(ActionEvent e) {
-        sent_combo_box.setValue(null);
-        received_combo_box.setValue(null);
         message_content.setText(null);
         message_content.setEditable(true);
         send_button.setDisable(false);
@@ -85,9 +83,9 @@ public class MessageController {
     @FXML
     private void handleSentComboBoxSelection() {
         int selectedItem = (int) sent_combo_box.getValue();
+        if ((Integer) selectedItem == (Integer) null) {return;}
 
         for (Message message : sent) {
-            System.out.println(message.getContent());
             if (message.getId() == (selectedItem)) {
                 message_content.setText(message.getContent());
                 break;
@@ -98,6 +96,7 @@ public class MessageController {
     @FXML
     private void handleReceivedComboBoxSelection() {
         int selectedItem = (int) received_combo_box.getValue();
+        if ((Integer) selectedItem == (Integer) null) {return;}
 
         for (Message message : received) {
             if (message.getId() == (selectedItem)) {
