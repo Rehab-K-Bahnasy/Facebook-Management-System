@@ -9,16 +9,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import Post.*;
+import dataManager.DataManager;
 
 public class User extends Person implements Serializable {
     private String username;
     private String email;
     private String phone_number;
     private String password;
-     public ArrayList<Friend> allFriends;
+    private ArrayList<Friend> allFriends;
 
-    public ArrayList<Message> sent_messages;
-    public ArrayList<Message> recieved_message;
+    private static ArrayList<Message> sent_messages;
+    private static ArrayList<Message> received_message;
 
     private ArrayList<Post> posts;
     private ArrayList<Post> feed;
@@ -204,5 +205,18 @@ public class User extends Person implements Serializable {
         user_map.put("birthdate", getBirthdate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
         user_map.put("phone number",getPhoneNumber());
         return user_map;
+    }
+    public static void updateSentMessages(String username, Message message){
+        DataManager.getCurrentUser().getSent_messages().add(message);
+    }
+    public static void updateReceivedMessages(String username,Message message){
+        DataManager.retrieveUser(username).getReceived_message().add(message);
+    }
+
+    public ArrayList<Message> getReceived_message() {
+        return received_message;
+    }
+    public ArrayList<Message> getSent_messages(){
+        return sent_messages;
     }
 }
