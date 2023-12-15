@@ -1,17 +1,21 @@
 package user;
 
-
+import Friend.Friend;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
+import java.time.format.DateTimeFormatter;
 
 public class User extends Person implements Serializable {
     private String username;
     private String email;
     private String phone_number;
     private String password;
-    private ArrayList<Message> messages;
+    private List<Friend> allFriends;
+
+
+
 
     public User(Map userData) {
         super(userData);
@@ -19,7 +23,9 @@ public class User extends Person implements Serializable {
         setEmail((String) userData.get("email"));
         setPhoneNumber((String) userData.get("phone number"));
         setPassword((String) userData.get("password"));
-        messages = new ArrayList<>();
+        allFriends = new ArrayList<>();
+
+
     }
 
     public String getUsername() {
@@ -71,6 +77,13 @@ public class User extends Person implements Serializable {
                 hasEmailMatch(input_identifier) ||
                 hasPhoneNumberMatch(input_identifier);
     }
+    public List<Friend> getAllFriends() {
+        return Collections.unmodifiableList(allFriends);
+    }
+
+
+
+
 
     public boolean hasSimilarities(String input) {
         boolean name_similarity = first_name.contains(input) || last_name.contains(input);
@@ -82,9 +95,7 @@ public class User extends Person implements Serializable {
         return hasMatchingIdentity(input_identifier) && hasPasswordMatch(input_password);
     }
 
-    public void send_message(Message message) {
-        messages.add(message);
-    }
+
 
     @Override
     public String toString() {
