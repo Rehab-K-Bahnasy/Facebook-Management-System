@@ -61,6 +61,7 @@ public class HomePageController implements Initializable {
 
     @FXML
     private void profile(ActionEvent actionEvent) throws IOException {
+        ProfileController.setUser(DataManager.getCurrentUser());
         ProfileController.setLastScene("Home");
         ProfileController.switchToProfile(actionEvent, DataManager.getCurrentUser());
     }

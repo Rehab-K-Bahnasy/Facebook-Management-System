@@ -4,7 +4,6 @@ import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import userDashaboard.HomePageController;
 import validator.Validator;
 
 import java.io.IOException;
@@ -45,7 +44,6 @@ public class CreateAccountController {
     private Button sign_up;
     @FXML
     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-    private String gender_check = null;
     private String field_style = null;
     private String error_message;
 
@@ -111,7 +109,7 @@ public class CreateAccountController {
             user_map.put("first name",getFirstName());
             user_map.put("last name",getLastName());
             user_map.put("password",getPassword());
-            user_map.put("gender",setGenderGroup());
+            user_map.put("gender",getGender());
             user_map.put("birthdate", getBirthdate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
             user_map.put("phone number",getPhoneNumber());
             DataManager.addUser(user_map);
@@ -214,25 +212,11 @@ public class CreateAccountController {
         return true;
     }
 
-    public String setGenderGroup() {
-        if (gender_check == null) {
-            if (male.isSelected()) {
-                gender_check = "M";
-            }
-            if (female.isSelected()) {
-                gender_check = "F";
-            }
-        }
-        if (male.isSelected() && gender_check.equals("F")) {
-            male.setSelected(true);
-            gender_check = "M";
-            female.setSelected(false);
-        } else if (female.isSelected() && gender_check.equals("M")) {
-            female.setSelected(true);
-            gender_check = "F";
-            male.setSelected(false);
-        }
-        return gender_check;
+    public String getGender() {
+        if(male.isSelected())
+            return "M";
+        else
+            return "F";
     }
 
     public void passwordVisibility() {
