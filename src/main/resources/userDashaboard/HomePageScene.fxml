@@ -41,9 +41,9 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="196.0" layoutY="152.0" prefHeight="530.0" prefWidth="756.0">
+      <ScrollPane layoutX="195.0" layoutY="150.0" prefHeight="530.0" prefWidth="780.0">
          <content>
-            <VBox fx:id="postscontainer" prefHeight="528.0" prefWidth="755.0" />
+            <VBox fx:id="posts_container" prefHeight="525.0" prefWidth="760.0" />
          </content>
       </ScrollPane>
    </children>

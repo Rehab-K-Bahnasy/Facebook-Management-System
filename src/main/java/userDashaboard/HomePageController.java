@@ -1,12 +1,12 @@
 package userDashaboard;
 
-import Post.PostController;
 import Post.Post;
+import Post.PostController;
+import dataManager.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,57 +15,50 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import welcomeLogin.WelcomeLogin;
+
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
-public class HomePageController implements Initializable {
-///////////////////////////////
-    @FXML
-    private VBox postscontainer;
 
-    private List<Post> postss;
+public class HomePageController implements Initializable {
+    @FXML
+    private VBox posts_container;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        postss=new ArrayList<>(getposts());
-        try
-        {
-            for(Post p:postss)
-            {
-                FXMLLoader fxmlLoader= new FXMLLoader();
+        List<Post> posts = new ArrayList<>(getPosts());
+        for (var post : posts) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(Post.class.getResource("PostScene.fxml"));
-                VBox vbox=fxmlLoader.load();
-                PostController postcontroller=fxmlLoader.getController(); ///the use
-                postcontroller.setData(p);
-                postscontainer.getChildren().add(vbox);
+                VBox vbox = fxmlLoader.load();
+                PostController postcontroller = fxmlLoader.getController();
+                postcontroller.setData(post);
+                posts_container.getChildren().add(vbox);
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
             }
         }
-        catch(IOException e)
-        {
-            e.printStackTrace();
-        }
-
     }
 
-    public List<Post> getposts(){
+    public List<Post> getPosts() {
 
-        List<Post> listpost=new ArrayList<>();
+        List<Post> list_post = new ArrayList<>();
         Post post;
-        for(int i=0;i<4;i++)
-        {
-            post=new Post(312,"hello world", LocalDate.now(),"public");
+        for (int i = 0; i < 4; i++) {
+            post = new Post(312, "hello world", LocalDate.now(), "public");
             post.setUsername("@mobakry");
             post.setName("mohamed");
-            listpost.add(post);
+            list_post.add(post);
         }
 
-        return listpost;
+        return list_post;
     }
 
-////////////////////////////////////////////
     @FXML
     private void settings(ActionEvent event) throws IOException {
         SettingsController.switchToSettings(event);
@@ -94,6 +87,4 @@ public class HomePageController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-
-
 }

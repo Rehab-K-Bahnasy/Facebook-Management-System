@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="one more edit Post-Comment HomePage">
+    <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="Linking messages">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Post/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/CommentsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/CommentsScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Post/PostScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/PostScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +24,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -28,10 +31,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="PhoneNumber" />
+        <entry key="$PROJECT_DIR$" value="Friend" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/Friend/Friend.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -42,20 +48,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Post-Comment-V2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Post-Comment-V2",
+    "last_opened_file_path": "D:/Facebook-Management-System/src/main/resources/Post",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Facebook-Management-System\src\main\resources\Post" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="WelcomeLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="welcomeLogin.WelcomeLogin" />
+      <module name="theSocialNetwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="welcomeLogin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WelcomeLogin" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,83 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1701195701166</updated>
       <workItem from="1701195702237" duration="3000" />
-      <workItem from="1701728762488" duration="772000" />
-      <workItem from="1701802492849" duration="1338000" />
-      <workItem from="1702052319586" duration="625000" />
-      <workItem from="1702148575354" duration="6210000" />
-      <workItem from="1702227212765" duration="594000" />
-      <workItem from="1702313252960" duration="456000" />
-      <workItem from="1702326728440" duration="3809000" />
-      <workItem from="1702468606191" duration="5000" />
-      <workItem from="1702504372185" duration="12111000" />
-      <workItem from="1702550196760" duration="9799000" />
-      <workItem from="1702570672072" duration="6940000" />
+      <workItem from="1702596910753" duration="4030000" />
     </task>
-    <task id="LOCAL؜-٠٠٠٠١" summary="Testing how to commit">
-      <option name="closed" value="true" />
-      <created>1701728709800</created>
-      <option name="number" value="٠٠٠٠١" />
-      <option name="presentableId" value="LOCAL؜-٠٠٠٠١" />
-      <option name="project" value="LOCAL؜" />
-      <updated>1701728709800</updated>
-    </task>
-    <task id="LOCAL؜-٠٠٠٠٢" summary="Testing how to commit">
-      <option name="closed" value="true" />
-      <created>1701729002465</created>
-      <option name="number" value="٠٠٠٠٢" />
-      <option name="presentableId" value="LOCAL؜-٠٠٠٠٢" />
-      <option name="project" value="LOCAL؜" />
-      <updated>1701729002465</updated>
-    </task>
-    <task id="LOCAL؜-٠٠٠٠٣" summary="Added Search bar and view list to the messenger">
-      <option name="closed" value="true" />
-      <created>1702153224930</created>
-      <option name="number" value="٠٠٠٠٣" />
-      <option name="presentableId" value="LOCAL؜-٠٠٠٠٣" />
-      <option name="project" value="LOCAL؜" />
-      <updated>1702153224930</updated>
-    </task>
-    <task id="LOCAL؜-٠٠٠٠٤" summary="Added a Search Window">
-      <option name="closed" value="true" />
-      <created>1702329958976</created>
-      <option name="number" value="٠٠٠٠٤" />
-      <option name="presentableId" value="LOCAL؜-٠٠٠٠٤" />
-      <option name="project" value="LOCAL؜" />
-      <updated>1702329958976</updated>
-    </task>
-    <task id="LOCAL؜-٠٠٠٠٥" summary="adding posts to homepage">
-      <option name="closed" value="true" />
-      <created>1702550435594</created>
-      <option name="number" value="٠٠٠٠٥" />
-      <option name="presentableId" value="LOCAL؜-٠٠٠٠٥" />
-      <option name="project" value="LOCAL؜" />
-      <updated>1702550435594</updated>
-    </task>
-    <task id="LOCAL؜-٠٠٠٠٦" summary="one more edit Post-Comment HomePage">
-      <option name="closed" value="true" />
-      <created>1702555664205</created>
-      <option name="number" value="٠٠٠٠٦" />
-      <option name="presentableId" value="LOCAL؜-٠٠٠٠٦" />
-      <option name="project" value="LOCAL؜" />
-      <updated>1702555664205</updated>
-    </task>
-    <task id="LOCAL؜-٠٠٠٠٧" summary="one more edit Post-Comment HomePage">
-      <option name="closed" value="true" />
-      <created>1702565120223</created>
-      <option name="number" value="٠٠٠٠٧" />
-      <option name="presentableId" value="LOCAL؜-٠٠٠٠٧" />
-      <option name="project" value="LOCAL؜" />
-      <updated>1702565120223</updated>
-    </task>
-    <task id="LOCAL؜-٠٠٠٠٨" summary="one more edit Post-Comment HomePage">
-      <option name="closed" value="true" />
-      <created>1702575986250</created>
-      <option name="number" value="٠٠٠٠٨" />
-      <option name="presentableId" value="LOCAL؜-٠٠٠٠٨" />
-      <option name="project" value="LOCAL؜" />
-      <updated>1702575986250</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,20 +107,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/welcomeLogin" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Testing how to commit" />
-    <MESSAGE value="Added Search bar and view list to the messenger" />
-    <MESSAGE value="Finished Settings GUI, Functionality:(not finished)&#10;&#10;Signed-off-by: abdllrhmanzedan &lt;abdom.zedan@gmail.com&gt;" />
-    <MESSAGE value="Added a Search Window" />
-    <MESSAGE value="adding posts to homepage" />
-    <MESSAGE value="one more edit Post-Comment HomePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="one more edit Post-Comment HomePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -176,9 +137,5 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

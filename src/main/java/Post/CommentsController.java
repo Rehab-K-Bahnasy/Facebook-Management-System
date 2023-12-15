@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.VBox;
+import userDashaboard.HomePageController;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -70,5 +72,9 @@ public class CommentsController implements Initializable {
     }
     public void switch_to_post_scene(ActionEvent event) throws IOException {
         Starter.switchToScene(event,"PostScene.fxml");
+    }
+    @FXML
+    private void back(ActionEvent event) throws IOException {
+        HomePageController.switchToHomePage(event);
     }
 }
