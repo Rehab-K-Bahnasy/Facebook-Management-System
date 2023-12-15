@@ -70,8 +70,7 @@ public class CreatPostController {
     public void tag(ActionEvent event) throws IOException {
         var selectedItem = list_view.getSelectionModel().getSelectedItem();
         if (selectedItem != null) {
-            DataManager.retrieveUser(selectedItem).getPosts().add(post);
-            DataManager.retrieveUser(selectedItem).createPost(post);
+           DataManager.retrieveUser(selectedItem).createPost(post);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Tag sent");
             alert.setHeaderText("Your Friend is tagged successfully");
