@@ -6,14 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/CreatPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/CreatPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/PostScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/PostScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Post/styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Post/styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/ProfileScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/ProfileScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/styling.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,5 +1,6 @@
 package welcomeLogin;
 
+import Friend.Friend;
 import dataManager.DataReader;
 import dataManager.DataWriter;
 import javafx.application.Application;
@@ -9,7 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import Friend.Friend.*;
 import java.io.IOException;
 
 public class WelcomeLogin extends Application {
@@ -38,5 +39,7 @@ public class WelcomeLogin extends Application {
         DataReader.readUsersData();
         launch();
         DataWriter.writeUsersData();
+
+
     }
 }

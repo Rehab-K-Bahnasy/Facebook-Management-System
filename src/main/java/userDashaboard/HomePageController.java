@@ -16,6 +16,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import welcomeLogin.WelcomeLogin;
+import Friend.Friend.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -92,6 +93,7 @@ public class HomePageController implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+
         stage.show();
     }
 

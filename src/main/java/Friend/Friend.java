@@ -24,35 +24,7 @@ public class Friend extends User {
     public FriendshipType getFriendshipType() {
         return friendship_type;
     }
-    public void addFriend(User user, Friend username) {
-        user.getAllFriends().add(username);
-        username.setFriendshipType(FriendshipType.ALL);
-    }
 
-    public void removeFriend(User user, Friend username) {
-        user.getAllFriends().remove(username);
-    }
-
-    public void restrictFriend( Friend username) {
-        username.setFriendshipType(FriendshipType.RESTRICTED);
-    }
-
-    public void blockFriend( Friend username) {
-        username.getAllFriends().remove(username);
-        username.setFriendshipType(FriendshipType.BLOCKED);
-    }
-
-    public void unrestrictFriend(Friend username) {
-        username.setFriendshipType(FriendshipType.ALL);
-    }
-
-    public void unblockFriend(User user,Friend username) {
-        user.getAllFriends().add(username);
-        username.setFriendshipType(FriendshipType.ALL);
-    }
-    public void closeFriend(Friend username){
-        username.setFriendshipType(FriendshipType.CLOSE);
-    }
     public void setFriendshipDate(Date friendshipDate) {
         this.friendship_date = (friendshipDate != null) ? friendshipDate : new Date();
     }

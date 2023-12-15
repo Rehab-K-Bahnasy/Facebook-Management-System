@@ -17,6 +17,12 @@ public abstract class Person implements Serializable {
         setBirthdate((String) personData.get("birthdate"));
         setGender((String) personData.get("gender"));
     }
+    Person(User user){
+        setFirstName(user.getFirstName());
+        setLastName(user.getLastName());
+        setBirthdate(user.getBirthdate().toString());
+        setGender(user.getGender());
+    }
 
     public String getFirstName() {
         return first_name;

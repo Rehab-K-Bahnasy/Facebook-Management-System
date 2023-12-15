@@ -1,5 +1,6 @@
 package userDashaboard;
 
+import Friend.Friend;
 import Post.*;
 import dataManager.DataManager;
 import javafx.event.ActionEvent;
@@ -74,11 +75,17 @@ public class ProfileController implements Initializable {
             add_button.setText("Add friend");
             restrict_button.setVisible(false);
         }
+        else
+        {
+            add_button.setText("friends");
+            restrict_button.setVisible(true);
+        }
     }
 
     @FXML
     private void addFriend() {
-        
+        add_button.setText("friends");
+        DataManager.getCurrentUser().addFriend(DataManager.getCurrentUser(),new Friend(DataManager.getCurrentUser().changeUserintoMap(DataManager.retrieveUser(username.getText()))));
     }
 
     @FXML

@@ -4,6 +4,8 @@ import Friend.Friend;
 import conversation.Message;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import Post.*;
@@ -13,7 +15,7 @@ public class User extends Person implements Serializable {
     private String email;
     private String phone_number;
     private String password;
-    private List<Friend> allFriends;
+     public ArrayList<Friend> allFriends;
 
     public ArrayList<Message> sent_messages;
     public ArrayList<Message> recieved_message;
@@ -82,8 +84,8 @@ public class User extends Person implements Serializable {
                 hasPhoneNumberMatch(input_identifier);
     }
 
-    public List<Friend> getAllFriends() {
-        return Collections.unmodifiableList(allFriends);
+    public ArrayList<Friend> getAllFriends() {
+        return new ArrayList<>(allFriends);
     }
 
     public boolean hasSimilarities(String input) {
@@ -143,5 +145,56 @@ public class User extends Person implements Serializable {
         User user = (User) o;
         //checking username is enough, as a username, email and phone number only assigned once
         return Objects.equals(username, user.username);
+    }
+    public void addFriend(User user, Friend username) {
+        for (var friend : allFriends) System.out.println(friend.toString());
+        user.getAllFriends().add(username);
+        username.setFriendshipType(Friend.FriendshipType.ALL);
+        LocalDate currentDate = LocalDate.now();
+       // username.setFriendshipDate(currentDate);
+    }
+
+    public void removeFriend(User user, Friend username) {
+        user.getAllFriends().remove(username);
+    }
+
+    public void restrictFriend( Friend username) {
+        username.setFriendshipType(Friend.FriendshipType.RESTRICTED);
+    }
+
+    public void blockFriend( Friend username) {
+        username.getAllFriends().remove(username);
+        username.setFriendshipType(Friend.FriendshipType.BLOCKED);
+    }
+
+    public void unrestrictFriend(Friend username) {
+        username.setFriendshipType(Friend.FriendshipType.ALL);
+    }
+
+    public void unblockFriend(User user,Friend username) {
+        user.getAllFriends().add(username);
+        username.setFriendshipType(Friend.FriendshipType.ALL);
+    }
+    public void closeFriend(Friend username){
+        username.setFriendshipType(Friend.FriendshipType.CLOSE);
+    }
+    public Friend getFriend(String username){
+        for (var friend : allFriends) {
+            if (friend.hasMatchingIdentity(username)) {
+                return friend;
+            }
+        }
+        return null;
+    }
+    public Map<Object, Object> changeUserintoMap(User user){
+        Map <Object, Object> user_map = new HashMap<>();
+        user_map.put("email",getEmail());
+        user_map.put("username",getUsername());
+        user_map.put("first name",getFirstName());
+        user_map.put("last name",getLastName());
+        user_map.put("gender",getGender());
+        user_map.put("birthdate", getBirthdate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
+        user_map.put("phone number",getPhoneNumber());
+        return user_map;
     }
 }
