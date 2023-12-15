@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/user/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/MessagingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/MessagingScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashaboard/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/SearchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashaboard/SearchScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="FxmlFile" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -39,7 +31,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="conversation" />
+        <entry key="$PROJECT_DIR$" value="Settings" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,7 +68,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;homePage&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Facebook-Management-System/src/main/resources/userDashaboard&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alhas/OneDrive/MyProjects/Facebook-Management-System/src/main/resources/conversation&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,7 +83,6 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Facebook-Management-System\src\main\resources\userDashaboard" />
       <recent name="C:\Users\alhas\OneDrive\MyProjects\Facebook-Management-System\src\main\resources\conversation" />
       <recent name="D:\Facebook-Management-System\src\main\resources\welcomeLogin" />
       <recent name="D:\Facebook-Management-System\src" />
@@ -104,11 +95,11 @@
   </component>
   <component name="RunManager" selected="Application.WelcomeLogin">
     <configuration name="CreateAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="welcomeLogin.CreateAccount" />
+      <option name="MAIN_CLASS_NAME" value="creatAccount.CreateAccount" />
       <module name="theSocialNetwork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="welcomeLogin.*" />
+          <option name="PATTERN" value="creatAccount.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataManager.DataManager" />
-      <module name="theSocialNetwork" />
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Post.HelloApplication" />
+      <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dataManager.*" />
+          <option name="PATTERN" value="Post.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataManager.DataWriter" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="message.Main" />
       <module name="theSocialNetwork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dataManager.*" />
+          <option name="PATTERN" value="message.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,12 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homePage.HomePage" />
+    <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Post.Starter" />
       <module name="theSocialNetwork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="userDashaboard.*" />
+          <option name="PATTERN" value="Post.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -171,9 +162,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.WelcomeLogin" />
-        <item itemvalue="Application.HomePage" />
-        <item itemvalue="Application.DataWriter" />
-        <item itemvalue="Application.DataManager" />
+        <item itemvalue="Application.Starter" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.CreateAccount" />
       </list>
     </recent_temporary>
@@ -205,8 +196,8 @@
       <workItem from="1702132237591" duration="3751000" />
       <workItem from="1702232147217" duration="327000" />
       <workItem from="1702233141210" duration="2029000" />
-      <workItem from="1702266071216" duration="6236000" />
-      <workItem from="1702594352621" duration="799000" />
+      <workItem from="1702266071216" duration="6325000" />
+      <workItem from="1702594179223" duration="2066000" />
     </task>
     <task id="LOCAL-00001" summary="zZz">
       <option name="closed" value="true" />
@@ -296,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702303957908</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added group chat functions now waiting for linking">
+      <option name="closed" value="true" />
+      <created>1702404206705</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702404206705</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +324,7 @@
     <MESSAGE value="added Message and it's gui without styling" />
     <MESSAGE value="added the fxml file" />
     <MESSAGE value="fixed some unadded files" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some unadded files" />
+    <MESSAGE value="added group chat functions now waiting for linking" />
+    <option name="LAST_COMMIT_MESSAGE" value="added group chat functions now waiting for linking" />
   </component>
 </project>

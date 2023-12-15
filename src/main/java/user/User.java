@@ -2,9 +2,7 @@ package user;
 
 import Friend.Friend;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.time.format.DateTimeFormatter;
 
 public class User extends Person implements Serializable {

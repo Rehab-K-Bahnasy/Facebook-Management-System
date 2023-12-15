@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class Friend extends User {
-    private LocalDate friendship_date;
+    private Date friendship_date;
     private FriendshipType friendship_type;
     public enum FriendshipType {
         ALL,
@@ -54,10 +54,10 @@ public class Friend extends User {
     public void closeFriend(Friend username){
         username.setFriendshipType(FriendshipType.CLOSE);
     }
-    public void setFriendshipDate(LocalDate friendshipDate) {
-        this.friendship_date = (friendshipDate != null) ? friendshipDate : new LocalDate();
+    public void setFriendshipDate(Date friendshipDate) {
+        this.friendship_date = (friendshipDate != null) ? friendshipDate : new Date();
     }
-    public LocalDate getFriendshipDate() {
+    public Date getFriendshipDate() {
         return friendship_date;
     }
 }
