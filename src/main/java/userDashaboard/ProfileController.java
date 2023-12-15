@@ -20,6 +20,7 @@ import user.User;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class ProfileController implements Initializable {
@@ -85,7 +86,7 @@ public class ProfileController implements Initializable {
     @FXML
     private void addFriend() {
         add_button.setText("friends");
-        DataManager.getCurrentUser().addFriend(DataManager.getCurrentUser(),new Friend(DataManager.getCurrentUser().changeUserintoMap(DataManager.retrieveUser(username.getText()))));
+        DataManager.getCurrentUser().addFriend(user , username.getText() );
     }
 
     @FXML

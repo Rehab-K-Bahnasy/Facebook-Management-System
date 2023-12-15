@@ -34,6 +34,17 @@ public class User extends Person implements Serializable {
         feed = new ArrayList<>();
     }
 
+    public User(User user)
+    {
+        super(user);
+        setUsername(user.getUsername());
+        setEmail(user.getEmail());
+        setPhoneNumber(user.getPhoneNumber());
+        allFriends = new ArrayList<>();
+        posts = new ArrayList<>();
+        feed = new ArrayList<>();
+    }
+
     public String getUsername() {
         return username;
     }
@@ -146,12 +157,9 @@ public class User extends Person implements Serializable {
         //checking username is enough, as a username, email and phone number only assigned once
         return Objects.equals(username, user.username);
     }
-    public void addFriend(User user, Friend username) {
-        for (var friend : allFriends) System.out.println(friend.toString());
-        user.getAllFriends().add(username);
-        username.setFriendshipType(Friend.FriendshipType.ALL);
-        LocalDate currentDate = LocalDate.now();
-       // username.setFriendshipDate(currentDate);
+    public void addFriend(User user, String type) {
+        System.out.println(user.toString());
+        allFriends.add(new Friend(user));
     }
 
     public void removeFriend(User user, Friend username) {

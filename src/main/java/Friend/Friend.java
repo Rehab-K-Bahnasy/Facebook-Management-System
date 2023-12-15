@@ -5,6 +5,9 @@ import user.User;
 import java.time.LocalDate;
 import java.util.*;
 
+import static Friend.Friend.FriendshipType.ALL;
+import static Friend.Friend.FriendshipType.RESTRICTED;
+
 public class Friend extends User {
     private Date friendship_date;
     private FriendshipType friendship_type;
@@ -15,8 +18,10 @@ public class Friend extends User {
         BLOCKED
     }
 
-    public Friend(Map userData) {
-        super(userData);
+    public Friend(User user ){
+        super(user);
+
+
     }
     public void setFriendshipType(FriendshipType friendshipType) {
         this.friendship_type = friendshipType;
