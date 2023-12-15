@@ -16,7 +16,8 @@
          </font>
       </Label>
       <Button fx:id="send_button" layoutX="833.0" layoutY="608.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="138.0" stylesheets="@../Post/styling.css" text="Send" />
-      <ComboBox fx:id="choose_a_message" layoutX="475.0" layoutY="29.0" prefHeight="55.0" prefWidth="518.0" stylesheets="@../Post/styling.css" />
+      <ComboBox fx:id="choose_a_message" layoutX="406.0" layoutY="22.0" prefHeight="55.0" prefWidth="281.0" stylesheets="@../Post/styling.css" />
       <Button fx:id="new_message_button" layoutX="680.0" layoutY="608.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="138.0" stylesheets="@../Post/styling.css" text="New Message" />
+      <ComboBox fx:id="choose_a_message1" layoutX="716.0" layoutY="23.0" prefHeight="55.0" prefWidth="281.0" stylesheets="@../Post/styling.css" />
    </children>
 </Pane>
