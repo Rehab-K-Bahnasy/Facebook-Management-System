@@ -21,6 +21,6 @@
          </content>
       </ScrollPane>
       <Button layoutX="917.0" layoutY="40.0" mnemonicParsing="false" onAction="#back" prefWidth="100.0" stylesheets="@styling.css" text="Back" />
-      <Label layoutX="31.0" layoutY="140.0" styleClass="Label" stylesheets="@styling.css" text="Comments" />
+      <Label layoutX="32.0" layoutY="98.0" styleClass="Label" stylesheets="@styling.css" text="Comments" />
    </children>
 </AnchorPane>

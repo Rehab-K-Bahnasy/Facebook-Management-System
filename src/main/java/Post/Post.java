@@ -1,5 +1,6 @@
 package Post;
 
+import dataManager.DataManager;
 import user.User;
 
 import java.io.Serializable;
@@ -17,8 +18,8 @@ public class Post implements Serializable {
     private ArrayList<User> tagged_users;
     private ArrayList<User> reactors;
 
-    public Post(User creator, String post_caption, String post_privacy) {
-        this.creator = creator;
+    public Post(String post_caption, String post_privacy) {
+        creator = DataManager.getCurrentUser();
         setCaption(post_caption);
         setPrivacy(post_privacy);
         comments_on_post = new ArrayList<>();
@@ -29,8 +30,8 @@ public class Post implements Serializable {
         cnt++;
     }
 
-    public Post(User creator, String post_caption, String post_privacy, ArrayList<User> tagged_users) {
-        this(creator, post_caption, post_privacy);
+    public Post(String post_caption, String post_privacy, ArrayList<User> tagged_users) {
+        this(post_caption, post_privacy);
         setTaggedUsers(tagged_users);
     }
 
@@ -65,7 +66,6 @@ public class Post implements Serializable {
     public int getReacts() {
         return reactors.size();
     }
-
 
     public ArrayList<Comment> getComments_on_post() {
         return comments_on_post;

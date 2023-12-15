@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="835.0" styleClass="vbox" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.ReplyController">
+<VBox fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.ReplyController">
     <children>
-        <Label fx:id="name" layoutX="90.0" prefHeight="66.0" prefWidth="567.0" styleClass="nameLabel" stylesheets="@styling.css" text="Mo Bakry">
-            <font>
-                <Font size="39.0" />
-            </font>
-        </Label>
-        <Label fx:id="username" prefHeight="27.0" prefWidth="178.0" styleClass="usernameLabel" stylesheets="@styling.css" text="\@MoBakry04" />
-        <Label fx:id="caption" prefHeight="125.0" prefWidth="835.0" style="-fx-font-size: 30;" styleClass="captionLabel" stylesheets="@styling.css" text="t7yati l team OOP" wrapText="true">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Label>
-        <AnchorPane prefHeight="110.0" prefWidth="835.0" stylesheets="@styling.css">
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="700.0">
             <children>
-                <Button fx:id="like" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#changeLiked" prefHeight="40.0" prefWidth="120.0" stylesheets="@styling.css" text="Like">
+                <Label fx:id="username" layoutX="10.0" layoutY="39.0" prefHeight="30.0" prefWidth="143.0" styleClass="usernameLabel" stylesheets="@styling.css" text="\@MoBakry04" textAlignment="CENTER">
                     <font>
-                        <Font size="45.0" />
+                        <Font size="20.0" />
                     </font>
-                </Button>
-                <Label fx:id="likes_counter" layoutX="46.0" layoutY="74.0" text="101 Likes">
+                </Label>
+                <Label fx:id="name" layoutX="10.0" layoutY="-7.0" prefHeight="51.0" prefWidth="520.0" styleClass="nameLabel" stylesheets="@styling.css" text="Mo Bakry">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label fx:id="privacy" layoutX="165.0" layoutY="41.0" prefHeight="27.0" prefWidth="122.0" styleClass="privacyLabel" stylesheets="@styling.css" text="Replied">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="date" layoutX="10.0" layoutY="158.0" prefHeight="34.0" prefWidth="280.0" styleClass="dateLabel" stylesheets="@styling.css" text="Wed Dec 06 17:51:48 EET 2023" />
+                <Label fx:id="caption" alignment="TOP_LEFT" layoutX="10.0" layoutY="69.0" prefHeight="94.0" prefWidth="690.0" styleClass="captionLabel" stylesheets="@styling.css" text="t7yati l team OOP" wrapText="true">
+                    <font>
+                        <Font name="Tajawal" size="12.0" />
+                    </font>
+                </Label>
+                <ToggleButton fx:id="like" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#changeLiked" prefHeight="35.0" prefWidth="70.0" styleClass="button" stylesheets="@styling.css" text="Like" />
+                <Label fx:id="likes_counter" layoutX="10.0" layoutY="230.0" text="101 Likes">
                     <font>
                         <Font name="Tajawal" size="14.0" />
                     </font>

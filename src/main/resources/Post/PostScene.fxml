@@ -21,7 +21,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="privacy" layoutX="165.0" layoutY="41.0" prefHeight="27.0" prefWidth="122.0" styleClass="privacyLabel" stylesheets="@styling.css" text="public">
+      <Label fx:id="privacy" layoutX="165.0" layoutY="41.0" prefHeight="27.0" prefWidth="122.0" styleClass="privacyLabel" stylesheets="@styling.css" text="Posted">
          <font>
             <Font size="18.0" />
          </font>
@@ -46,11 +46,16 @@
             <Font name="Tajawal" size="14.0" />
          </font></Label>
       <TextField fx:id="comment_field" alignment="TOP_LEFT" focusTraversable="false" layoutX="287.0" layoutY="108.0" prefHeight="51.0" prefWidth="394.0" promptText="Write a comment" styleClass="field" stylesheets="@styling.css" />
-         <Button layoutX="537.0" layoutY="158.0" mnemonicParsing="false" onAction="#switch_to_comment_scene" prefHeight="34.0" prefWidth="143.0" stylesheets="@styling.css" text="Post a commnet">
+         <Button layoutX="537.0" layoutY="158.0" mnemonicParsing="false" onAction="#addComment" prefHeight="34.0" prefWidth="143.0" stylesheets="@styling.css" text="Post a commnet">
             <font>
                <Font name="Andalus" size="12.0" />
             </font>
          </Button>
+         <Label fx:id="privacy1" layoutX="270.0" layoutY="40.0" prefHeight="27.0" prefWidth="122.0" styleClass="privacyLabel" stylesheets="@styling.css" text="public">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
    </children>
 </AnchorPane>
 </VBox>

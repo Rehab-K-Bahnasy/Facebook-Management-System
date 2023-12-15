@@ -1,12 +1,11 @@
 package Post;
 
-import javafx.event.ActionEvent;
+import dataManager.DataManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.VBox;
-
-import java.io.IOException;
 
 public class ReplyController {
     @FXML
@@ -18,26 +17,34 @@ public class ReplyController {
     @FXML
     private Label name;
     @FXML
-    private Button like;
+    private ToggleButton like;
     @FXML
     private Label likes_counter;
     boolean liked;
-    Comment comment;
+    private Comment comment;
 
-    public void setData(Comment comment)
-    {
-        this.comment=comment;
+    public void setData(Comment comment) {
+        this.comment = comment;
         caption.setText(comment.getComment_content());
         username.setText(comment.getUsername());
         name.setText(comment.getName());
-        likes_counter.setText(Integer.toString(comment.getReacts()));
+        likes_counter.setText(Integer.toString(comment.getReactsCounter()));
+        liked = comment.hasUserLikedComment(DataManager.getCurrentUser());
+        if (liked) {
+            like.setStyle("-fx-background-color: #35502c");
+            like.setText("Liked");
+        } else {
+            like.setStyle("-fx-background-color: #709354");
+            like.setText("Like");
+        }
     }
+
     private void setLikesCounterLabel() {
-        likes_counter.setText(Integer.toString(comment.getReacts()));
+        likes_counter.setText(Integer.toString(comment.getReactsCounter()));
     }
 
     @FXML
-    private void changeLiked()  {
+    private void changeLiked() {
         liked = !liked;
         if (liked) {
             like.setStyle("-fx-background-color: #35502c");
@@ -46,12 +53,11 @@ public class ReplyController {
             like.setStyle("-fx-background-color: #709354");
             like.setText("Like");
         }
-        try {
-            comment.modifyReacts(liked);
-        } catch (NullPointerException exception) {
-            System.out.println(exception.getMessage());
+        if (liked) {
+            comment.addReact(DataManager.getCurrentUser());
+        } else {
+            comment.removeReact(DataManager.getCurrentUser());
         }
         setLikesCounterLabel();
     }
-
 }

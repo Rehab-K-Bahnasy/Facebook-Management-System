@@ -33,7 +33,7 @@ public class CreatPostController {
             return;
         }
         var user = DataManager.getCurrentUser();
-        Post post = new Post(user, content.getText(), privacy);
+        Post post = new Post(content.getText(), privacy);
         user.createPost(post);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Post sent");
