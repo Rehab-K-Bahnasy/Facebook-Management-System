@@ -18,8 +18,6 @@ public class User extends Person implements Serializable {
     public ArrayList<Message> sent_messages;
     public ArrayList<Message> recieved_message;
 
-
-
     private ArrayList<Post> posts;
     private ArrayList<Post> feed;
 
@@ -100,7 +98,7 @@ public class User extends Person implements Serializable {
 
     public boolean isFriendWith(String username) {
         for (var friend : allFriends) {
-            if(friend.hasMatchingIdentity(username)) {
+            if (friend.hasMatchingIdentity(username)) {
                 return true;
             }
         }
@@ -121,6 +119,7 @@ public class User extends Person implements Serializable {
     public ArrayList<Post> getFeed() {
         return feed;
     }
+
     public ArrayList<Post> getPosts() {
         return posts;
     }

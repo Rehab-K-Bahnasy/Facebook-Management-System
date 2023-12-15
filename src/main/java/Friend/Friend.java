@@ -17,7 +17,6 @@ public class Friend extends User {
 
     public Friend(Map userData) {
         super(userData);
-
     }
     public void setFriendshipType(FriendshipType friendshipType) {
         this.friendship_type = friendshipType;

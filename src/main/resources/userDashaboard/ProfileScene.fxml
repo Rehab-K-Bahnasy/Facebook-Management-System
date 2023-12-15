@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
@@ -25,5 +26,6 @@
       <Label fx:id="username" layoutX="23.0" layoutY="391.0" prefHeight="44.0" prefWidth="78.0" styleClass="profileUsername" stylesheets="@styling.css" text="\@zezo" />
       <Button layoutX="929.0" layoutY="35.0" mnemonicParsing="false" onAction="#back" styleClass="Button" stylesheets="@styling.css" text="Back" />
       <Button fx:id="add_button" layoutX="23.0" layoutY="439.0" mnemonicParsing="false" styleClass="Button" stylesheets="@styling.css" text="Friend" />
+      <CheckBox fx:id="restrict_button" layoutX="25.0" layoutY="490.0" mnemonicParsing="false" styleClass="showPasswordBox" stylesheets="@styling.css" text="Restricted" />
    </children>
 </AnchorPane>

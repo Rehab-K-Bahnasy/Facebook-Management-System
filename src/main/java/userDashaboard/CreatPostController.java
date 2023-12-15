@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -34,6 +35,10 @@ public class CreatPostController {
         var user = DataManager.getCurrentUser();
         Post post = new Post(user, content.getText(), privacy);
         user.createPost(post);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Post sent");
+        alert.setHeaderText("Your post has been uploaded");
+        alert.showAndWait();
     }
     @FXML
     private void back(ActionEvent event) throws IOException {
