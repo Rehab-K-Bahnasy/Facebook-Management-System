@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
+import user.User;
 import userDashaboard.HomePageController;
 import userDashaboard.SettingsController;
 
@@ -18,15 +19,13 @@ import java.util.*;
 public class MessageController {
 
     @FXML
-    private Label to_label;
-    @FXML
     private ComboBox sent_combo_box;
     @FXML
     private ComboBox received_combo_box;
     @FXML
-    private TextArea message_content;
+    private ComboBox friends_combo_box;
     @FXML
-    private Button new_message_button;
+    private TextArea message_content;
     @FXML
     private Button send_button;
     ArrayList<Message> sent = new ArrayList<>();
@@ -74,6 +73,10 @@ public class MessageController {
         sent.add(new Message(message_content.getText(), sender_username, recipients_usernames));
         NewMessageButton(new ActionEvent());
         addToHistory(sent.getLast().getId());
+    }
+    @FXML
+    private void handleFriendsComboBoxSelection() {
+        recipients_usernames.add((String) friends_combo_box.getValue());
     }
     @FXML
     private void handleSentComboBoxSelection() {
