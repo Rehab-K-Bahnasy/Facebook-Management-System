@@ -5,45 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d26fef0-1084-4d2c-b299-acbb0d599280" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/userDashboard/NameUsername.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Friend/Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/CommentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/RepliesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/RepliesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/ReplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Post/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Post/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/conversation/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conversation/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataManager/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataManager/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataManager/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataManager/DataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataManager/DataWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataManager/DataWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/CreatPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/CreatPostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/NameUsername.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userDashaboard/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/welcomeLogin/WelcomeLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conversation/MessageScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userDashboard/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userDashboard/ProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataManager/users.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/CreatePostScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/CreatePostScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/HomePageScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/HomePageScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/ProfileScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/ProfileScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/SearchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/SearchScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/SettingsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/SettingsScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/bar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/icons.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/styling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashaboard/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userDashboard/ProfileScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userDashboard/ProfileScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

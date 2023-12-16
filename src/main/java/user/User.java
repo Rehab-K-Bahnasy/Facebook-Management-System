@@ -21,7 +21,6 @@ import dataManager.DataManager;
  * @version 1.0
  */
 public class User extends Person implements Serializable {
-
     private String username;
     private String email;
     private String phone_number;
@@ -298,49 +297,47 @@ public class User extends Person implements Serializable {
     /**
      * Restricts the interaction level with a friend to "RESTRICTED."
      *
-     * @param username The friend's username to be restricted.
+     * @param friend The friend's username to be restricted.
      */
-    public void restrictFriend(Friend username) {
-        username.setFriendshipType(Friend.FriendshipType.RESTRICTED);
+    public void restrictFriend(Friend friend) {
+        friend.setFriendshipType("RESTRICTED");
     }
 
     /**
      * Blocks a friend, removing them from the friend list.
      *
-     * @param username The friend's username to be blocked.
+     * @param friend The friend's username to be blocked.
      */
-    public void blockFriend(Friend username) {
-        username.getAllFriends().remove(username);
-        username.setFriendshipType(Friend.FriendshipType.BLOCKED);
+    public void blockFriend(Friend friend) {
+        friend.setFriendshipType("BLOCKED");
     }
 
     /**
      * Removes restriction from a friend, setting the interaction level to "ALL."
      *
-     * @param username The friend's username to be unrestricted.
+     * @param friend The friend's username to be unrestricted.
      */
-    public void unrestrictFriend(Friend username) {
-        username.setFriendshipType(Friend.FriendshipType.ALL);
+    public void unrestrictFriend(Friend friend) {
+        friend.setFriendshipType("ALL");
     }
 
     /**
      * Unblocks a friend, adding them back to the friend list with the interaction level set to "ALL."
      *
-     * @param user     The user object representing the friend to be unblocked.
-     * @param username The friend's username to be unblocked.
+     * @param friend The friend's username to be unblocked.
      */
-    public void unblockFriend(User user, Friend username) {
-        user.getAllFriends().add(username);
-        username.setFriendshipType(Friend.FriendshipType.ALL);
+    public void unblockFriend(Friend friend) {
+        allFriends.add(friend);
+        friend.setFriendshipType("ALL");
     }
 
     /**
      * Sets the interaction level with a friend to "CLOSE."
      *
-     * @param username The friend's username to be set as a close friend.
+     * @param friend The friend's username to be set as a close friend.
      */
-    public void closeFriend(Friend username) {
-        username.setFriendshipType(Friend.FriendshipType.CLOSE);
+    public void closeFriend(Friend friend) {
+        friend.setFriendshipType("CLOSE");
     }
 
     /**
@@ -394,6 +391,10 @@ public class User extends Person implements Serializable {
      */
     public ArrayList<Message> getSent_messages() {
         return sent_messages;
+    }
+
+    public String getFriendType(Friend friend) {
+        return friend.getFriendshipType();
     }
 
     /**

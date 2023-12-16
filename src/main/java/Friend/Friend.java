@@ -17,22 +17,12 @@ public class Friend extends User {
     /**
      * The date when the friendship was established.
      */
-    private Date friendship_date;
+    private LocalDate friendship_date;
 
     /**
      * The type of friendship, which can be ALL, CLOSE, RESTRICTED, or BLOCKED.
      */
-    private FriendshipType friendship_type;
-
-    /**
-     * Enumeration representing different types of friendship.
-     */
-    public enum FriendshipType {
-        ALL,
-        CLOSE,
-        RESTRICTED,
-        BLOCKED
-    }
+    private String friendship_type;
 
     /**
      * Constructs a Friend object based on a User object.
@@ -41,6 +31,7 @@ public class Friend extends User {
      */
     public Friend(User user) {
         super(user);
+        friendship_type = "ALL";
     }
 
     /**
@@ -48,7 +39,7 @@ public class Friend extends User {
      *
      * @param friendshipType The type of friendship to be set.
      */
-    public void setFriendshipType(FriendshipType friendshipType) {
+    public void setFriendshipType(String friendshipType) {
         this.friendship_type = friendshipType;
     }
 
@@ -57,18 +48,8 @@ public class Friend extends User {
      *
      * @return The type of friendship.
      */
-    public FriendshipType getFriendshipType() {
+    public String getFriendshipType() {
         return friendship_type;
-    }
-
-    /**
-     * Sets the date when the friendship was established.
-     * If the provided date is null, the current date is set.
-     *
-     * @param friendshipDate The date when the friendship was established.
-     */
-    public void setFriendshipDate(Date friendshipDate) {
-        this.friendship_date = (friendshipDate != null) ? friendshipDate : new Date();
     }
 
     /**
@@ -76,7 +57,7 @@ public class Friend extends User {
      *
      * @return The date when the friendship was established.
      */
-    public Date getFriendshipDate() {
+    public LocalDate getFriendshipDate() {
         return friendship_date;
     }
 }
