@@ -29,8 +29,14 @@
       <Button fx:id="add_button" layoutX="25.0" layoutY="439.0" mnemonicParsing="false" onAction="#addFriend" styleClass="Button" stylesheets="@styling.css" text="Friend" />
       <CheckBox fx:id="restrict_button" layoutX="27.0" layoutY="490.0" mnemonicParsing="false" onAction="#restrict" styleClass="showPasswordBox" stylesheets="@styling.css" text="Restricted" />
       <Button fx:id="mutual_button" layoutX="25.0" layoutY="533.0" mnemonicParsing="false" onAction="#seeMutual" styleClass="Button" stylesheets="@styling.css" text="See mutual friends" />
-      <Button fx:id="friendship_button" layoutX="25.0" layoutY="600.0" mnemonicParsing="false" styleClass="Button" stylesheets="@styling.css" text="See friendship" wrapText="true" />
+      <Button fx:id="friendship_button" layoutX="25.0" layoutY="600.0" mnemonicParsing="false" onAction="#seeFriendship" styleClass="Button" stylesheets="@styling.css" text="See friendship" wrapText="true" />
       <ListView fx:id="mutual_list" layoutX="205.0" layoutY="160.0" prefHeight="530.0" prefWidth="780.0" visible="false" />
       <Button fx:id="close_list" layoutX="900.0" layoutY="124.0" mnemonicParsing="false" onAction="#closeList" styleClass="cancelButton" stylesheets="@styling.css" text="Close list" visible="false" />
+      <Label fx:id="friendship_date" layoutX="204.0" layoutY="126.0" stylesheets="@styling.css" text="Friends since 2004" visible="false" />
+      <ScrollPane fx:id="common_pane" layoutX="205.0" layoutY="160.0" prefHeight="530.0" prefWidth="780.0" visible="false">
+         <content>
+            <VBox fx:id="common_posts" prefHeight="525.0" prefWidth="760.0" visible="false" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

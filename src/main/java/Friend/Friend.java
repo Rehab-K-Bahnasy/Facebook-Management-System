@@ -32,6 +32,7 @@ public class Friend extends User {
     public Friend(User user) {
         super(user);
         friendship_type = "ALL";
+        friendship_date = LocalDate.now();
     }
 
     /**

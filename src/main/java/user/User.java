@@ -231,7 +231,9 @@ public class User extends Person implements Serializable {
      * @param post The post to be created.
      */
     public void createPost(Post post) {
-        posts.add(post);
+        if(!posts.contains(post)) {
+            posts.add(post);
+        }
         for (var friend : allFriends) {
             friend.updateFeed(post);
         }
@@ -243,7 +245,9 @@ public class User extends Person implements Serializable {
      * @param post The post to be added to the user's feed.
      */
     public void updateFeed(Post post) {
-        feed.add(post);
+        if(!feed.contains(post)) {
+            feed.add(post);
+        }
     }
 
     /**
@@ -252,7 +256,11 @@ public class User extends Person implements Serializable {
      * @param posts The list of posts to be added to the user's feed.
      */
     public void updateFeed(ArrayList<Post> posts) {
-        this.feed.addAll(posts);
+        for(var post:posts) {
+            if(!feed.contains(post)){
+                feed.add(post);
+            }
+        }
     }
 
     /**
@@ -283,7 +291,9 @@ public class User extends Person implements Serializable {
         allFriends.add(friend);
         updateFeed(friend.getPosts());
     }
-
+    public LocalDate getFriendshipDate(Friend friend) {
+        return friend.getFriendshipDate();
+    }
     /**
      * Removes a friend from the user's friend list.
      *

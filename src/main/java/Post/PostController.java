@@ -7,7 +7,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -30,6 +29,8 @@ public class PostController {
     private Label comments_counter;
     @FXML
     private TextField comment_field;
+    @FXML
+    private Label tagged;
     private Post post;
     boolean liked;
 
@@ -39,7 +40,7 @@ public class PostController {
         caption.setText(post.getCaption());
         date.setText(post.getCreatedOn().toString());
         name.setText(post.getCreatorName());
-        username.setText("@"+post.getCreatorUsername());
+        username.setText("@" + post.getCreatorUsername());
         likes_counter.setText(Integer.toString(post.getReacts()));
         comments_counter.setText(Integer.toString(post.getCommentsCounter()));
         liked = post.hasUserLikedPost(DataManager.getCurrentUser());
@@ -49,6 +50,18 @@ public class PostController {
         } else {
             like.setStyle("-fx-background-color: #709354");
             like.setText("Like");
+        }
+        var tags = post.getTaggedUsers();
+        if (!tags.isEmpty()) {
+            StringBuilder tag_message = new StringBuilder("and");
+            for (int i = 0; i < Math.min(2, tags.size()); i++) {
+                tag_message.append(" ").append(tags.get(i).getUsername());
+            }
+            if (tags.size() > 2) {
+                tag_message.append(" and others");
+            }
+            tagged.setText(tag_message.toString());
+            tagged.setVisible(true);
         }
     }
 
@@ -81,7 +94,7 @@ public class PostController {
     @FXML
     private void addComment() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        if(comment_field.getText().isEmpty()){
+        if (comment_field.getText().isEmpty()) {
             alert.setAlertType(Alert.AlertType.ERROR);
             alert.setTitle("Empty comment");
             alert.setHeaderText("Cannot post an empty comment");

@@ -30,9 +30,13 @@ public class Post implements Serializable {
         cnt++;
     }
 
-    public Post(String post_caption, String post_privacy, ArrayList<User> tagged_users) {
+    public Post(String post_caption, String post_privacy, ArrayList<User> tags) {
         this(post_caption, post_privacy);
-        setTaggedUsers(tagged_users);
+        setTaggedUsers(tags);
+        for (var user : tagged_users) {
+            user.updateFeed(this);
+            user.createPost(this);
+        }
     }
 
     public String getCreatorName() {
@@ -82,6 +86,7 @@ public class Post implements Serializable {
     public void addComment(Comment comment) {
         comments_on_post.add(comment);
     }
+
     public int getCommentsCounter() {
         return comments_on_post.size();
     }

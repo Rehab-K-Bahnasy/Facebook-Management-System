@@ -117,7 +117,7 @@ public class CommentController {
         if(reply_field.getText().isEmpty()){
             alert.setAlertType(Alert.AlertType.ERROR);
             alert.setTitle("Empty reply");
-            alert.setHeaderText("Cannot reply with an empty comment");
+            alert.setHeaderText("Cannot post an empty post");
             alert.showAndWait();
             return;
         }

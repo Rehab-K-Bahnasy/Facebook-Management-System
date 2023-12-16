@@ -46,6 +46,17 @@ public class HomePageController implements Initializable {
         ArrayList<Post> posts = new ArrayList<>(DataManager.getCurrentUser().getFeed());
         for (var post : posts) {
             try {
+                if (post.getPrivacy().equals("private")) {
+                    var creator = DataManager.retrieveUser(post.getCreatorUsername());
+                    var curr_user = DataManager.getCurrentUser();
+                    var friend = creator.getFriend(curr_user.getUsername());
+                    if (friend != null) {
+                        var type = friend.getFriendshipType();
+                        if (type.equals("RESTRICTED")) {
+                            continue;
+                        }
+                    }
+                }
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(Post.class.getResource("PostScene.fxml"));
                 VBox vbox = fxmlLoader.load();
@@ -112,7 +123,7 @@ public class HomePageController implements Initializable {
      */
     @FXML
     private void createPost(ActionEvent event) throws IOException {
-        CreatPostController.switchToHomePage(event);
+        CreatPostController.switchToCreatePost(event);
     }
 
     /**

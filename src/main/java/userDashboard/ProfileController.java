@@ -11,17 +11,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import user.User;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
@@ -51,6 +51,12 @@ public class ProfileController implements Initializable {
     private ListView<String> mutual_list;
     @FXML
     private Button close_list;
+    @FXML
+    private Label friendship_date;
+    @FXML
+    private ScrollPane common_pane;
+    @FXML
+    private VBox common_posts;
     private static String last_scene = "";
     private static User user = DataManager.getCurrentUser();
 
@@ -65,6 +71,18 @@ public class ProfileController implements Initializable {
         ArrayList<Post> posts = new ArrayList<>(user.getPosts());
         for (var post : posts) {
             try {
+                if (!user.getUsername().equals(post.getCreatorUsername()) && post.getPrivacy().equals("private")) {
+                    var creator = DataManager.retrieveUser(post.getCreatorUsername());
+                    var friend = creator.getFriend(user.getUsername());
+                    if (friend != null) {
+                        var type = friend.getFriendshipType();
+                        if (type.equals("RESTRICTED")) {
+                            continue;
+                        }
+                    } else {
+                        continue;
+                    }
+                }
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(Post.class.getResource("PostScene.fxml"));
                 VBox vbox = fxmlLoader.load();
@@ -77,6 +95,7 @@ public class ProfileController implements Initializable {
         }
         setProfile();
         setMutual();
+        setFriendship();
     }
 
     /**
@@ -110,7 +129,7 @@ public class ProfileController implements Initializable {
         if (curr_user.hasMatchingIdentity(user.getUsername())) {
             add_button.setVisible(false);
             restrict_button.setVisible(false);
-            mutual_button.setText("Friends");
+            mutual_button.setText("My Friends");
             friendship_button.setVisible(false);
         } else if (!curr_user.isFriendWith(user.getUsername())) {
             add_button.setText("Add friend");
@@ -118,7 +137,7 @@ public class ProfileController implements Initializable {
             mutual_button.setVisible(false);
             friendship_button.setVisible(false);
         } else {
-            add_button.setText("Friends");
+            add_button.setText("You're friends");
             restrict_button.setVisible(true);
             var friend = curr_user.getFriend(user.getUsername());
             var type = curr_user.getFriendType(friend);
@@ -132,8 +151,12 @@ public class ProfileController implements Initializable {
      */
     @FXML
     private void addFriend() {
+        var curr_user = DataManager.getCurrentUser();
+        if (curr_user.getFriend(user.getUsername()) != null) {
+            return;
+        }
         add_button.setText("Friends");
-        DataManager.getCurrentUser().addFriend(user);
+        curr_user.addFriend(user);
     }
 
     /**
@@ -158,19 +181,58 @@ public class ProfileController implements Initializable {
         var curr_user = DataManager.getCurrentUser();
         ArrayList<Friend> mutual = new ArrayList<>(curr_user.getAllFriends());
         mutual.retainAll(user.getAllFriends());
-        for(var friend:mutual) {
+        for (var friend : mutual) {
             mutual_list.getItems().add(friend.getName());
         }
     }
+
     @FXML
     private void seeMutual() {
         close_list.setVisible(true);
         mutual_list.setVisible(true);
     }
+
     @FXML
     private void closeList() {
         close_list.setVisible(false);
         mutual_list.setVisible(false);
+        common_pane.setVisible(false);
+        common_pane.setVisible(false);
+        friendship_date.setVisible(false);
+    }
+
+    private void setFriendship() {
+        var curr_user = DataManager.getCurrentUser();
+        var friend = curr_user.getFriend(user.getUsername());
+        if(friend == null) {
+            return;
+        }
+        var date = curr_user.getFriendshipDate(friend).toString();
+        friendship_date.setText("Friends since: " + date);
+        friendship_date.setVisible(true);
+        var curr_user_posts = curr_user.getPosts();
+        var user_posts = user.getPosts();
+        var common = new ArrayList<>(List.copyOf(curr_user_posts));
+        common.retainAll(user_posts);
+        for (var post : common) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(Post.class.getResource("PostScene.fxml"));
+                VBox vbox = fxmlLoader.load();
+                PostController postController = fxmlLoader.getController();
+                postController.setData(post);
+                common_posts.getChildren().add(vbox);
+            } catch (IOException e) {
+                System.out.println("IOException caught");
+            }
+        }
+    }
+
+    @FXML
+    private void seeFriendship() {
+        common_posts.setVisible(true);
+        common_pane.setVisible(true);
+        close_list.setVisible(true);
     }
     /**
      * Switches to the user profile scene.
