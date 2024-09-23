@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userDashboard.ProfileController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1024.0">
+         <image>
+            <Image url="@bg.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="205.0" layoutY="160.0" prefHeight="530.0" prefWidth="780.0">
+         <content>
+            <VBox fx:id="posts_container" prefHeight="525.0" prefWidth="760.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="name" layoutX="26.0" layoutY="304.0" prefHeight="99.0" prefWidth="179.0" styleClass="profileName" stylesheets="@styling.css" text="Abdllrhman Zedan" wrapText="true" />
+      <Button layoutX="21.0" layoutY="132.0" maxHeight="118.0" maxWidth="119.0" minHeight="152.0" minWidth="152.0" mnemonicParsing="false" prefHeight="152.0" prefWidth="152.0" styleClass="profilePic" stylesheets="@styling.css" />
+      <Label fx:id="username" layoutX="23.0" layoutY="391.0" prefHeight="44.0" prefWidth="78.0" styleClass="profileUsername" stylesheets="@styling.css" text="\@zezo" />
+      <Button layoutX="929.0" layoutY="35.0" mnemonicParsing="false" onAction="#back" styleClass="Button" stylesheets="@styling.css" text="Back" />
+      <Button fx:id="add_button" layoutX="25.0" layoutY="439.0" mnemonicParsing="false" onAction="#addFriend" styleClass="Button" stylesheets="@styling.css" text="Friend" />
+      <CheckBox fx:id="restrict_button" layoutX="27.0" layoutY="490.0" mnemonicParsing="false" onAction="#restrict" styleClass="showPasswordBox" stylesheets="@styling.css" text="Restricted" />
+      <Button fx:id="mutual_button" layoutX="25.0" layoutY="533.0" mnemonicParsing="false" onAction="#seeMutual" styleClass="Button" stylesheets="@styling.css" text="See mutual friends" />
+      <Button fx:id="friendship_button" layoutX="25.0" layoutY="600.0" mnemonicParsing="false" onAction="#seeFriendship" styleClass="Button" stylesheets="@styling.css" text="See friendship" wrapText="true" />
+      <ListView fx:id="mutual_list" layoutX="205.0" layoutY="160.0" prefHeight="530.0" prefWidth="780.0" visible="false" />
+      <Button fx:id="close_list" layoutX="900.0" layoutY="124.0" mnemonicParsing="false" onAction="#closeList" styleClass="cancelButton" stylesheets="@styling.css" text="Close list" visible="false" />
+      <Label fx:id="friendship_date" layoutX="204.0" layoutY="126.0" stylesheets="@styling.css" text="Friends since 2004" visible="false" />
+      <ScrollPane fx:id="common_pane" layoutX="205.0" layoutY="160.0" prefHeight="530.0" prefWidth="780.0" visible="false">
+         <content>
+            <VBox fx:id="common_posts" prefHeight="525.0" prefWidth="760.0" visible="false" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

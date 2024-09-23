@@ -1,4 +1,4 @@
-package userDashaboard;
+package userDashboard;
 
 import dataManager.DataManager;
 import javafx.event.ActionEvent;
@@ -14,7 +14,15 @@ import validator.Validator;
 
 import java.io.IOException;
 
+/**
+ * Controller class for the user settings view.
+ * Handles user input and updates user settings.
+ *
+ *  @version 1.0
+ *  @author SOC-IO
+ */
 public class SettingsController {
+
     @FXML
     TextField first_name;
     @FXML
@@ -31,8 +39,16 @@ public class SettingsController {
     PasswordField old_password;
     @FXML
     PasswordField new_password;
+
     String error_message;
     String field_style;
+
+    /**
+     * Cancels any changes made and switches back to the home page.
+     *
+     * @param event The event triggered by the cancel button.
+     * @throws IOException if an I/O error occurs.
+     */
     @FXML
     private void cancelChanges(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -47,6 +63,13 @@ public class SettingsController {
             }
         }
     }
+
+    /**
+     * Saves the changes made by the user in the settings.
+     *
+     * @param event The event triggered by the save button.
+     * @throws IOException if an I/O error occurs.
+     */
     @FXML
     private void saveChanges(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -58,19 +81,18 @@ public class SettingsController {
         if (result.isPresent()) {
             if (result.get() == ButtonType.OK) {
                 boolean check_valid_changes = changeUserSettings();
-                if(check_valid_changes)
-                {
-                    if(!email.getText().isEmpty())
+                if (check_valid_changes) {
+                    if (!email.getText().isEmpty())
                         DataManager.getCurrentUser().setEmail(email.getText());
-                    if(!username.getText().isEmpty())
+                    if (!username.getText().isEmpty())
                         DataManager.getCurrentUser().setUsername(username.getText());
-                    if(!first_name.getText().isEmpty())
+                    if (!first_name.getText().isEmpty())
                         DataManager.getCurrentUser().setFirstName(first_name.getText());
-                    if(!last_name.getText().isEmpty())
+                    if (!last_name.getText().isEmpty())
                         DataManager.getCurrentUser().setLastName(last_name.getText());
-                    if(birthdate.getValue() != null)
+                    if (birthdate.getValue() != null)
                         DataManager.getCurrentUser().setBirthdate(birthdate.getValue().toString());
-                    if(!phone_number.getText().isEmpty())
+                    if (!phone_number.getText().isEmpty())
                         DataManager.getCurrentUser().setPhoneNumber(phone_number.getText());
 
                     HomePageController.switchToHomePage(event);
@@ -78,6 +100,13 @@ public class SettingsController {
             }
         }
     }
+
+    /**
+     * Switches to the settings view.
+     *
+     * @param event The event triggered to switch to the settings view.
+     * @throws IOException if an I/O error occurs.
+     */
     public static void switchToSettings(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SettingsController.class.getResource("SettingsScene.fxml"));
         Parent root = fxmlLoader.load();
@@ -89,21 +118,31 @@ public class SettingsController {
         settings.setSettingsDetails(DataManager.getCurrentUser());
     }
 
-    public void setSettingsDetails(User current_user){
-       first_name.setPromptText(current_user.getFirstName());
-       last_name.setPromptText(current_user.getLastName());
-       email.setPromptText(current_user.getEmail());
-       phone_number.setPromptText(current_user.getPhoneNumber());
-       username.setPromptText(current_user.getUsername());
-       birthdate.setPromptText(current_user.getBirthdate().toString());
+    /**
+     * Sets the initial details for the user settings.
+     *
+     * @param current_user The user whose settings are displayed.
+     */
+    public void setSettingsDetails(User current_user) {
+        first_name.setPromptText(current_user.getFirstName());
+        last_name.setPromptText(current_user.getLastName());
+        email.setPromptText(current_user.getEmail());
+        phone_number.setPromptText(current_user.getPhoneNumber());
+        username.setPromptText(current_user.getUsername());
+        birthdate.setPromptText(current_user.getBirthdate().toString());
     }
-    public boolean changeUserSettings () {
+
+    /**
+     * Validates and updates the user settings based on user input.
+     *
+     * @return true if the user settings are valid and updated, false otherwise.
+     */
+    public boolean changeUserSettings() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         if (field_style == null) {
             field_style = email.getStyle();
         }
         error_message = "";
-        // must be operated on more than one line to avoid short cycle
         boolean can_change_settings = manageNameFields(first_name);
         can_change_settings &= manageNameFields(last_name);
         can_change_settings &= manageUsernameField();
@@ -112,7 +151,7 @@ public class SettingsController {
         can_change_settings &= managePasswordField();
         can_change_settings &= manageDateField();
 
-        if (!can_change_settings){
+        if (!can_change_settings) {
             alert.setAlertType(Alert.AlertType.ERROR);
             alert.setTitle("invalid credentials");
             alert.setHeaderText(error_message);
@@ -123,9 +162,14 @@ public class SettingsController {
         return true;
     }
 
+    /**
+     * Validates the name fields.
+     *
+     * @param field The TextField to be validated.
+     * @return true if the name is valid, false otherwise.
+     */
     private boolean manageNameFields(TextField field) {
-
-        if(!field.getText().isEmpty()){
+        if (!field.getText().isEmpty()) {
             if (!Validator.checkNameValidation(field.getText())) {
                 if (!error_message.startsWith("Name")) {
                     error_message += "Name can't contain numbers\n";
@@ -138,8 +182,13 @@ public class SettingsController {
         return true;
     }
 
+    /**
+     * Validates the username field.
+     *
+     * @return true if the username is valid, false otherwise.
+     */
     private boolean manageUsernameField() {
-        if(!username.getText().isEmpty()) {
+        if (!username.getText().isEmpty()) {
             if (!Validator.checkUniqueUsername(username.getText())) {
                 error_message += "Username must be unique\n";
                 username.setStyle("-fx-border-color: #9a0e0e");
@@ -150,8 +199,13 @@ public class SettingsController {
         return true;
     }
 
+    /**
+     * Validates the email field.
+     *
+     * @return true if the email is valid, false otherwise.
+     */
     private boolean manageEmailField() {
-        if(!email.getText().isEmpty()) {
+        if (!email.getText().isEmpty()) {
             int error = Validator.checkEmail(email.getText());
             if (error > 0) {
                 if (error == 1)
@@ -167,8 +221,13 @@ public class SettingsController {
         return true;
     }
 
+    /**
+     * Validates the phone number field.
+     *
+     * @return true if the phone number is valid, false otherwise.
+     */
     private boolean managePhoneNumberField() {
-        if(!phone_number.getText().isEmpty()) {
+        if (!phone_number.getText().isEmpty()) {
             int error = Validator.checkPhone(phone_number.getText());
             if (error > 0) {
                 if (error == 1)
@@ -184,8 +243,13 @@ public class SettingsController {
         return true;
     }
 
+    /**
+     * Validates the password fields.
+     *
+     * @return true if the password is valid, false otherwise.
+     */
     private boolean managePasswordField() {
-        if(!old_password.getText().isEmpty()){
+        if (!old_password.getText().isEmpty()) {
             String password = old_password.getText();
             String new_password_string = new_password.getText();
             if (!DataManager.getCurrentUser().hasPasswordMatch(password)) {
@@ -199,8 +263,13 @@ public class SettingsController {
         return true;
     }
 
+    /**
+     * Validates the birthdate field.
+     *
+     * @return true if the birthdate is valid, false otherwise.
+     */
     private boolean manageDateField() {
-        if(birthdate.getValue()!=null){
+        if (birthdate.getValue() != null) {
             if ((birthdate.getValue() == null) || !Validator.checkAdult(birthdate.getValue())) {
                 error_message += "You must be more than 13 to join SOC-IO";
                 birthdate.setStyle("-fx-border-color: #9a0e0e");

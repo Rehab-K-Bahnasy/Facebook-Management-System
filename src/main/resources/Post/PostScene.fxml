@@ -8,44 +8,55 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.PostController">
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Post.PostController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="username" layoutX="5.0" layoutY="65.0" prefHeight="30.0" prefWidth="143.0" styleClass="usernameLabel" stylesheets="@styling.css" text="\@MoBakry04" textAlignment="CENTER">
+      <Label fx:id="username" layoutX="10.0" layoutY="39.0" prefHeight="30.0" prefWidth="143.0" styleClass="usernameLabel" stylesheets="@styling.css" text="\@MoBakry04" textAlignment="CENTER">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="name" layoutX="5.0" layoutY="10.0" prefHeight="70.0" prefWidth="520.0" styleClass="nameLabel" stylesheets="@styling.css" text="Mo Bakry">
+      <Label fx:id="name" layoutX="10.0" layoutY="-7.0" prefHeight="51.0" prefWidth="520.0" styleClass="nameLabel" stylesheets="@styling.css" text="Mo Bakry">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="privacy" layoutX="140.0" layoutY="66.0" prefHeight="27.0" prefWidth="122.0" styleClass="privacyLabel" stylesheets="@styling.css" text="public">
+      <Label fx:id="privacy" layoutX="165.0" layoutY="41.0" prefHeight="27.0" prefWidth="122.0" styleClass="privacyLabel" stylesheets="@styling.css" text="Posted">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="date" layoutX="15.0" layoutY="235.0" prefHeight="34.0" prefWidth="280.0" styleClass="dateLabel" stylesheets="@styling.css" text="Wed Dec 06 17:51:48 EET 2023" />
-      <Label fx:id="caption" layoutX="15.0" layoutY="97.0" prefHeight="128.0" prefWidth="655.0" styleClass="captionLabel" stylesheets="@styling.css" text="t7yati l team OOP" wrapText="true">
+      <Label fx:id="date" layoutX="10.0" layoutY="158.0" prefHeight="34.0" prefWidth="280.0" styleClass="dateLabel" stylesheets="@styling.css" text="Wed Dec 06 17:51:48 EET 2023" />
+      <Label fx:id="caption" alignment="TOP_LEFT" layoutX="10.0" layoutY="69.0" prefHeight="94.0" prefWidth="690.0" styleClass="captionLabel" stylesheets="@styling.css" text="t7yati l team OOP" wrapText="true">
          <font>
             <Font name="Tajawal" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="155.0" layoutY="271.0" mnemonicParsing="false" onAction="#switch_to_comment_scene" prefWidth="110.0" stylesheets="@styling.css" text="Comments">
+      <Button layoutX="140.0" layoutY="190.0" mnemonicParsing="false" onAction="#switch_to_comment_scene" prefHeight="34.0" prefWidth="112.0" stylesheets="@styling.css" text="Comments">
          <font>
             <Font name="Andalus" size="12.0" />
          </font></Button>
-      <ToggleButton fx:id="like" layoutX="15.0" layoutY="271.0" mnemonicParsing="false" onAction="#changeLiked" prefWidth="101.0" styleClass="button" stylesheets="@styling.css" text="Like" />
-      <Label fx:id="likes_counter" layoutX="15.0" layoutY="316.0" text="101 Likes">
+      <ToggleButton fx:id="like" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#changeLiked" prefHeight="35.0" prefWidth="70.0" styleClass="button" stylesheets="@styling.css" text="Like" />
+      <Label fx:id="likes_counter" layoutX="10.0" layoutY="230.0" text="101 Likes">
          <font>
             <Font name="Tajawal" size="14.0" />
          </font></Label>
-      <Label fx:id="comments_counter" layoutX="155.0" layoutY="316.0" prefHeight="18.0" prefWidth="112.0" text="202 Comments">
+      <Label fx:id="comments_counter" layoutX="140.0" layoutY="230.0" prefHeight="18.0" prefWidth="112.0" text="202 Comments">
          <font>
             <Font name="Tajawal" size="14.0" />
          </font></Label>
-      <TextField fx:id="comment_field" focusTraversable="false" layoutX="291.0" layoutY="270.0" prefHeight="34.0" prefWidth="394.0" promptText="Write a comment" styleClass="field" stylesheets="@styling.css" />
+      <TextField fx:id="comment_field" alignment="TOP_LEFT" focusTraversable="false" layoutX="287.0" layoutY="108.0" prefHeight="51.0" prefWidth="394.0" promptText="Write a comment" styleClass="field" stylesheets="@styling.css" />
+         <Button layoutX="537.0" layoutY="158.0" mnemonicParsing="false" onAction="#addComment" prefHeight="34.0" prefWidth="143.0" stylesheets="@styling.css" text="Post a commnet">
+            <font>
+               <Font name="Andalus" size="12.0" />
+            </font>
+         </Button>
+         <Label fx:id="privacy1" layoutX="270.0" layoutY="40.0" prefHeight="27.0" prefWidth="122.0" styleClass="privacyLabel" stylesheets="@styling.css" text="public">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Label fx:id="tagged" layoutX="138.0" layoutY="17.0" text="and " visible="false" />
    </children>
 </AnchorPane>
 </VBox>

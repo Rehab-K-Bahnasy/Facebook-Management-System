@@ -152,3 +152,36 @@
     -fx-font-size: 20;
     -fx-text-fill: rgba(74, 69, 67, 0.70);
 }
+
+.showPasswordBox {
+    -fx-font-family: Tajawal;
+}
+.showPasswordBox .box {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 9px;
+    -fx-border-color: #999999;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-padding: 4px;
+    -fx-cursor: hand;
+    -fx-background-insets: 0;
+}
+
+.showPasswordBox .box:hover {
+    -fx-border-color: #666666;
+}
+
+.showPasswordBox:selected .box {
+    -fx-background-color: #709354;
+    -fx-border-color: #666666;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-padding: 4px;
+}
+
+.showPasswordBox:selected .box > .mark {
+    -fx-shape: "M5 27 L12 34 L30 16";
+    -fx-stroke: green;
+    -fx-stroke-width: 2px;
+}

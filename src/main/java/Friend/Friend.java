@@ -1,62 +1,63 @@
 package Friend;
 
 import user.User;
-
+import java.time.LocalDate;
 import java.util.*;
 
+/**
+ * The Friend class represents a user's friend in the Welcome Login application.
+ * It extends the User class to inherit basic user information and functionality.
+ *
+ * @author SOC-IO
+ * @version 1.0
+ */
 public class Friend extends User {
-    private Date friendship_date;
-    private FriendshipType friendship_type;
-    public enum FriendshipType {
-        ALL,
-        CLOSE,
-        RESTRICTED,
-        BLOCKED
+
+    /**
+     * The date when the friendship was established.
+     */
+    private LocalDate friendship_date;
+
+    /**
+     * The type of friendship, which can be ALL, CLOSE, RESTRICTED, or BLOCKED.
+     */
+    private String friendship_type;
+
+    /**
+     * Constructs a Friend object based on a User object.
+     *
+     * @param user The User object to be converted into a Friend object.
+     */
+    public Friend(User user) {
+        super(user);
+        friendship_type = "ALL";
+        friendship_date = LocalDate.now();
     }
 
-    public Friend(@SuppressWarnings("rawtypes") Map userData) {
-        super(userData);
-
-    }
-    public void setFriendshipType(FriendshipType friendshipType) {
+    /**
+     * Sets the type of friendship for the Friend object.
+     *
+     * @param friendshipType The type of friendship to be set.
+     */
+    public void setFriendshipType(String friendshipType) {
         this.friendship_type = friendshipType;
     }
-    public FriendshipType getFriendshipType() {
+
+    /**
+     * Gets the type of friendship for the Friend object.
+     *
+     * @return The type of friendship.
+     */
+    public String getFriendshipType() {
         return friendship_type;
     }
-    public void addFriend(User user, Friend username) {
-        user.getAllFriends().add(username);
-        username.setFriendshipType(FriendshipType.ALL);
-    }
 
-    public void removeFriend(User user, Friend username) {
-        user.getAllFriends().remove(username);
-    }
-
-    public void restrictFriend( Friend username) {
-        username.setFriendshipType(FriendshipType.RESTRICTED);
-    }
-
-    public void blockFriend( Friend username) {
-        username.getAllFriends().remove(username);
-        username.setFriendshipType(FriendshipType.BLOCKED);
-    }
-
-    public void unrestrictFriend(Friend username) {
-        username.setFriendshipType(FriendshipType.ALL);
-    }
-
-    public void unblockFriend(User user,Friend username) {
-        user.getAllFriends().add(username);
-        username.setFriendshipType(FriendshipType.ALL);
-    }
-    public void closeFriend(Friend username){
-        username.setFriendshipType(FriendshipType.CLOSE);
-    }
-    public void setFriendshipDate(Date friendshipDate) {
-        this.friendship_date = (friendshipDate != null) ? friendshipDate : new Date();
-    }
-    public Date getFriendshipDate() {
+    /**
+     * Gets the date when the friendship was established.
+     *
+     * @return The date when the friendship was established.
+     */
+    public LocalDate getFriendshipDate() {
         return friendship_date;
     }
 }
