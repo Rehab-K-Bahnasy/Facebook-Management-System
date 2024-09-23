@@ -44,7 +44,6 @@ public class CreateAccountController {
     private Button sign_up;
     @FXML
     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-    private String gender_check = null;
     private String field_style = null;
     private String error_message;
 
@@ -88,7 +87,7 @@ public class CreateAccountController {
         return female.isSelected();
     }
 
-    public void signUp () {
+    public void signUp (ActionEvent event) throws IOException {
         if (field_style == null) {
             field_style = email.getStyle();
         }
@@ -110,14 +109,19 @@ public class CreateAccountController {
             user_map.put("first name",getFirstName());
             user_map.put("last name",getLastName());
             user_map.put("password",getPassword());
-            user_map.put("gender",setGenderGroup());
+            user_map.put("gender",getGender());
             user_map.put("birthdate", getBirthdate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
             user_map.put("phone number",getPhoneNumber());
             DataManager.addUser(user_map);
             alert.setAlertType(Alert.AlertType.INFORMATION);
             alert.setTitle("HELLOZ");
             alert.setHeaderText("Welcome to SOC-IO <3");
-            alert.showAndWait();
+            var result = alert.showAndWait();
+            if (result.isPresent()) {
+                if (result.get() == ButtonType.OK) {
+                    toLogin(event);
+                }
+            }
         } else {
             alert.setAlertType(Alert.AlertType.ERROR);
             alert.setTitle("invalid credentials");
@@ -129,7 +133,7 @@ public class CreateAccountController {
 
     private boolean manageNameFields(TextField field) {
 
-        if ((field.getText() != null) && !Validator.checkNameValidation(field.getText())) {
+        if ( !Validator.checkNameValidation(field.getText())) {
             if (!error_message.startsWith("Name")) {
                 error_message += "Name can't contain numbers\n";
             }
@@ -208,25 +212,11 @@ public class CreateAccountController {
         return true;
     }
 
-    public String setGenderGroup() {
-        if (gender_check == null) {
-            if (male.isSelected()) {
-                gender_check = "M";
-            }
-            if (female.isSelected()) {
-                gender_check = "F";
-            }
-        }
-        if (male.isSelected() && gender_check.equals("F")) {
-            male.setSelected(true);
-            gender_check = "M";
-            female.setSelected(false);
-        } else if (female.isSelected() && gender_check.equals("M")) {
-            female.setSelected(true);
-            gender_check = "F";
-            male.setSelected(false);
-        }
-        return gender_check;
+    public String getGender() {
+        if(male.isSelected())
+            return "M";
+        else
+            return "F";
     }
 
     public void passwordVisibility() {

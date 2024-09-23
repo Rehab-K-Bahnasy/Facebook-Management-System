@@ -1,26 +1,37 @@
 package user;
 
+import Friend.Friend;
+import conversation.Message;
 
 import java.io.Serializable;
-import java.util.Random;
-import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
+
+import Post.*;
 
 public class User extends Person implements Serializable {
     private String username;
-    Random random = new Random();
-
-    final short key = (short) random.nextInt(Short.MAX_VALUE + 1);
     private String email;
+    private String phone_number;
     private String password;
+    private List<Friend> allFriends;
+
+    public ArrayList<Message> sent_messages;
+    public ArrayList<Message> recieved_message;
+
+
+
+    private ArrayList<Post> posts;
+    private ArrayList<Post> feed;
 
     public User(Map userData) {
         super(userData);
         setUsername((String) userData.get("username"));
         setEmail((String) userData.get("email"));
+        setPhoneNumber((String) userData.get("phone number"));
         setPassword((String) userData.get("password"));
+        allFriends = new ArrayList<>();
+        posts = new ArrayList<>();
+        feed = new ArrayList<>();
     }
 
     public String getUsername() {
@@ -37,6 +48,14 @@ public class User extends Person implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phone_number;
+    }
+
+    public void setPhoneNumber(String phone_number) {
+        this.phone_number = phone_number;
     }
 
     public void setPassword(String password) {
@@ -65,9 +84,47 @@ public class User extends Person implements Serializable {
                 hasPhoneNumberMatch(input_identifier);
     }
 
+    public List<Friend> getAllFriends() {
+        return Collections.unmodifiableList(allFriends);
+    }
+
+    public boolean hasSimilarities(String input) {
+        boolean name_similarity = first_name.contains(input) || last_name.contains(input);
+        boolean username_similarity = username.contains(input);
+        return name_similarity || username_similarity;
+    }
+
     public boolean hasMatchCredentials(String input_identifier, String input_password) {
         return hasMatchingIdentity(input_identifier) && hasPasswordMatch(input_password);
     }
+
+    public boolean isFriendWith(String username) {
+        for (var friend : allFriends) {
+            if(friend.hasMatchingIdentity(username)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void createPost(Post post) {
+        posts.add(post);
+        for (var friend : allFriends) {
+            friend.updateFeed(post);
+        }
+    }
+
+    public void updateFeed(Post post) {
+        feed.add(post);
+    }
+
+    public ArrayList<Post> getFeed() {
+        return feed;
+    }
+    public ArrayList<Post> getPosts() {
+        return posts;
+    }
+
     @Override
     public String toString() {
         return "first name = " + first_name +

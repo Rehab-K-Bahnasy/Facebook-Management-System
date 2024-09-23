@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class DataReader extends DataManager {
     private final static String USERS_FILE_PATH = "src\\main\\resources\\dataManager\\users.ser";
 
+    @SuppressWarnings("unchecked")
     public static void readUsersData() {
         try {
             FileInputStream file = new FileInputStream(USERS_FILE_PATH);

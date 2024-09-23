@@ -1,11 +1,10 @@
 package welcomeLogin;
 
+import dataManager.DataManager;
+import userDashaboard.HomePageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import validator.Validator;
 
 import java.io.IOException;
@@ -20,6 +19,7 @@ public class WelcomeLoginController {
     @FXML
     private CheckBox show_password;
 
+   private static String CurrentUserIdentity;
     public void passwordVisibility() {
         if (show_password.isSelected()) {
             password_text.setText(password_field.getText());
@@ -32,7 +32,7 @@ public class WelcomeLoginController {
         password_text.setVisible(false);
     }
 
-    public void login() {
+    public void login(ActionEvent event) throws IOException {
         String input_identity = identity_field.getText();
         String input_password = password_field.getText();
         if (show_password.isSelected()) {
@@ -48,14 +48,23 @@ public class WelcomeLoginController {
             alert.showAndWait();
             return;
         }
+        DataManager.setCurrentUser(DataManager.retrieveUser(input_identity));
         alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Welcome back ya m3lm");
         alert.setHeaderText("Welcome back ya m3lm");
-        alert.showAndWait();
-        //else: switch scene to the user home page
+        var result = alert.showAndWait();
+        if(result.isPresent()) {
+            if(result.get()== ButtonType.OK) {
+                HomePageController.switchToHomePage(event);
+            }
+        }
     }
 
     public void createNewAccount(ActionEvent event) throws IOException {
         WelcomeLogin.switchToScene(event, "CreateAccountScene.fxml");
+    }
+    public static String getCurrentUserIdentity()
+    {
+        return CurrentUserIdentity;
     }
 }

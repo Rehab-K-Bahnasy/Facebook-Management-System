@@ -7,6 +7,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -30,19 +31,22 @@
          </font>
       </Label>
       <Button layoutX="790.0" layoutY="648.0" mnemonicParsing="false" onAction="#toLogin" prefHeight="30.0" prefWidth="201.0" styleClass="creatAccountButton" stylesheets="@styling.css" text="Already have an account?" />
-      <DatePicker fx:id="birth_date" focusTraversable="false" layoutX="605.0" layoutY="541.0" prefHeight="42.0" prefWidth="360.0" promptText="Date of birth" styleClass="field" stylesheets="@styling.css" />
+      <DatePicker fx:id="birth_date" editable="false" focusTraversable="false" layoutX="605.0" layoutY="541.0" prefHeight="42.0" prefWidth="360.0" promptText="Date of birth" styleClass="field" stylesheets="@styling.css" />
       <TextField fx:id="username" focusTraversable="false" layoutX="606.0" layoutY="266.0" prefHeight="40.0" prefWidth="360.0" promptText="Username" styleClass="field" stylesheets="@styling.css" />
       <TextField fx:id="password_text" accessibleRole="PASSWORD_FIELD" focusTraversable="false" layoutX="606.0" layoutY="366.0" prefHeight="40.0" prefWidth="360.0" promptText="New password" styleClass="field" stylesheets="@styling.css" visible="false" />
       <TextField fx:id="phone_number" focusTraversable="false" layoutX="605.0" layoutY="491.0" prefHeight="40.0" prefWidth="360.0" promptText="Phone number" styleClass="field" stylesheets="@styling.css" />
       <PasswordField fx:id="password_field" focusTraversable="false" layoutX="606.0" layoutY="366.0" prefHeight="40.0" prefWidth="360.0" promptText="New password" styleClass="field" stylesheets="@styling.css" />
       <PasswordField fx:id="confirm_password_field" focusTraversable="false" layoutX="606.0" layoutY="416.0" prefHeight="40.0" prefWidth="360.0" promptText="Confirm your password" styleClass="field" stylesheets="@styling.css" />
       <CheckBox fx:id="show_password" layoutX="853.0" layoutY="462.0" mnemonicParsing="false" onAction="#passwordVisibility" prefHeight="21.0" prefWidth="134.0" styleClass="showPasswordBox" stylesheets="@styling.css" text="Show password" />
-      <RadioButton fx:id="male" layoutX="838.0" layoutY="592.0" mnemonicParsing="false" onAction="#setGenderGroup" prefHeight="26.0" prefWidth="81.0" stylesheets="@styling.css" text="Male">
+      <RadioButton fx:id="male" layoutX="838.0" layoutY="592.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="81.0" stylesheets="@styling.css" text="Male">
          <font>
             <Font size="14.0" />
          </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Gender" />
+         </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="female" layoutX="686.0" layoutY="592.0" mnemonicParsing="false" onAction="#setGenderGroup" prefHeight="26.0" prefWidth="82.0" text="Female" wrapText="true">
+      <RadioButton fx:id="female" layoutX="686.0" layoutY="592.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" text="Female" toggleGroup="$Gender" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
